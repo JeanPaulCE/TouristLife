@@ -3,7 +3,7 @@
     width: 100%;
     background: url(../imgs/music-Tourism-colors-Singapore-fb-ngc-661549-wallhere.com\ \(1\).jpg)no-repeat;
     background-size: cover;
-    padding-bottom: 30vh;
+    padding-bottom: 40vh;
 }
 
 .cuadro{
@@ -15,4 +15,10 @@
     height: 60vh;
     width: 25%;
     background: rgba(35, 34, 33, 100%);
+}
+
+.footer-section{
+    position: absolute;
+    top: 90vh;
+    background: var(--backgraund-alpha);
 }
