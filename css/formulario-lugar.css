@@ -6,12 +6,18 @@
 }
 
 .cuadricula-interna {
-        width: 85%;
-        margin: auto;
+    display: grid;
+    width: 85%;
+    margin: auto;
 }
 
 .contenedor-formulario {
     background: #232221;
     border-radius: 3em;
     margin-top: 10em;
+}
+
+.titulo-formulario {
+    text-align: center;
+    
 }
