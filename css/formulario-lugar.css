@@ -26,9 +26,8 @@
 }
 
 .campo-formulario {
-    width: 50%;
-    padding: .5em;
-    margin-left: 5em;
+    width: 80%;
+    padding: .6em;
     background: var(--gray);
     border: 1px solid var(--orange);
     border-radius: .5em;
@@ -43,6 +42,7 @@
 
 .texto-formulario {
     font-family: Montserrat-SemiBold;
+    width: 20%;
 }
 
 .texto-20 { font-size: 1.25em; }
