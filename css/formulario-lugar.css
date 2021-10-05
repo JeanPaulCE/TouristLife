@@ -8,5 +8,10 @@
 .cuadricula-interna {
         width: 85%;
         margin: auto;
-        background: #232221;
+}
+
+.contenedor-formulario {
+    background: #232221;
+    border-radius: 3em;
+    margin-top: 10em;
 }
