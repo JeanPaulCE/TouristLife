@@ -26,6 +26,8 @@
 .titulo-formulario {
     text-align: center;
     font-family: Montserrat-Bold;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .texto-formulario {
