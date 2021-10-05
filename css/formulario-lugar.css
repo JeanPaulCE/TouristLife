@@ -33,6 +33,14 @@
     border-radius: .5em;
 }
 
+.campo-desplegable {
+    width: 36%;
+    padding: .6em;
+    background: var(--gray);
+    border: 1px solid var(--orange);
+    border-radius: .5em;
+}
+
 .titulo-formulario {
     text-align: center;
     font-family: Montserrat-Bold;
