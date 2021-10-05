@@ -18,3 +18,31 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'Montserrat-Light.ttf';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold.ttf';
+    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-style: bold;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular.ttf';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold.ttf';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
