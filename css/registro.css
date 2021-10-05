@@ -29,5 +29,18 @@
 }
 
 .color{
-    color: black;
+    
+    margin-left: 23%;
+    color: blanchedalmond;
+    background: black;
+}
+
+.form-submit{
+    border: none;
+    background: green;
+    color: #fff;
+    padding: 1em;
+    border-radius: .5em;
+    width: 15em;
+    margin-left: 20%;
 }
