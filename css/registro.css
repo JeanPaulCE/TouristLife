@@ -19,6 +19,15 @@
 
 .footer-section{
     position: absolute;
-    top: 90vh;
+    top: 94vh;
     background: var(--backgraund-alpha);
+}
+
+.form-label{
+    display: inline-block;
+    width: 6em;
+}
+
+.color{
+    color: black;
 }
