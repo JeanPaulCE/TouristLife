@@ -101,11 +101,10 @@ body{
 }
 .footer-section{
     position: relative;
-    top: 20em;
 }
 .footer-element{
     margin: auto;
-    font-size: 2em;
+    font-size: 1em;
     padding: 0em 1em;
     display: inline-block;
 }
