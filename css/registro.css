@@ -22,3 +22,12 @@
     top: 93.5vh;
     background: var(--backgraund-alpha);
 }
+
+.form-label{
+    display: inline-block;
+    width: 6em;
+}
+
+.color{
+    color: black;
+}
