@@ -56,12 +56,17 @@
                                         rows="8"></textarea>
                                 </div>
                                 <div class="cuadricula-contenedor-formulario">
-                                    <p class="texto-formulario texto-20">Categoría</p>
-
+                                    <label class="texto-formulario texto-20" for="categoria">Categoría</label>
+                                    <select class="campo-desplegable" name="categoria" id="categoria">
+                                        <option value="sj">Ninguno</option>
+                                        <option value="pun">Playa</option>
+                                        <option value="her">Montaña</option>
+                                        <option value="her">Ciudad</option>
+                                    </select>
                                 </div>
                                 <div class="cuadricula-contenedor-formulario">
-                                    <p class="texto-formulario texto-20">Archivo</p>
-
+                                        <label for="archivo" class="texto-formulario texto-20">Archivo</label>
+                                        <input id="archivo" type="file" name="archivo">
                                 </div>
                             </form>
                         </div>
