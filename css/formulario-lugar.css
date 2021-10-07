@@ -2,14 +2,14 @@
     width: 100%;
     background: url(../imgs/fondo-formulario-lugar.jpg) no-repeat;
     background-size: cover;
-    padding-bottom: 100vh;
 }
 
 .contenedor-formulario {
     background: var(--background);
     border-radius: 3em;
-    margin-top: 10em;
     box-shadow: 0px 0px 60px 0px black;
+    margin-top: 8em;
+    margin-bottom: 4em;
 }
 
 .cuadricula-interna {
@@ -51,6 +51,20 @@
 .texto-formulario {
     font-family: Montserrat-SemiBold;
     width: 20%;
+}
+
+.boton-formulario {
+    background: var(--green);
+    border: none;
+    border-radius: .3em;
+    padding: 1em .5em;
+    margin: 0 auto .8em auto;
+}
+
+.footer-section{
+    position: absolute;
+    top: auto;
+    background: var(--backgraund-alpha);
 }
 
 .texto-20 { font-size: 1.25em; }
