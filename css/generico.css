@@ -6,6 +6,7 @@
     --gray: #2D2C2B;
     --display-nav:none;
     --backgraund-alpha: rgba(35, 34, 33, 72%);
+    --text-gray:#7C7C7C;
 }
 
 *{
@@ -21,6 +22,23 @@ body{
     padding: 0;
     background-color: var(--background);
 }
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 13px;
+    }
+    ::-webkit-scrollbar-thumb{
+    background: #B3AFB3;
+    border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+    background: #B3AFB3;
+    }
+    ::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0%);
+    border-radius: 0px;
+    
+    }
 
 .center{
     display: flex;
@@ -134,20 +152,105 @@ body{
     font-family: "Montserrat-Medium";;
 }
 
-
-::-webkit-scrollbar{
-    width: 6px;
-    height: 13px;
-    }
-    ::-webkit-scrollbar-thumb{
-    background: #B3AFB3;
-    border-radius: 0px;
-    }
-    ::-webkit-scrollbar-thumb:hover{
-    background: #B3AFB3;
-    }
-    ::-webkit-scrollbar-track{
-    background: rgba(0, 0, 0, 0%);
-    border-radius: 0px;
+.element-1>div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 40px;
+    box-shadow: -8px 8px 25px #000;
+    background: var(--white);
+    font-family: "Montserrat-Medium";
+    font-size: 2vh;
+}
+.element-data-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.element-img-1{
+    display: flex;
+    background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 26vw;
+    height: 35vh;
+    border-radius: 40px 0px 0px 40px;
+}
+.element-title-1{
+    color: var(--orange);
+    font-family: "Montserrat-Medium";
+    font-size: 2vw;
+    padding: 3em 2em 0em 1vw;
+    margin: 0;
+}
+.element-p-1{
+    color: var(--text-gray);
+    font-family: "Montserrat-Light";
+    font-size: 1em;
+    padding: 0.2em 0em 0em 1vw;
+    margin: 0;
+}
+.element-a-1>i{
+    color: var(--green);
+   font-size: 0.9em;
+}
+.element-a-1{
+    color: var(--green);
+    font-family: Montserrat-Italic;
+    font-size: 1.5em;
+    padding: 1em 1em 0em 13em;
+}
+.element{
+    display: inline-flex;
+    width: 20vw;
+    margin: 2em 2em;
+}
+.element>div{
+    display: flex;
+    flex-wrap: wrap;
     
-    }
+    width: 20vw;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+
+.element-img{
+    display: flex;
+    background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 20vw;
+    height: 25vh;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.element-title{
+    color: var(--green);
+    font-family: "Montserrat-Medium";
+    font-size: 1.3vw;
+    padding: 1em 0em 0em 1vw;
+    margin: 0;
+}
+.element-p{
+    color: var(--text-gray);
+    font-family: "Montserrat-Light";
+    font-size: 1em;
+    padding: 0.2em 0em 0em 1vw;
+    margin: 0;
+}
+.element-a>i{
+    color: var(--green);
+   font-size: 0.9em;
+}
+.element-a{
+    display: block;
+    color: var(--orange);
+    font-family: Montserrat-Italic;
+    font-size: 1.5em;
+    padding: 1em 0em 1em 11.5em;
+}
+
+.elements-d{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);;
+}
