@@ -1,5 +1,6 @@
 .fondo {
     width: 100%;
+    height: 100vh;
     background: url(../imgs/fondo-formulario-lugar.jpg) no-repeat;
     background-size: cover;
 }
@@ -63,7 +64,8 @@
 
 .footer-section{
     position: absolute;
-    top: auto;
+    top: 95vh;
+    height: 5vh;
     background: var(--backgraund-alpha);
 }
 

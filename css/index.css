@@ -1,0 +1,43 @@
+.footer-section{
+    display: block;
+    position: relative;
+}
+
+.top-section{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("../imgs/main-back.jpg") no-repeat;
+    background-size: 100%;
+
+}
+
+.ts-text{
+
+    position: relative;
+    top: 35vh;
+}
+
+.title{
+    color: var(--orange);
+    text-shadow: -4px 4px 14px #000;
+    font-family: "Montserrat-SemiBold";
+    font-size: 3.5vw;
+}
+
+
+.button-a{
+    display: inline-block;
+    position: relative;
+    background: var(--green);
+    font-family: "Montserrat-Medium";
+    font-size: 1.6em;
+    padding: 0.4em 2em;
+    border-radius: 14px;
+}
+
+.top10{
+    font-family: "Montserrat-SemiBold";
+    font-size: 2vw;
+    padding: 1.5em;
+}
