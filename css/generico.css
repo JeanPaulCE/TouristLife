@@ -239,8 +239,8 @@ body{
     margin: 0;
 }
 .element-a>i{
-    color: var(--green);
-   font-size: 0.9em;
+    color: var(--orange);
+   font-size: 0.7em;
 }
 .element-a{
     display: block;
