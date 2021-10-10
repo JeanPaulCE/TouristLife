@@ -88,6 +88,7 @@ body{
     display: inline-flex;
     font-size: 1.2em;
     top:-0.5em;
+    padding: 0;
     
 }
 .nav-item,.nav-item-cluster
@@ -201,14 +202,14 @@ body{
 }
 .element{
     display: inline-flex;
-    width: 20vw;
+    width: 24vw;
     margin: 2em 2em;
 }
 .element>div{
     display: flex;
     flex-wrap: wrap;
     
-    width: 20vw;
+    width: 24vw;
     background-color: var(--white);
     border-radius: 20px;
 }
@@ -218,8 +219,8 @@ body{
     display: flex;
     background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
     background-size: 100% 100%;
-    width: 20vw;
-    height: 25vh;
+    width: 24vw;
+    height: 28vh;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -227,7 +228,7 @@ body{
 .element-title{
     color: var(--green);
     font-family: "Montserrat-Medium";
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     padding: 1em 0em 0em 1vw;
     margin: 0;
 }
@@ -242,12 +243,24 @@ body{
     color: var(--orange);
    font-size: 0.7em;
 }
+
+.element-a>i{
+    
+}
+
 .element-a{
     display: block;
+    position: relative;
+    text-align: end;
     color: var(--orange);
     font-family: Montserrat-Italic;
     font-size: 1.5em;
-    padding: 1em 0em 1em 11.5em;
+    margin: 0em 0.8em;
+    padding: 0.8em;
+}
+
+.element-data{
+    width: 100%;
 }
 
 .elements-d{

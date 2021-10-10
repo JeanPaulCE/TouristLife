@@ -24,7 +24,7 @@
 .buttons{
     display: grid;
     grid-template-columns: repeat(3,1fr);;
-    
+    width: 100%;
 }
 .title{
     color: var(--orange);
@@ -32,7 +32,9 @@
     font-family: "Montserrat-SemiBold";
     font-size: 3.5vw;
 }
-
+.buttons>div{
+    width: 100%;
+}
 .button-b{
     display: inline-block;
     position: relative;
@@ -43,5 +45,4 @@
     border-radius: 14px;
     width: 5vw;
     text-align: center;
-    margin: 0em 8.5em;
 }
