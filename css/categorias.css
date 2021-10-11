@@ -2,19 +2,10 @@
     display: block;
     position: relative;
 }
-
-.top-section{
-    margin: 0;
-    padding: 0;
-    height: 76vh;
-    background: url("../imgs/main-back.jpg") no-repeat;
-    background-size: 100%;
-
-}
 .ts-text{
 
     position: relative;
-    top: 28vh;
+    top: 32vh;
 }
 .top10{
     font-family: "Montserrat-SemiBold";
@@ -24,7 +15,7 @@
 .buttons{
     display: grid;
     grid-template-columns: repeat(3,1fr);;
-    width: 100%;
+    
 }
 .title{
     color: var(--orange);
@@ -32,12 +23,9 @@
     font-family: "Montserrat-SemiBold";
     font-size: 3.5vw;
 }
-.buttons>div{
-    width: 100%;
-}
+
 .button-b{
-    display: inline-block;
-    position: relative;
+    
     background: var(--green);
     font-family: "Montserrat-Medium";
     font-size: 1.6em;
@@ -45,4 +33,10 @@
     border-radius: 14px;
     width: 5vw;
     text-align: center;
+    
+}
+.body{
+    width: 100%;
+    position: relative;
+    top: -15vh;
 }
