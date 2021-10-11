@@ -1,0 +1,42 @@
+.footer-section{
+    display: block;
+    position: relative;
+}
+.ts-text{
+
+    position: relative;
+    top: 32vh;
+}
+.top10{
+    font-family: "Montserrat-SemiBold";
+    font-size: 2vw;
+    padding: 1.5em;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);;
+    
+}
+.title{
+    color: var(--orange);
+    text-shadow: -4px 4px 14px #000;
+    font-family: "Montserrat-SemiBold";
+    font-size: 3.5vw;
+}
+
+.button-b{
+    
+    background: var(--green);
+    font-family: "Montserrat-Medium";
+    font-size: 1.6em;
+    padding: 0.4em 2em;
+    border-radius: 14px;
+    width: 5vw;
+    text-align: center;
+    
+}
+.body{
+    width: 100%;
+    position: relative;
+    top: -15vh;
+}
