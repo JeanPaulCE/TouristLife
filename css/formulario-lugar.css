@@ -48,7 +48,6 @@
 }
 
 .form-title {
-  text-align: center;
   font-family: Montserrat-Bold;
   margin: 6vh 0em;
 }
@@ -63,7 +62,6 @@
   border: none;
   border-radius: 0.3em;
   padding: 2.5vh 1vw;
-  margin: 0 auto 0.8em auto;
 }
 
 .footer-section {
