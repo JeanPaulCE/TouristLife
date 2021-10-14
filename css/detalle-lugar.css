@@ -38,6 +38,7 @@ body {
 .detail-title {
     font-family: Montserrat-Bold;
     margin-top: 1.5em;
+    margin-bottom: 0em;
 }
 
 .detail-description {
