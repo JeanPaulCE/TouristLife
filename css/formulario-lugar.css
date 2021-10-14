@@ -18,12 +18,6 @@
   height: 74vh;
 }
 
-.inner-grid {
-  display: grid;
-  width: 80%;
-  margin: auto;
-}
-
 .form-container-grid {
   display: inline-flex;
   width: 100%;
