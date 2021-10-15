@@ -40,16 +40,20 @@ body{
     
     }
 
+    /* centra todo */
 .center{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
 }
+
+/* genera margenes  a los lados*/
 .inner-grip{
     width: 80%;
     margin: auto;
 }
+
 .nav-sec{
     background: var(--backgraund-alpha);
     position: absolute;
