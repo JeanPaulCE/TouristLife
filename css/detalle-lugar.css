@@ -14,14 +14,14 @@ body {
 }
 
 .inner-image {
-    display: grid;
+    display: block;
     width: 170%;
     margin: auto;
     border-top-left-radius: 3em;
 }
 
 .inner-text {
-    display: grid;
+    display: block;
     width: 40%;
     margin-left: auto;
     margin-right: 2em;
@@ -37,8 +37,8 @@ body {
 
 .detail-title {
     font-family: Montserrat-Bold;
-    margin-top: 1.5em;
-    margin-bottom: 0em;
+    margin: 1.5em 0 .5em;
+    padding: 0em;
 }
 
 .detail-description {
@@ -47,6 +47,30 @@ body {
 }
 
 .detail-bottom {
-    font-size: Montserrat-SemiBold;
+    font-family: Montserrat-SemiBold;
     margin: 1.5em 0em 2em 2.5em;
+}
+
+.line {
+    border-bottom: 4px solid var(--gray);
+    width: 120vh;
+    margin: auto 0em auto 2.5em;
+}
+
+.link {
+    font-family: Montserrat-SemiBold;
+    margin: .5em 0;
+    color: var(--orange);
+}
+
+.footer-section {
+    position: absolute;
+    background: var(--backgraund-alpha);
+    top: auto;
+    height: auto;
+}
+
+.center-vertical {
+    margin-top: auto;
+    margin-bottom: auto;
 }
