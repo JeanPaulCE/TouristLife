@@ -55,6 +55,5 @@
 }
 
 .footer-section {
-  position: absolute;
-  background: var(--backgraund-alpha);
+  top:92vh;
 }
