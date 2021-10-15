@@ -26,6 +26,8 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    position: relative;
+    top: 0;
 }
 
 ::-webkit-scrollbar{
@@ -45,17 +47,20 @@ body{
     
     }
 
+    /* centra todo */
 .center{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
 }
+
+/* genera margenes  a los lados*/
 .inner-grid{
-    display: grid;
     width: 80%;
     margin: auto;
 }
+
 .nav-sec{
     background: var(--backgraund-alpha);
     position: absolute;
@@ -138,7 +143,7 @@ body{
 .footer-section{
     background: var(--backgraund-alpha);
     position: absolute;
-    top: 94vh;
+    top: 0vh;
     width: 100%;
     height: 6vh;
 }
