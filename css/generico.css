@@ -400,7 +400,7 @@ body{
 
 .background{
     width: 100%;
-    background-size: 100% 100%;
+    background-size: cover;
     padding-bottom: 40vh;
     height: 60vh;
 }

@@ -1,0 +1,12 @@
+
+
+
+.background-register{
+    background: url(../imgs/bosque.jpg)no-repeat;
+}
+
+
+.box-register{
+    height: 70vh;
+    max-height: 500px; 
+}
