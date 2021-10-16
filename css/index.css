@@ -41,3 +41,17 @@
     font-size: 2vw;
     padding: 1.5em;
 }
+
+@media (max-width: 800px) {
+    .top-section{
+        background: url("../imgs/main-back-movil.jpg") no-repeat;
+    }
+    .title{
+        font-size: 7vw;
+        text-align: center;
+    }
+    .top10{
+        font-size: 7vw;
+    }
+    
+}
