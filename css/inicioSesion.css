@@ -4,7 +4,7 @@
     background: url(../imgs/music-Tourism-colors-Singapore-fb-ngc-661549-wallhere.com\ \(1\).jpg)no-repeat;
     background-size: cover;
     padding-bottom: 40vh;
-    height: 100vh;
+    height: 60vh;
 }
 
 .cuadro{
@@ -74,4 +74,18 @@
     text-align: center;
     top: 5em;
     margin-bottom: 1em;
+}
+
+
+.text-recover{
+    top: 3em;
+}
+
+.recover-label{
+    position: relative;
+    display: block;
+    font-family: 'Sary-Soft-SemiBlod';
+    font-size: 35px;
+    top: 40px;
+    text-align: center;
 }
