@@ -1,7 +1,7 @@
 
 .background-login{
     background: url(../imgs/city.jpg)no-repeat;
-    
+    background-size: cover;
 }
 
 

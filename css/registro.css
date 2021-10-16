@@ -2,7 +2,8 @@
 
 
 .background-register{
-    background: url(../imgs/bosque.jpg)no-repeat;
+    background: url(../imgs/city2.jpg)no-repeat;
+    background-size: cover;
 }
 
 

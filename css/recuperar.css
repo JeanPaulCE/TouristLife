@@ -1,5 +1,6 @@
 .background-recover{
     background: url(../imgs/mar.jpg)no-repeat;
+    background-size: cover;
 }
 
 .text-recover{
