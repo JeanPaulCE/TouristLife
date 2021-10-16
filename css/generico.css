@@ -67,6 +67,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 1;
+    animation: nav 1s;
 }
 .nav-bar{
     display: grid;
@@ -290,6 +291,15 @@ body{
     background-color: var(--background);
 }
 
+@keyframes nav {
+    0%{
+        top: -10vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
 
 @media (max-width: 800px) {
     .nav-bar{

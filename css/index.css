@@ -4,12 +4,13 @@
 }
 
 .top-section{
+    position: relative;
     margin: 0;
     padding: 0;
     height: 76vh;
     background: url("../imgs/main-back.jpg") no-repeat;
     background-size: 100%;
-
+    animation: back 1s;
 }
 
 .ts-text{
@@ -40,6 +41,28 @@
     font-family: "Montserrat-SemiBold";
     font-size: 2vw;
     padding: 1.5em;
+}
+.body{
+    position: relative;
+    animation: body 1.5s ;
+}
+@keyframes back {
+    0%{
+        top: -100vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
+@keyframes body {
+    0%{
+        top: 100vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
 }
 
 @media (max-width: 800px) {
