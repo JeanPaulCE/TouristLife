@@ -1,89 +1,18 @@
 
-.fondo{
-    width: 100%;
+.background-login{
     background: url(../imgs/music-Tourism-colors-Singapore-fb-ngc-661549-wallhere.com\ \(1\).jpg)no-repeat;
-    background-size: cover;
-    padding-bottom: 40vh;
-    height: 60vh;
 }
 
 
-
-.box-inicio{
+.box-login{
     height: 60vh;
     max-height: 460px;
 }
 
-.footer-section{
-    position: absolute;
-    top: 94vh;
-    background: var(--backgraund-alpha);
-}
-
-.form-label{
-    position: relative;
-    display: block;
-    font-family: 'Montserrat-SemiBold';
-    font-size: 25px;
-    top: 40px;
-    text-align: center;
-}
-
-.form-input{
-    display: block;
-    position: relative;
-    text-align: center;
-    margin-bottom: 2em;
-    color: blanchedalmond;
-    background: #0F0F0F;
-    width: 16em;
-    height: 3em;
-    border-radius: .5em;
-    top: 5em;
-    outline: .1px solid #006600;
-    border: none;
-    
-}
-
-.form-submit{
-    display: block;
-    position: relative;
-    border: none;
-    background: #006600;
-    color: #fff;
-    padding: 1em;
-    border-radius: .5em;
-    width: 12em;
-    top: 5em;
-    margin: auto;
-}
-
-.form-submit:hover{
-    background: #A05007;
-}
-
-.links{
-    position: relative;
-    display: block;
-    text-align: center;
-    top: 5em;
-    margin-bottom: 1em;
-}
 
 
-.text-recover{
-    top: 4em;
-}
 
 
-.form-input-recover{
-    left: 1.3vh;
-}
-
-.box-recover{
-    height: 55vh;
-    max-height: 400px; 
-}
 
 
 

@@ -1,0 +1,17 @@
+.background-recover{
+    background: url(../imgs/mar.jpg)no-repeat;
+}
+
+.text-recover{
+    top: 4em;
+}
+
+
+.form-input-recover{
+    left: 1.3vh;
+}
+
+.box-recover{
+    height: 55vh;
+    max-height: 400px; 
+}
