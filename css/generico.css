@@ -403,6 +403,7 @@ body{
     background-size: cover;
     padding-bottom: 40vh;
     height: 60vh;
+    
 }
 
 .footer-section{
@@ -447,6 +448,7 @@ body{
     width: 12em;
     top: 5em;
     margin: auto;
+    cursor: pointer;
 }
 
 .form-submit:hover{
