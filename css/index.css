@@ -44,7 +44,9 @@
 
 @media (max-width: 800px) {
     .top-section{
+        height: 85vh;
         background: url("../imgs/main-back-movil.jpg") no-repeat;
+        background-size: 100% 100%;
     }
     .title{
         font-size: 7vw;
