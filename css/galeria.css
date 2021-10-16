@@ -4,12 +4,13 @@
 }
 
 .top-section{
+    position: relative;
     margin: 0;
     padding: 0;
     height: 76vh;
     background: url("../imgs/main-back.jpg") no-repeat;
     background-size: 100%;
-
+    animation: back 1s;
 }
 .ts-text{
 
@@ -23,7 +24,7 @@
 }
 .buttons{
     display: grid;
-    grid-template-columns: repeat(3,1fr);;
+    grid-template-columns: repeat(3,1fr);
     width: 100%;
 }
 .title{
@@ -45,4 +46,49 @@
     border-radius: 14px;
     width: 5vw;
     text-align: center;
+}
+.body{
+    position: relative;
+    animation: body 1s;
+}
+@keyframes back {
+    0%{
+        top: -100vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
+
+@keyframes body {
+    0%{
+        top: 100vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
+
+@media(max-width: 800px){
+    .top-section{
+        height: 85vh;
+        background:url("../imgs/main-back-movil.jpg") no-repeat ;
+        background-size: 100% 100%;
+    }
+    .ts-text{
+        top: 13vh;
+    }
+    .buttons{
+        gap: 2em;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .title{
+        font-size: 8vw;
+        text-align: center;
+    }
+    .button-b{
+        width: 25vw;
+    }
 }
