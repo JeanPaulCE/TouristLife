@@ -14,8 +14,6 @@ body {
     grid-auto-flow: row;
 }
 .container-img{
-    grid-column-start: 1;
-    grid-column-end:2;
     width: 200%;
 }
 .inner-image {
