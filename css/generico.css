@@ -81,6 +81,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-end;
+    grid-column-start: 3;
 }
 
 .d-logo{
