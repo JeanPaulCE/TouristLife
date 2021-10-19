@@ -433,8 +433,8 @@ body{
     top: 5em;
     outline: .1px solid var(--green);
     border: none;
-    
 }
+
 /* botones en general*/
 .form-submit{
     display: block;
