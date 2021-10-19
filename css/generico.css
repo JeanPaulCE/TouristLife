@@ -407,7 +407,6 @@ body{
 .footer-section{
     position: absolute;
     top: 94vh;
-    background: var(--backgraund-alpha);
 }
 
 .form-label{
