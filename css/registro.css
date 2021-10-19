@@ -8,13 +8,16 @@
 
 
 .box{
+    position: relative;
     height: 70vh;
+    top: 16vh;
     max-height: 500px; 
 }
 
 .footer-section{
-    top: 93vh;
-    height: 7vh;
+    position: absolute;
+    top: 92vh;
+    height: 8vh;
 }
 
 .footer-elements{
