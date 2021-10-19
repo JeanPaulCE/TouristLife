@@ -74,5 +74,10 @@
     .top10{
         font-size: 7vw;
     }
-    
+    .ts-text{
+        top: 32vh;
+    }
+    .form-submit{
+        width: 25vw;
+    }
 }
