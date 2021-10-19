@@ -2,11 +2,12 @@
   display: block;
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background: url(../imgs/fondo-formulario-lugar.jpg) no-repeat;
   background-size: cover;
 }
 
+/*
 .form-container {
   display: block;
   position: relative;
@@ -17,6 +18,7 @@
   margin-bottom: 0em;
   height: 74vh;
 }
+*/
 
 .box {
   width: 80%;
@@ -31,19 +33,25 @@
   margin-bottom: 1.5em;
 }
 
-.field-text {
+.form-input {
+  width: 80%;
+  margin: 0;
+  top: 0;
+}
+
+.form-input-textarea {
   width: 80%;
   padding: 0.6em;
-  background: var(--gray);
-  border: 1px solid var(--orange);
+  background: var(--black);
+  border: 1px solid var(--green);
   border-radius: 0.5em;
 }
 
-.field-select {
+.form-input-select {
   width: 36%;
   padding: 0.6em;
-  background: var(--gray);
-  border: 1px solid var(--orange);
+  background: var(--black);
+  border: 1px solid var(--green);
   border-radius: 0.5em;
 }
 
@@ -52,29 +60,26 @@
   margin: 0;
   position: relative;
   font-family: Montserrat-Bold;
-  margin: 6vh 0em;
+  margin: 1.5em 0em;
   text-align: center;
 }
 
 .form-text {
-  font-family: Montserrat-SemiBold;
+  font-family: Montserrat-Regular;
   width: 20%;
 }
-
+/*
 .form-button {
   background: var(--green);
   border: none;
   border-radius: 0.3em;
   padding: 2.5vh 1vw;
-}
+}*/
 
 .footer-section {
   top: 94vh;
 }
 
-@media (max-width: 800px) {
-  
-}
 .title-box{
   display: inline-block;
   width: 100%;
@@ -82,4 +87,50 @@
 
 .form-submit{
   top: 0;
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 90%;
+    height: 78vh;
+    top: 9vh;
+    max-height: 650px;
+  }
+
+  .form-container-grid {
+    display: grid;
+  }
+
+  .form-input {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .form-input-textarea {
+    width: 95%;
+    margin-top: 1em;
+  }
+
+  .form-input-select {
+    width: 60%;
+    margin-top: 1em;
+  }
+
+  .form-input-file {
+    margin-top: 1em;
+  }
+
+  .form-submit {
+    margin-top: 1em;
+    margin-bottom: 3em;
+  }
+
+  .title-box {
+    margin-top: .5em;
+  }
+
+  .footer-section {
+    top: 89vh;
+    height: 11vh;
+  }
 }
