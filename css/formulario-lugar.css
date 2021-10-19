@@ -92,7 +92,9 @@
 @media (max-width: 800px) {
   .box {
     width: 90%;
-    height: auto;
+    height: 78vh;
+    top: 9vh;
+    max-height: 650px;
   }
 
   .form-container-grid {
@@ -125,5 +127,10 @@
 
   .title-box {
     margin-top: .5em;
+  }
+
+  .footer-section {
+    top: 89vh;
+    height: 11vh;
   }
 }
