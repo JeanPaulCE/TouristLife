@@ -18,6 +18,12 @@
   height: 74vh;
 }
 
+.box {
+  width: 80%;
+  height: 74vh;
+  top: 14vh;
+}
+
 .form-container-grid {
   display: inline-flex;
   width: 100%;
@@ -42,6 +48,7 @@
 }
 
 .form-title {
+  position: relative;
   font-family: Montserrat-Bold;
   margin: 6vh 0em;
 }
