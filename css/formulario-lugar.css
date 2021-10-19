@@ -48,10 +48,12 @@
 }
 
 .form-title {
+  display: block;
   margin: 0;
   position: relative;
   font-family: Montserrat-Bold;
   margin: 6vh 0em;
+  text-align: center;
 }
 
 .form-text {
@@ -72,4 +74,12 @@
 
 @media (max-width: 800px) {
   
+}
+.title-box{
+  display: inline-block;
+  width: 100%;
+}
+
+.form-submit{
+  top: 0;
 }
