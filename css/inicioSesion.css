@@ -10,6 +10,19 @@
     max-height: 460px;
 }
 
+@media (max-width: 800px) {
+    .footer-section{
+        top: 86vh;
+        height: 14vh;
+    }
+
+    .footer-elements{
+        margin-bottom: 0;
+    }
+
+
+}
+
 
 
 

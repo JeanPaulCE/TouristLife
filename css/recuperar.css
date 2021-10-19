@@ -16,3 +16,17 @@
     height: 55vh;
     max-height: 400px; 
 }
+
+
+@media (max-width: 800px) {
+    .footer-section{
+        top: 86vh;
+        height: 14vh;
+    }
+
+    .footer-elements{
+        margin-bottom: 0;
+    }
+
+
+}
