@@ -27,14 +27,10 @@
 }
 
 
-.button-a{
-    display: inline-block;
-    position: relative;
-    background: var(--green);
-    font-family: "Montserrat-Medium";
-    font-size: 1.6em;
-    padding: 0.4em 2em;
-    border-radius: 14px;
+.form-submit{
+    width: 12vw;
+    text-align: center;
+    top: 0;
 }
 
 .top10{
