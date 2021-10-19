@@ -7,7 +7,13 @@
     --display-nav:none;
     --backgraund-alpha: rgba(35, 34, 33, 72%);
     --text-gray:#7C7C7C;
+    --black: #0F0F0F;
 }
+
+.text-16 { font-size: 1em; }
+.text-20 { font-size: 1.25em; }
+.text-24 { font-size: 1.5em; }
+.h-13 { height: 13vh; }
 
 *{
     list-style: none;
@@ -21,6 +27,8 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    position: relative;
+    top: 0;
 }
 
 ::-webkit-scrollbar{
@@ -40,40 +48,43 @@ body{
     
     }
 
+    /* centra todo */
 .center{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
 }
-.inner-grip{
+
+/* genera margenes  a los lados*/
+.inner-grid{
     width: 80%;
     margin: auto;
 }
+
 .nav-sec{
     background: var(--backgraund-alpha);
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 1;
+    animation: nav 1s;
 }
 .nav-bar{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     
 }
 .end{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-end;
-    
 }
 
-.nav-bar>div{
-    width: 50%;
+.d-logo{
+    width: 100%;
 }
 .logo{
     display: inline-flex;
@@ -132,10 +143,9 @@ body{
 .footer-section{
     background: var(--backgraund-alpha);
     position: absolute;
-    top: 0;
+    top: 0vh;
     width: 100%;
-    height: 6.5vh;
-
+    height: 6vh;
 }
 .footer-element{
     display: inline-flex;
@@ -151,8 +161,13 @@ body{
 .footer-elements{
     
     width: 100%;
-    font-family: "Montserrat-Medium";;
+    font-family: "Montserrat-Medium";
+    font-size: 2vh;
 }
+
+
+
+
 
 .element-1>div{
     display: flex;
@@ -201,12 +216,16 @@ body{
     font-size: 1.5em;
     padding: 1em 1em 0em 13em;
 }
-.element{
+.element,.element2{
     display: inline-flex;
     width: 24vw;
     margin: 2em 2em;
 }
-.element>div{
+
+
+
+
+.element>div,.element2>div{
     display: flex;
     flex-wrap: wrap;
     
@@ -263,5 +282,197 @@ body{
 
 .elements-d{
     display: grid;
-    grid-template-columns: repeat(3,1fr);;
+    grid-template-columns: repeat(3,1fr);
 }
+.filtro{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 76vh;
+    opacity: 40%;
+    background-color: var(--background);
+}
+
+@keyframes nav {
+    0%{
+        top: -10vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav-bar{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .end{
+        display: none;
+    }
+    .d-logo{
+        text-align: center;
+    }
+    .element-1{
+        width: 90%;
+        margin: auto;
+        height: 45vh;
+    }
+    .element-img-1{
+        width: 100%;
+        height: 25vh;
+        border-radius: 40px 40px 0px 0px;
+    }
+    .element-1>div{
+        width: 100%;
+        
+    }
+    .element-title-1{
+        padding: 1em 0em 0em 4vw;
+        font-size: 6vw;
+    }
+    .element-p-1{
+        padding: 1em 0em 0em 4vw;
+    }
+    .element-data-1{
+        width: 100%;
+    }
+    .element-a-1{
+        width: 90%;
+        margin: auto;
+        padding: 0.8em 0 0.8em 0;
+        text-align: end;
+
+    }
+    .elements-d{
+        grid-template-columns: repeat(1,1fr);
+        width: 90%;
+        margin: auto;
+    }
+    .element{
+        margin: 2em 0em 2em 0em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content:center;
+        width: 100%;
+        height: 28vh;
+    }
+    .element2{
+        margin: 2em 0em 2em 0em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content:center;
+        width: 100%;
+        height: 28vh;
+    }
+    .element>div,.element2>div{
+        width: 80vw;
+        
+    }
+    .element-img{
+        width: 100%;
+        height: 14vh;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .element-title{
+        font-size: 6vw;
+        padding: 0.5em 0em 0em 1vw;
+    }
+    .element-a{
+        margin: 0;
+    }
+    .footer-elements{
+        padding: 0;
+    }
+    .footer-element{
+        text-align: center;
+    }
+
+    .filtro{
+        height: 85vh;
+    }
+}
+
+
+
+/*cuadros genericos // Juan Luis*/
+
+
+.background{
+    width: 100%;
+    padding-bottom: 40vh;
+    height: 60vh;
+}
+
+.footer-section{
+    position: absolute;
+    top: 94vh;
+}
+
+.form-label{
+    position: relative;
+    display: block;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 25px;
+    top: 40px;
+    text-align: center;
+}
+
+.form-input{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+    color: var(--white);
+    background: var(--black);
+    width: 16em;
+    height: 3em;
+    border-radius: .5em;
+    top: 5em;
+    outline: .1px solid var(--green);
+    border: none;
+}
+
+/* botones en general*/
+.form-submit{
+    display: block;
+    position: relative;
+    border: none;
+    background:var(--green);
+    color: #fff;
+    padding: 1em;
+    border-radius: .5em;
+    width: 12em;
+    top: 5em;
+    margin: auto;
+    cursor: pointer;
+    font-family: 'Montserrat-Regular'  ;
+}
+
+.form-submit:hover{
+    background: var(--orange);
+}
+
+
+.links{
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 5em;
+    margin-bottom: 1em;
+}
+
+
+.box{
+    box-shadow: 0px 0px 60px 0px black;
+    margin: auto;
+    border-radius: 1em;
+    position: relative;
+    top: 23vh;
+    width: 25%;
+    background: var(--background);
+}
+
+/*/Juan Luis/*/

@@ -1,23 +1,29 @@
 
-.background-login{
-    background: url(../imgs/city.jpg)no-repeat;
+
+
+.background-register{
+    background: url(../imgs/bosque.jpg)no-repeat;
     background-size: cover;
 }
 
 
 .box{
-    height: 60vh;
-    max-height: 460px;
+    position: relative;
+    height: 70vh;
+    top: 16vh;
+    max-height: 500px; 
 }
 
 .footer-section{
-    top: 93vh;
-    height: 7vh;
+    position: absolute;
+    top: 92vh;
+    height: 8vh;
 }
 
 .footer-elements{
     margin-bottom: 0;
 }
+
 
 @media (max-width: 800px) {
     .footer-section{
@@ -36,11 +42,3 @@
 
 
 }
-
-
-
-
-
-
-
-

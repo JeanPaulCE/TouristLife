@@ -1,73 +1,136 @@
-.fondo {
-    width: 100%;
-    height: 100vh;
-    background: url(../imgs/fondo-formulario-lugar.jpg) no-repeat;
-    background-size: cover;
+.background {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  background: url(../imgs/fondo-formulario-lugar.jpg) no-repeat;
+  background-size: cover;
 }
 
-.contenedor-formulario {
-    background: var(--background);
-    border-radius: 3em;
-    box-shadow: 0px 0px 60px 0px black;
-    margin-top: 8em;
-    margin-bottom: 4em;
+/*
+.form-container {
+  display: block;
+  position: relative;
+  background: var(--background);
+  border-radius: 3em;
+  box-shadow: 0px 0px 60px 0px black;
+  margin-top: 15vh;
+  margin-bottom: 0em;
+  height: 74vh;
+}
+*/
+
+.box {
+  width: 80%;
+  height: 74vh;
+  top: 14vh;
 }
 
-.cuadricula-interna {
+.form-container-grid {
+  display: inline-flex;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1.5em;
+}
+
+.form-input {
+  width: 80%;
+  margin: 0;
+  top: 0;
+}
+
+.form-input-textarea {
+  width: 80%;
+  padding: 0.6em;
+  background: var(--black);
+  border: 1px solid var(--green);
+  border-radius: 0.5em;
+}
+
+.form-input-select {
+  width: 36%;
+  padding: 0.6em;
+  background: var(--black);
+  border: 1px solid var(--green);
+  border-radius: 0.5em;
+}
+
+.form-title {
+  display: block;
+  margin: 0;
+  position: relative;
+  font-family: Montserrat-Bold;
+  margin: 1.5em 0em;
+  text-align: center;
+}
+
+.form-text {
+  font-family: Montserrat-Regular;
+  width: 20%;
+}
+/*
+.form-button {
+  background: var(--green);
+  border: none;
+  border-radius: 0.3em;
+  padding: 2.5vh 1vw;
+}*/
+
+.footer-section {
+  top: 94vh;
+}
+
+.title-box{
+  display: inline-block;
+  width: 100%;
+}
+
+.form-submit{
+  top: 0;
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 90%;
+    height: 78vh;
+    top: 9vh;
+    max-height: 650px;
+  }
+
+  .form-container-grid {
     display: grid;
-    width: 80%;
-    margin: auto;
-}
+  }
 
-.cuadricula-contenedor-formulario {
-    display: inline-flex;
+  .form-input {
     width: 100%;
-    margin: auto;
-    margin-bottom: 1.5em;
-}
+    margin-top: 1em;
+  }
 
-.campo-formulario {
-    width: 80%;
-    padding: .6em;
-    background: var(--gray);
-    border: 1px solid var(--orange);
-    border-radius: .5em;
-}
+  .form-input-textarea {
+    width: 95%;
+    margin-top: 1em;
+  }
 
-.campo-desplegable {
-    width: 36%;
-    padding: .6em;
-    background: var(--gray);
-    border: 1px solid var(--orange);
-    border-radius: .5em;
-}
+  .form-input-select {
+    width: 60%;
+    margin-top: 1em;
+  }
 
-.titulo-formulario {
-    text-align: center;
-    font-family: Montserrat-Bold;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
+  .form-input-file {
+    margin-top: 1em;
+  }
 
-.texto-formulario {
-    font-family: Montserrat-SemiBold;
-    width: 20%;
-}
+  .form-submit {
+    margin-top: 1em;
+    margin-bottom: 3em;
+  }
 
-.boton-formulario {
-    background: var(--green);
-    border: none;
-    border-radius: .3em;
-    padding: 1em .5em;
-    margin: 0 auto .8em auto;
-}
+  .title-box {
+    margin-top: .5em;
+  }
 
-.footer-section{
-    position: absolute;
-    top: 95vh;
-    height: 5vh;
-    background: var(--backgraund-alpha);
+  .footer-section {
+    top: 89vh;
+    height: 11vh;
+  }
 }
-
-.texto-20 { font-size: 1.25em; }
-.texto-24 { font-size: 1.5em; }

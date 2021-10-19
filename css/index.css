@@ -4,12 +4,13 @@
 }
 
 .top-section{
+    position: relative;
     margin: 0;
     padding: 0;
     height: 76vh;
     background: url("../imgs/main-back.jpg") no-repeat;
     background-size: 100%;
-
+    animation: back 1s;
 }
 
 .ts-text{
@@ -26,18 +27,52 @@
 }
 
 
-.button-a{
-    display: inline-block;
-    position: relative;
-    background: var(--green);
-    font-family: "Montserrat-Medium";
-    font-size: 1.6em;
-    padding: 0.4em 2em;
-    border-radius: 14px;
+.form-submit{
+    width: 12vw;
+    text-align: center;
+    top: 0;
 }
 
 .top10{
     font-family: "Montserrat-SemiBold";
     font-size: 2vw;
     padding: 1.5em;
+}
+.body{
+    position: relative;
+    animation: body 1.5s ;
+}
+@keyframes back {
+    0%{
+        top: -100vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
+@keyframes body {
+    0%{
+        top: 100vh;
+    }
+
+    100%{
+        top: 0vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .top-section{
+        height: 85vh;
+        background: url("../imgs/main-back-movil.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+    .title{
+        font-size: 7vw;
+        text-align: center;
+    }
+    .top10{
+        font-size: 7vw;
+    }
+    
 }
