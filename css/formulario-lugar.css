@@ -69,7 +69,11 @@
 }
 
 .footer-section {
-  top:94vh;
+  top: 94vh;
+}
+
+@media (max-width: 800px) {
+  
 }
 .title-box{
   display: inline-block;
