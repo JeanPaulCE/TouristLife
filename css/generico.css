@@ -446,7 +446,7 @@ body{
     top: 5em;
     margin: auto;
     cursor: pointer;
-    font-family: 'Montserrat-Regular';
+    font-family: 'Montserrat-SemiBold'  ;
 }
 
 .form-submit:hover{
