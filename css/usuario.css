@@ -1,0 +1,45 @@
+.fondo{
+    width: 100%;
+    background: url(/imgs/fondo_Usuario.jpg)no-repeat;
+    background-size: cover;
+    padding-bottom: 40vh;
+}
+
+.banner{
+    position: relative;
+    width: 75%;
+    height: 75%;
+    box-shadow: 0px 0px 60px 0px black;
+    background: rgba(35, 34, 33, 100%);
+    border-radius: 1em;
+    margin: auto;
+    top: 10em;
+    height: 40em;
+}
+
+.profile{
+    background: #383838;
+    border-radius: 1em 1em 0em 0em;
+}
+
+.img-profile{
+    display: relative;
+    margin: 2em;
+    width: 30%;
+    height: 70%;
+    
+}
+
+.inner-col{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2em
+}
+
+.name{
+    margin: 2em;
+}
+
+.mail{
+    margin: 2em;
+}
