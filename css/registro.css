@@ -12,15 +12,29 @@
     max-height: 500px; 
 }
 
+.footer-section{
+    top: 93vh;
+    height: 7vh;
+}
+
+.footer-elements{
+    margin-bottom: 0;
+}
+
 
 @media (max-width: 800px) {
     .footer-section{
-        top: 86vh;
-        height: 14vh;
+        top: 89vh;
+        height: 11vh;
     }
 
     .footer-elements{
         margin-bottom: 0;
+    }
+
+    .box{
+        width: 70%;
+        top: 17vh;
     }
 
 
