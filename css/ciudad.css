@@ -5,7 +5,21 @@
     padding: 0;
     height: 76vh;
     background: url("../imgs/ciudad.jpg") no-repeat;
-    background-size: 100%;
-    background-position: 0em 0em ;
+    background-size: 100% 180%;
+    background-position: 0em -6em ;
 
+}
+.title{
+        color:var(--orange);
+}
+
+@media (max-width: 800px) {
+    .title{
+        font-size: 4vh;
+    }
+    .top-section{
+        background: url("../imgs/ciudad-movil.jpg") no-repeat;
+        background-size: 115% 90%;
+    }
+    
 }
