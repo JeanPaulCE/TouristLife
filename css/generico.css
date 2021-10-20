@@ -1,6 +1,7 @@
 :root{
     --background: #232221;
     --orange: #F3881F;
+    --orange-b:#d4781c;
     --green: #006600;
     --white:#F2F2F2;
     --gray: #2D2C2B;
@@ -119,6 +120,11 @@ body{
     border-radius: 6px;
 }
 
+.cluster>li:hover{
+    background-color: var(--orange-b);
+    border-radius: 6px;
+}
+
 .nav-item-cluster{
     position: relative;
     --display-nav:none;
@@ -139,7 +145,7 @@ body{
 .cluster>li{
     width: 100%;
     text-align: center;
-    margin: 0.5em 0em;
+    padding: 0.5em 0em;
   
     
 }
