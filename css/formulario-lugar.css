@@ -77,9 +77,15 @@
 }*/
 
 .footer-section {
-  top: 94vh;
+  top: 93.5vh;
+  height: 6.5vh;
 }
-
+.footer-elements{
+  margin-top: 1vh;
+}
+.footer-element{
+  font-size: 1.7vh;
+}
 .title-box{
   display: inline-block;
   width: 100%;
