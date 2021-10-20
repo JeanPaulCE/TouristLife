@@ -316,9 +316,14 @@ body{
         grid-template-columns: repeat(2,1fr);
         
     }
+    .nav-item-cluster:hover>ul{
+        display: none;
+        border-radius: 6px;
+    }
     .end{
         display: none;
         position: relative;
+        grid-column-start:1;
         grid-column-end: 2;
         width: 200%;
         
