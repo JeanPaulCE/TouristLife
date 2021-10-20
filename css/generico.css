@@ -107,38 +107,40 @@ body{
 .nav-item,.nav-item-cluster
 {
     display: inline-flex;
+   
+    padding: 0em 0.8em;
     
-    margin: 0em 0.8em;
     font-family: Montserrat-Regular;
 }
 
 .nav-item:hover,.nav-item-cluster:hover
 {
     background-color: var(--orange);
-
+    border-radius: 6px;
 }
 
 .nav-item-cluster{
     position: relative;
     --display-nav:none;
 }
-.nav-item-cluster:hover{
-    /* top:3.8em; */
-    --display-nav:block;
+.nav-item-cluster:hover>ul{
+    display: block;
+    border-radius: 6px;
 }
 .nav-item-cluster>ul{
-    display: var(--display-nav);
+    display: none;
     position: absolute;
-    padding-top: 0.2em;
     padding-inline-start: 0px;
     background-color: var(--orange); 
     margin: 0px;
     left: 0em;
     width: 100%;
 }
-.nav-item-cluster>ul>li{
-    padding: 0.2em 1.1em;
-    
+.cluster>li{
+    width: 100%;
+    text-align: center;
+    margin: 0.5em 0em;
+  
     
 }
 .footer-section{
