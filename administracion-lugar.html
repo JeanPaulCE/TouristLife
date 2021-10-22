@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css">
+
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
-    <link rel="stylesheet" href="./css/usuario.css">
-    <title>TouristLife</title>
-</head>
+    <link rel="stylesheet" href="./css/administracion.css">
 
-<body class="background background-usuario">
+
+
+    <title>administracion-lugar</title>
+</head>
+<body class="background background-admin">
     <header>
         <section class="nav-sec ">
             <nav class="nav-bar inner-grid">
-                <div class="d-logo">
+                <div>
                     <a href="./index.html" class="logo">Tourist<span>Life</span></a>
                 </div>
-                <div>
-
-                    <label for="menu" class="bars">
-                        <img src="./imgs/svg/bars.svg" alt="menu bar">
-                    </label>
-                </div>
-                <input id="menu" type="checkbox">
                 <div class="end">
+
                     <ul class="nav-items">
                         <li class="nav-item"><a href="./index.html">inicio</a></li>
                         <li class="nav-item-cluster">
-                            <a href="./galeria.html">categoria</a>
+                            categoria
                             <ul class="cluster">
                                 <li><a href="./galeria.html">categoria</a></li>
                                 <li><a href="./playa.html">Playa</a></li>
@@ -50,20 +47,19 @@
 
     <section>
 
+        <h2 class="title">Sistema de Administración</h2>
+
+        <section class="center">
+
+        <div class="menu ">
+            <a class="tab-two left" href="./administracion-personas.html">Personas Registradas</a>
+            <a class="tab right" href="./administracion-lugar.html">Lugares Pendientes</a>
+        </div>
+
+        </section>
+
         <section class="banner">
 
-            <section class="profile inner-col inner-profile">
-                <div class="inline">
-                    <img img class="img-profile" src="./imgs/profile.png" alt="profile">
-                    <div>
-                        <h4 class="text-name">Nombre Usuario</h4>
-                        <p class="text-mail">example@gmail.com</p>
-                    </div>
-                </div>
-                <div>
-                    <a class="btn" href="./formulario-lugar.html">Nueva Publicación</a>
-                </div>
-            </section>
 
             <section>
 
@@ -143,6 +139,7 @@
             </section>
 
         </section>
+
     </section>
 
     <!--     FOOTER COMPONENT -->
@@ -161,7 +158,5 @@
         </footer>
     </section>
 
-
 </body>
-
 </html>

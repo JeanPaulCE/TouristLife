@@ -2,6 +2,8 @@
     background: url(/imgs/fondo_Usuario.jpg)no-repeat;
     background-size: cover;
     height:auto;
+    display: block;
+    position: absolute;
 }
 
 .banner{
@@ -13,6 +15,7 @@
     border-radius: 1em;
     margin: auto;
     top: 10em;
+    padding-bottom: 2em;
 }
 
 .inline{
@@ -28,10 +31,9 @@
 }
 
 .mas{
-    top: 0;
     display: block;
     text-align: end;
-    margin-top: 3em;
+    margin-bottom: 1em;
     margin-right: 1em;
 }
 
@@ -52,12 +54,11 @@
     display: grid;
     grid-auto-flow:column;
     gap: 2em;
+    align-items: center;
 }
 
 .inner-profile{
-    margin: 4em 0 4em ;
-    align-items: center;
-    
+    margin: 4em 0 4em ;  
 }
 
 .text-name{
@@ -84,8 +85,7 @@
     width: 10em;
     left: 5em;
     margin: auto;
-    cursor: pointer;
-    font-family: 'Montserrat-Regular'  ;
+    font-family: 'Montserrat-Regular';
 }
 
 .site-background{
@@ -100,9 +100,10 @@
 .site-img{
     background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
     background-size: 100% 100%;
-    width: 60%;
-    height: 13em;
+    width: 50%;
+    height: 10em;
     margin-right: 1em;
     border-radius: .5em 0em 0em .5em;
 }
+
 

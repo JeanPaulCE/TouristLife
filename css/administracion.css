@@ -1,0 +1,153 @@
+.background-admin{
+    background: url(/imgs/fondo_Usuario.jpg)no-repeat;
+    background-size: cover;
+    height:auto;
+    position: absolute;
+}
+
+.banner{
+    position:relative;
+    width: 75%;
+    height: auto;
+    background: rgba(35, 34, 33, 100%);
+    border-radius: 0em 0em 1em 1em;
+    margin: auto;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    top:15em;
+}
+
+.inner-col{
+    display: grid;
+    grid-auto-flow:column;
+    gap: 2em;
+    align-items: center;
+}
+
+.menu{
+    gap: 1em;
+    margin: auto;
+}
+
+.title{
+    background: rgba(35, 34, 33, 100%);
+    border-radius: 1em;
+    top: 4em;
+    position: relative;
+    width: 72%;
+    height: auto;
+    margin:auto;
+
+    font-family: "Montserrat-Medium";
+    font-size: 2em;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.left{
+    border-radius: 1em 0em 0em 0em;
+}
+
+.right{
+    border-radius: 0em 1em 0em 0em;
+}
+
+.tab{
+    background: rgba(35, 34, 33, 100%);
+    top: 11em;
+    position: relative;
+    width: 75%;
+    height: auto;
+    margin:0em;
+    
+    padding: 1.5em;
+    color: var(--orange);
+    font-family: "Montserrat-Medium";
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration-line: underline;
+    padding-inline: 13.03em;
+    margin:-.1em;
+}
+
+.tab-two{
+    background: rgba(35, 34, 33, 70%);
+    top: 11em;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1.5em;
+    color: var(--white);
+    font-family: "Montserrat-Medium";
+    font-size: 1.2em;
+    text-align: center;
+    margin:-.1em;
+    padding-inline: 13.03em;
+}
+
+.site-background{
+    border-radius: .5em;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    background-color: var(--white);
+    margin-bottom: 2em;
+}
+
+.site-img{
+    background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 10em;
+    margin-right: 1em;
+    border-radius: .5em 0em 0em .5em;
+}
+
+.mas{
+    display: block;
+    text-align: end;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.profile-background{
+    border-radius: .5em;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(61, 61, 61);
+    margin-bottom: 2em;
+}
+
+.profile-img{
+    background: url(../imgs/profile.png) no-repeat;
+    background-size: 100% 100%;
+    width: 10em;
+    height: 10em;
+    margin-right: 1em;
+}
+
+.view{
+    display: block;
+    color: var(--white);
+    text-align: end;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.profile-title{
+    color: var(--orange);
+    font-family: "Montserrat-Medium";
+    font-size: 1.5vw;
+    margin: 0;
+    padding-left: .5em;
+}
+.profile-p{
+    color: var(--white);
+    font-family: "Montserrat-Light";
+    font-size: 1em;
+    padding-left: 1em;
+    margin: 0;
+}
