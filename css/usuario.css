@@ -2,8 +2,6 @@
     background: url(/imgs/fondo_Usuario.jpg)no-repeat;
     background-size: cover;
     height:auto;
-    display: block;
-    position: absolute;
 }
 
 .banner{
