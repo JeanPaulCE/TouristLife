@@ -13,6 +13,7 @@ body {
     display: inline-flex;
     grid-auto-flow: row;
 }
+
 .container-img{
     width: 200%;
 }
@@ -53,12 +54,6 @@ body {
 .detail-bottom {
     font-family: Montserrat-SemiBold;
     margin: 1.5em 0em 2em 2.5em;
-}
-
-.line {
-    border-bottom: 4px solid var(--gray);
-    width: 120vh;
-    margin: auto 0em auto 2.5em;
 }
 
 .link {
