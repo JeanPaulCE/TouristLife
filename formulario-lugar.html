@@ -18,15 +18,21 @@
     <header>
         <section class="nav-sec ">
             <nav class="nav-bar inner-grid">
-                <div>
+                <div class="d-logo">
                     <a href="./index.html" class="logo">Tourist<span>Life</span></a>
                 </div>
-                <div class="end">
+                <div>
 
+                    <label for="menu" class="bars">
+                        <img src="./imgs/svg/bars.svg" alt="menu bar">
+                    </label>
+                </div>
+                <input id="menu" type="checkbox">
+                <div class="end">
                     <ul class="nav-items">
                         <li class="nav-item"><a href="./index.html">inicio</a></li>
                         <li class="nav-item-cluster">
-                            categoria
+                            <a href="./galeria.html">categoria</a>
                             <ul class="cluster">
                                 <li><a href="./galeria.html">categoria</a></li>
                                 <li><a href="./playa.html">Playa</a></li>
@@ -41,65 +47,66 @@
             </nav>
         </section>
     </header>
-    <section class="main">
-        
-        
-            <section class="background">
-                    <div class="box inner-grid">
-                        <div class="inner-grid">
-                            <div class="title-box">
-                                <h3 class="form-title text-20">Registrar lugar</h3>
-                            </div>
-                            <form action="" method="">
-                                <div class="form-container-grid">
-                                    <label class="form-text text-16" for="titulo">Título</label>
-                                    <input id="titulo" class="form-input" type="text" name="titulo">
-                                </div>
-                                <div class="form-container-grid">
-                                    <label for="descripcion" class="form-text text-16">Descripción</label>
-                                    <textarea class="form-input-textarea h-13" name="descripcion" id="descripcion" cols="30"
-                                        rows="8"></textarea>
-                                </div>
-                                <div class="form-container-grid">
-                                    <label class="form-text text-16" for="categoria">Categoría</label>
-                                    <select class="form-input-select" name="categoria" id="categoria">
-                                        <option value="sj">Ninguno</option>
-                                        <option value="pun">Playa</option>
-                                        <option value="her">Montaña</option>
-                                        <option value="her">Ciudad</option>
-                                    </select>
-                                </div>
-                                <div class="form-container-grid">
-                                        <label for="archivo" class="form-text text-16">Archivo</label>
-                                        <input class="form-input-file" id="archivo" type="file" name="archivo">
-                                </div>
-                                <div class="form-container-grid center">
-                                    <input class="form-submit" type="submit" value="Enviar">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                
-            </section>
 
-            <section class="footer-section">
-                <footer class="footer inner-grid">
-                    <ul class="footer-elements center">
-                        <div>
-                            <div class="center">
-                                <span>
-                                    <li class="footer-element"><i class="fab fa-facebook"></i></li>
-                                    <li class="footer-element"><i class="fab fa-instagram"></i></li>
-                                    <li class="footer-element"><i class="fab fa-twitter"></i></li>
-                                    <li class="footer-element"><i class="fab fa-youtube"></i></li>
-                                </span>
-                            </div>
-                            <li class="footer-element"><a href="">Read the FAQ, the Terms & Conditions and the Privacy
-                                    Policy</a></li>
+
+    <section class="main">
+
+        <section class="background">
+            <div class="box inner-grid">
+                <div class="inner-grid">
+                    <div class="title-box">
+                        <h3 class="form-title text-20">Registrar lugar</h3>
+                    </div>
+                    <form action="" method="">
+                        <div class="form-container-grid">
+                            <label class="form-text text-16" for="titulo">Título</label>
+                            <input id="titulo" class="form-input" type="text" name="titulo">
                         </div>
-                    </ul>
-                </footer>
-            </section>
+                        <div class="form-container-grid">
+                            <label for="descripcion" class="form-text text-16">Descripción</label>
+                            <textarea class="form-input-textarea h-13" name="descripcion" id="descripcion" cols="30"
+                                rows="8"></textarea>
+                        </div>
+                        <div class="form-container-grid">
+                            <label class="form-text text-16" for="categoria">Categoría</label>
+                            <select class="form-input-select" name="categoria" id="categoria">
+                                <option value="sj">Ninguno</option>
+                                <option value="pun">Playa</option>
+                                <option value="her">Montaña</option>
+                                <option value="her">Ciudad</option>
+                            </select>
+                        </div>
+                        <div class="form-container-grid">
+                            <label for="archivo" class="form-text text-16">Archivo</label>
+                            <input class="form-input-file" id="archivo" type="file" name="archivo">
+                        </div>
+                        <div class="form-container-grid center">
+                            <input class="form-submit" type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <footer class="footer inner-grid">
+                <ul class="footer-elements center">
+                    <div>
+                        <div class="center">
+                            <span>
+                                <li class="footer-element"><i class="fab fa-facebook"></i></li>
+                                <li class="footer-element"><i class="fab fa-instagram"></i></li>
+                                <li class="footer-element"><i class="fab fa-twitter"></i></li>
+                                <li class="footer-element"><i class="fab fa-youtube"></i></li>
+                            </span>
+                        </div>
+                        <li class="footer-element"><a href="">Read the FAQ, the Terms & Conditions and the Privacy
+                                Policy</a></li>
+                    </div>
+                </ul>
+            </footer>
+        </section>
+
     </section>
 </body>
 
