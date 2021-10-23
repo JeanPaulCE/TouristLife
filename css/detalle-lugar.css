@@ -3,10 +3,16 @@ body {
     background-color: var(--gray);
 }
 
+/*
 .inner-col {
     display: grid;
-    gap:0.5em;
+    gap: 0.5em;
     grid-template-columns: repeat(3,1fr);
+}
+*/
+
+.elements-d {
+    gap: 0.5em;
 }
 
 .inner-row {
@@ -17,10 +23,10 @@ body {
 .container-img{
     width: 200%;
 }
+
 .inner-image {
     display: block;
     width: 100%;
-    margin: auto;
     border-top-left-radius: 3em;
 }
 
@@ -28,7 +34,6 @@ body {
     grid-column-start: 3;
     display: block;
     padding-right: 1.5em;
-    
 }
 
 .detail-container {
@@ -72,4 +77,10 @@ body {
 .center-vertical {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+#like { display: none; }
+
+#like:checked ~ label i{
+    color: var(--green);
 }
