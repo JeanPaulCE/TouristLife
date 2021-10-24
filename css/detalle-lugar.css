@@ -13,16 +13,12 @@ body {
 }
 
 .elements-d {
+    grid-template-columns: repeat(2, 0fr);
     gap: 0.5em;
 }
 
-.container-img{
-    width: 200%;
-}
-
 .inner-image {
-    display: block;
-    width: 100%;
+    width: 110vh;
     border-top-left-radius: 3em;
 }
 
@@ -43,12 +39,15 @@ body {
 
 .inner-row {
     display: inline-flex;
-
 }
 
 .detail-bottom {
     font-family: Montserrat-Regular;
     margin: 1.5em 0em 2em 2.5em;
+}
+
+.inner-like {
+    display: inline-flex;
 }
 
 #like { display: none; }
@@ -74,7 +73,7 @@ body {
 }
 
 .footer-section {
-    top: 117vh;
+    top: 115vh;
     height: 6.5vh;
 }
 
@@ -88,4 +87,5 @@ body {
         grid-auto-flow: row;
     }
     
+
 }
