@@ -53,6 +53,10 @@ body {
     margin: 1.5em 0em 2em 2.5em;
 }
 
+.detail-bottom:hover {
+    font-family: Montserrat-SemiBold;
+}
+
 #like { display: none; }
 
 #like:checked ~ label i{
