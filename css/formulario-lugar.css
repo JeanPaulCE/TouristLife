@@ -117,7 +117,7 @@
   }
 }
 
-@media(max-width:1000px) and (min-width:700px){
+@media(max-width:1100px) and (min-width:700px){
   .box {
     height: auto;
     margin-top: 22vh;
