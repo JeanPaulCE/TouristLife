@@ -13,6 +13,12 @@
         color:var(--orange);
 }
 
+/*tablet*/
+@media(max-width:1000px) and (min-width:800px){
+
+}
+
+/*movil*/
 @media (max-width: 800px) {
     .title{
         font-size: 4vh;

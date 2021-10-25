@@ -551,3 +551,9 @@ body{
 }
 
 /*/Juan Luis/*/
+
+
+/*tablet*/
+@media(max-width:1000px) and (min-width:800px){
+
+}
