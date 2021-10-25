@@ -9,10 +9,10 @@
 
 .box {
   width: 60%;
-  height: 74vh;
+  height: auto;
   top: 0;
   margin-top: 15vh;
-  margin-bottom: 4vh;
+  margin-bottom: 5vh;
 }
 
 .inner-grid {
@@ -81,7 +81,6 @@
 @media (max-width: 700px) {
   .box {
     width: 90%;
-    height: auto;
     margin-top: 14vh;
     margin-bottom: 6vh;
   }
@@ -125,9 +124,8 @@
 @media(max-width:1100px) and (min-width:700px){
   .box {
     width: 80%;
-    height: auto;
-    margin-top: 22vh;
-    margin-bottom: 18vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
   }
 
   .title-box {
