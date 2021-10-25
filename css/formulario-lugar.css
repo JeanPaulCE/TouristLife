@@ -8,11 +8,15 @@
 }
 
 .box {
-  width: 80%;
-  height: 74vh;
+  width: 60%;
+  height: auto;
   top: 0;
   margin-top: 15vh;
-  margin-bottom: 4vh;
+  margin-bottom: 5vh;
+}
+
+.inner-grid {
+  width: 85%;
 }
 
 .form-container-grid {
@@ -44,7 +48,9 @@
 .form-input {
   width: 80%;
   margin: 0;
+  padding-left: 0.6em;
   top: 0;
+  text-align: left;
 }
 
 .form-input-textarea {
@@ -75,7 +81,6 @@
 @media (max-width: 700px) {
   .box {
     width: 90%;
-    height: auto;
     margin-top: 14vh;
     margin-bottom: 6vh;
   }
@@ -113,10 +118,44 @@
 
   .footer-section {
     height: 11vh;
-    top: auto;
   }
 }
 
-@media(max-width:1000px) and (min-width:700px){
+@media(max-width:1100px) and (min-width:700px){
+  .box {
+    width: 80%;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+  }
 
+  .title-box {
+    margin-top: 1em;
+  }
+
+  .form-container-grid {
+    display: grid;
+  }
+
+  .form-input {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .form-input-textarea {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .form-input-select {
+    width: 60%;
+    margin-top: 1em;
+  }
+
+  .form-input-file {
+    margin-top: 1em;
+  }
+
+  .form-submit {
+    margin-bottom: 2em;
+  }
 }
