@@ -81,7 +81,7 @@ body {
     height: 6.5vh;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .detail-container {
         margin-top: 12vh;
     }
@@ -118,4 +118,8 @@ body {
     .footer-section {
         height: 13vh;
     }
+}
+
+@media(max-width:1000px) and (min-width:700px){
+
 }
