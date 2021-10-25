@@ -79,13 +79,28 @@ body {
 
 @media (max-width: 800px) {
     .elements-d {
-        grid-auto-flow: row;
+        display: block;
+        width: 80%;
+    }
+
+    .inner-image {
+        width: 100%;
+        border-top-left-radius: 0em;
+        margin-top: 2em;
+    }
+
+    .inner-text {
+        margin-bottom: 0;
     }
 
     .inner-row {
         display: grid;
-        grid-auto-flow: row;
+        grid-auto-flow: column;
+        
     }
     
+    .detail-bottom {
+        margin-top: .5em;
+    }
 
 }
