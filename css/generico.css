@@ -291,6 +291,7 @@ body{
 }
 
 
+
 .element-a{
     display: block;
     position: relative;
@@ -464,9 +465,8 @@ body{
     .footer-elements{
         padding: 0;
     }
-    .footer-element{
-        text-align: center;
-    }
+    
+    
 
     .filtro{
         height: 85vh;
@@ -558,5 +558,8 @@ body{
 
 /*tablet*/
 @media(max-width:1000px) and (min-width:700px){
-
+    .footer-element{
+        text-align: center;
+        font-size: 2vw;
+    }
 }
