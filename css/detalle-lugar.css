@@ -122,7 +122,7 @@ body {
 
 @media(max-width:1100px) and (min-width:700px){
     .detail-container {
-        margin-top: 10vh;
+        margin-top: 18vh;
         padding-bottom: 1em;
     }
 
@@ -153,5 +153,14 @@ body {
     
     .detail-bottom {
         margin: 0 0 1.5em 0;
+    }
+
+    .links {
+        margin-top: 2em;
+        margin-bottom: 9vh;
+    }
+
+    .footer-section {
+        height: 8.5vh;
     }
 }
