@@ -64,9 +64,11 @@ body{
     margin: auto;
 }
 
+
+/*top section nav*/
 .nav-sec{
     background: var(--backgraund-alpha);
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -109,9 +111,7 @@ body{
 .nav-item,.nav-item-cluster
 {
     display: inline-flex;
-   
     padding: 0em 0.8em;
-    
     font-family: Montserrat-Regular;
 }
 
@@ -150,6 +150,10 @@ body{
   
     
 }
+
+
+
+/*footer*/
 .footer-section{
     background: var(--backgraund-alpha);
     position: absolute;
@@ -178,6 +182,7 @@ body{
 }
 
 
+/*elementos genericos*/
 .img-arrow{
     margin: 2em;
     width: 100%;
@@ -192,27 +197,35 @@ body{
     margin: auto;
 }
 
-.element-1>div{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.container{
+    display: grid;
+    grid-template-columns: 30vw 1fr 1fr 1fr;
     border-radius: 40px;
     box-shadow: -8px 8px 25px #000;
     background: var(--white);
     font-family: "Montserrat-Medium";
     font-size: 2vh;
+    height: 36vh;
 }
-.element-data-1{
+.element-data-2{
+    grid-column-start: 4;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-content: flex-end;
+}
+.element-data-1{
+    grid-column-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 200%;
 }
 .element-img-1{
     display: flex;
     background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
     background-size: 100% 100%;
-    width: 26vw;
-    height: 35vh;
+    
     border-radius: 40px 0px 0px 40px;
 }
 .element-title-1{
@@ -234,12 +247,16 @@ body{
    font-size: 0.9em;
 }
 .element-a-1{
+    position: relative;
     color: var(--green);
     font-family: Montserrat-Italic;
     font-size: 1.5em;
-    padding: 1em 1em 0em 13em;
+    padding: 1em;
+    top: 35%;
+
 }
-.element,.element2{
+
+.element{
     display: inline-flex;
     width: 24vw;
     margin: 2em 2em;
@@ -251,7 +268,7 @@ body{
 }
 
 
-.element>div,.element2>div{
+.element>div{
     display: flex;
     flex-wrap: wrap;
     
@@ -396,32 +413,48 @@ body{
         margin: auto;
         height: 45vh;
     }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
     .element-img-1{
         width: 100%;
-        height: 25vh;
+        height: 16vh;
         border-radius: 40px 40px 0px 0px;
     }
+
     .element-1>div{
         width: 100%;
         
     }
+
     .element-title-1{
         padding: 1em 0em 0em 4vw;
         font-size: 6vw;
     }
+
     .element-p-1{
         padding: 1em 0em 0em 4vw;
+    }
+    .element-data-2{
+        grid-column-start: 3;
+        width: 100%;
     }
     .element-data-1{
         width: 100%;
     }
+
     .element-a-1{
         width: 90%;
         margin: auto;
-        padding: 0.8em 0 0.8em 0;
+        padding: 0 1em 1.5em 0 ;
         text-align: end;
 
     }
+
     .elements-d{
         grid-template-columns: repeat(1,1fr);
         width: 90%;
@@ -437,42 +470,36 @@ body{
         width: 100%;
         height: 28vh;
     }
-    .element2{
-        margin: 2em 0em 2em 0em;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content:center;
-        width: 100%;
-        height: 28vh;
-    }
-    .element>div,.element2>div{
+
+    
+
+    .element>div{
         width: 80vw;
         
     }
+
     .element-img{
         width: 100%;
         height: 14vh;
         border-radius: 20px 20px 0px 0px;
     }
+
     .element-title{
         font-size: 6vw;
         padding: 0.5em 0em 0em 1vw;
     }
+
     .element-a{
         margin: 0;
     }
+
     .footer-elements{
         padding: 0;
     }
-    
-    
 
     .filtro{
         height: 85vh;
     }
-
-  
 
 }
 
@@ -558,15 +585,22 @@ body{
 
 /*tablet*/
 @media(max-width:1100px) and (min-width:700px){
-    
+
     .footer-element{
         text-align: center;
         font-size: 2vw;
         
     }
     .footer-section{
-        height: 9vh!important;
-        top: 91vh!important;
+        height: 9vh;
+        top: 91vh;
     }
-    
+    .container{
+        height: 15vh;
+    }
+    .element-a-1{
+        font-size: 1.2em;
+        padding: 0 0.5em 0 0;
+        top: 38%;
+    }
 }
