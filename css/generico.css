@@ -557,9 +557,16 @@ body{
 
 
 /*tablet*/
-@media(max-width:1000px) and (min-width:700px){
+@media(max-width:1100px) and (min-width:700px){
+    
     .footer-element{
         text-align: center;
         font-size: 2vw;
+        
     }
+    .footer-section{
+        height: 9vh!important;
+        top: 91vh!important;
+    }
+    
 }
