@@ -8,11 +8,15 @@
 }
 
 .box {
-  width: 70%;
+  width: 60%;
   height: 74vh;
   top: 0;
   margin-top: 15vh;
   margin-bottom: 4vh;
+}
+
+.inner-grid {
+  width: 85%;
 }
 
 .form-container-grid {
@@ -115,7 +119,6 @@
 
   .footer-section {
     height: 11vh;
-    top: auto;
   }
 }
 
