@@ -143,4 +143,28 @@ body{/* parche pa cagada de jean */
     border-radius: .5em 0em 0em .5em;
 }
 
+/*@media (max-width: 800px) {
+
+    .banner{
+        width: 75%;
+        top: 17vh;
+        margin-top: 0em;
+    }
+    
+    .site-img{
+        margin-right: 0em;
+        border-radius: .5em;
+    }
+
+    .inner-col {
+        display:inline-flex; 
+        grid-auto-flow:inherit; 
+        align-items: center;
+    }
+
+    .inline{
+        display:;
+    }
+    
+}*/
 
