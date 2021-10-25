@@ -121,5 +121,36 @@ body {
 }
 
 @media(max-width:1100px) and (min-width:700px){
+    .detail-container {
+        margin-top: 11vh;
+    }
 
+    .elements-d {
+        display: block;
+        width: 100%;
+    }
+
+    .inner-image {
+        width: 100%;
+        border-radius: 3em 3em 0 0;
+    }
+
+    .inner-text {
+        width: 80%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inner-row {
+        display: grid;
+        width: 80%;
+        grid-template-columns: auto auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .detail-bottom {
+        margin: 0 0 1.5em 0;
+    }
 }
