@@ -122,7 +122,8 @@ body {
 
 @media(max-width:1100px) and (min-width:700px){
     .detail-container {
-        margin-top: 11vh;
+        margin-top: 10vh;
+        padding-bottom: 1em;
     }
 
     .elements-d {
