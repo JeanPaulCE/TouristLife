@@ -353,6 +353,9 @@ body{
 }
 
 @media (max-width: 700px) {
+    .footer-element{
+        text-align: center;
+    }
     .nav-bar{
         grid-template-columns: repeat(2,1fr);
         
