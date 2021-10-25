@@ -19,7 +19,7 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .footer-section{
         top: 89vh;
         height: 11vh;
@@ -34,6 +34,10 @@
         top: 17vh;
     }
 
+
+}
+
+@media(max-width:1000px) and (min-width:700px){
 
 }
 
