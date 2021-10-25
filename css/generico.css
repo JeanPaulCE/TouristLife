@@ -332,7 +332,7 @@ body{
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .nav-bar{
         grid-template-columns: repeat(2,1fr);
         
@@ -555,6 +555,6 @@ body{
 
 
 /*tablet*/
-@media(max-width:1000px) and (min-width:800px){
+@media(max-width:1000px) and (min-width:700px){
 
 }
