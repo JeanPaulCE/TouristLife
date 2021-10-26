@@ -212,3 +212,40 @@ body{/* parche pa cagada de jean */
     font-size: 1em;
     margin: 0;
 }
+
+@media (max-width: 800px) {
+
+    .banner{
+        width: 80%;
+        margin-top: 0em;
+    }
+
+    .col-title{
+        width: 80%;
+    }
+
+    .title{
+        border-radius: .5em;
+        font-size: 1em;
+        width: 75%;
+        margin-top: 6em;
+    }
+
+    .tab{
+        padding: 1em;
+        font-size: 1em;
+        margin:auto;
+        margin-top: 2em;
+    }
+
+    .tab-two{
+        padding: 1em;
+        font-size: 1em;
+        margin:auto;
+        margin-top: 2em;
+    }
+
+    /*NEW*/
+
+    
+}
