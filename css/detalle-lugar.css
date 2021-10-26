@@ -3,84 +3,164 @@ body {
     background-color: var(--gray);
 }
 
-/*
-.inner-col {
-    display: grid;
-    gap: 0.5em;
-    grid-template-columns: repeat(3,1fr);
-}
-*/
-
-.elements-d {
-    gap: 0.5em;
-}
-
-.inner-row {
-    display: inline-flex;
-    grid-auto-flow: row;
-}
-
-.container-img{
-    width: 200%;
-}
-
-.inner-image {
-    display: block;
-    width: 100%;
-    border-top-left-radius: 3em;
-}
-
-.inner-text {
-    grid-column-start: 3;
-    display: block;
-    padding-right: 1.5em;
-}
+.center-vertical { margin-top: auto; margin-bottom: auto; }
 
 .detail-container {
     background: var(--background);
     border-radius: 3em;
-    margin-top: 12vh;
-    margin-bottom: 0em;
-    height: auto;
+    margin-top: 16vh;
     width: 100%;
 }
 
+.elements-d {
+    grid-template-columns: repeat(2, 0fr);
+    gap: 0.5em;
+}
+
+.inner-image {
+    width: 110vh;
+    border-top-left-radius: 3em;
+}
+
+.inner-text {
+    display: block;
+    grid-column-start: 3;
+    padding-right: 1.5em;
+}
+
 .detail-title {
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-SemiBold;
     margin: 1.5em 0 .5em;
-    padding: 0em;
 }
 
 .detail-description {
     font-family: Montserrat-Light;
-    margin: 0em;
+}
+
+.inner-row {
+    display: inline-flex;
 }
 
 .detail-bottom {
-    font-family: Montserrat-SemiBold;
+    font-family: Montserrat-Regular;
     margin: 1.5em 0em 2em 2.5em;
 }
 
-.link {
-    font-family: Montserrat-SemiBold;
-    margin: .5em 0;
-    color: var(--orange);
+.detail-bottom:hover {
+    font-family: Montserrat-Bold;
 }
 
-.footer-section {
-    position: absolute;
-    background: var(--backgraund-alpha);
-    top: auto;
-    height: auto;
-}
-
-.center-vertical {
-    margin-top: auto;
-    margin-bottom: auto;
+.inner-like {
+    display: inline-flex;
 }
 
 #like { display: none; }
 
-#like:checked ~ label i{
+#like:hover ~ label i {
     color: var(--green);
+}
+
+#like:checked ~ label i {
+    color: var(--green);
+}
+
+.links {
+    font-family: Montserrat-Regular;
+    margin: .5em 0;
+    color: var(--orange);
+    top: 0;
+}
+
+.links:hover {
+    font-family: Montserrat-Bold;
+    color: var(--green);
+}
+
+.footer-section {
+    top: auto;
+    height: 6.5vh;
+}
+
+@media (max-width: 700px) {
+    .detail-container {
+        margin-top: 12vh;
+    }
+
+    .elements-d {
+        display: block;
+        width: 100%;
+    }
+
+    .inner-image {
+        width: 100%;
+        border-radius: 3em 3em 0 0;
+    }
+
+    .inner-text {
+        width: 80%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inner-row {
+        display: grid;
+        width: 80%;
+        grid-template-columns: auto auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .detail-bottom {
+        margin: 0 0 1.5em 0;
+    }
+
+    .footer-section {
+        height: 13vh;
+    }
+}
+
+@media(max-width:1100px) and (min-width:700px){
+    .detail-container {
+        margin-top: 18vh;
+        padding-bottom: 1em;
+    }
+
+    .elements-d {
+        display: block;
+        width: 100%;
+    }
+
+    .inner-image {
+        width: 100%;
+        border-radius: 3em 3em 0 0;
+    }
+
+    .inner-text {
+        width: 80%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inner-row {
+        display: grid;
+        width: 80%;
+        grid-template-columns: auto auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .detail-bottom {
+        margin: 0 0 1.5em 0;
+    }
+
+    .links {
+        margin-top: 2em;
+        margin-bottom: 9vh;
+    }
+
+    .footer-section {
+        height: 8.5vh;
+    }
 }

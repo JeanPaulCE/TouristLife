@@ -25,7 +25,7 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .footer-section{
         top: 89vh;
         height: 11vh;
@@ -40,5 +40,13 @@
         top: 17vh;
     }
 
+
+}
+
+@media(max-width:1100px) and (min-width:700px){
+
+    .box{
+        width: 40%;
+    }
 
 }
