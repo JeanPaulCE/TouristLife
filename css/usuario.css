@@ -142,21 +142,30 @@ body{/* parche pa cagada de jean */
     border-radius: .5em 0em 0em .5em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
     .banner{
         width: 80%;
-        top: 17vh;
-        margin-top: 0em;
+        top: 14vh;
+        margin-top: 6em;
+        position: initial;
+        margin-bottom: 1em;
+    }
+
+    .footer-section{
+        height: 10vh;
     }
 
     .text-name{
         font-size: 1.5em;
+        text-align: center;
+        padding-top: 1.3em;
     }
     
     .text-mail{
         font-size: .8em;
-    }
+        text-align: center;
+        display:block;    }
 
     .img-profile{
         margin: 1em;
@@ -177,22 +186,151 @@ body{/* parche pa cagada de jean */
         display:list-item; 
         grid-auto-flow:row; 
         align-items: center;
+    }
 
-        
+    .inline{
+        align-items: normal;
     }
 
     /*SITE*/
 
     .card{
-        grid-template-columns: repeat(1,1fr);
         position: relative;
         grid-template-columns: 8em 1fr 1fr 1fr;
-        height: 16vh;
+        height: 13vh;
     }
 
     .site-img{
         margin-right: 0em;
-        border-radius: .5em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .element-title{
+        font-size: 5vw;
+
+    }
+
+    .element-p{
+        font-size: 4vw;
+
+    }
+
+    .col-txt{
+        padding-left: 1vw;
+    }
+    
+    .element-a-1{
+        font-size: 1.2em;
+        text-align:center;
+        padding-top: 2em;
+    }
+
+    .img-arrow {
+        margin: 0em;
+        margin: 0em 2em; 
+        width: 3em; 
+        height: 100%;
+    }
+
+}
+
+@media(max-width:1100px) and (min-width:700px){
+    
+    .banner{
+        width: 80%;
+        top: 14vh;
+        margin-top: 6em;
+        position: initial;
+        margin-bottom: 1vh;
+    }
+
+    .text-name{
+        font-size: 3.5vw;
+        text-align: left;
+        padding-top: 0vh;
+    }
+
+    .text-mail{
+        font-size: .8em;
+        text-align: left;
+        display:block;    }
+
+    .img-profile{
+        margin: 1.5em;
+        width: 20vw;
+        height: 12vh;
+    }
+
+    .btn{
+        width: 75%;
+        padding: 1em;
+    }
+
+    .inner-col{
+        gap: 0;
+    }
+
+    .profile{
+        padding-bottom: 0em;
+    }
+
+    .img-arrow {
+        margin: 0em;
+        margin: 0em 2em; 
+        width: 3em; 
+        height: 100%;
+    }
+
+    .footer-section{
+        top: 0;
+    }
+
+    /*SITE*/
+
+    .card{
+        grid-template-columns: 15em 1fr 1fr 1fr;
+        height: 10vh;
+    }
+
+    .site-img{
+        margin-right: 0em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .element-title{
+        font-size: 3vw;
+        padding: 0em;
+
+    }
+
+    .element-p{
+        font-size: 2.5vw;
+        padding: 0em;
+
+    }
+
+    .col-txt{
+        padding-left: 2vw;
+    }
+    
+    .element-a-1{
+        font-size: 3vw;
+        text-align:center;
+        padding-top: 0em;
+        margin-bottom: 2vh;
+        margin-right: 0em;
     }
     
 }

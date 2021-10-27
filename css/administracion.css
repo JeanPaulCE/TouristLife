@@ -213,22 +213,23 @@ body{/* parche pa cagada de jean */
     margin: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
     .banner{
-        width: 80%;
+        width: 85%;
         margin-top: 0em;
     }
 
     .col-title{
-        width: 80%;
+        width: 85%;
     }
 
     .title{
         border-radius: .5em;
-        font-size: 1em;
+        font-size: 1.3em;
         width: 75%;
         margin-top: 6em;
+        padding: 1.2em .9em;
     }
 
     .tab{
@@ -245,7 +246,219 @@ body{/* parche pa cagada de jean */
         margin-top: 2em;
     }
 
-    /*NEW*/
+    .card{
+        position: relative;
+        grid-template-columns: 8em 1fr 1fr 1fr;
+        height: 13vh;
+    }
 
+    .inline{
+        align-items: normal;
+    }
+
+    .img-arrow {
+        margin: 0em;
+        margin: 0em 2em; 
+        width: 3em; 
+        height: 100%;
+    }
+
+    /*Personas*/
     
+    .card{
+        position: relative;
+        grid-template-columns: 2vw 1fr 1fr 1fr;
+        height: 13vh;
+    }
+
+    .col-img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .site-img{
+        margin-right: 0em;
+        border-radius: .5em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-txt{
+        padding-left: 1vw;
+    }
+
+    .element-title{
+        font-size: 5vw;
+    }
+
+    .element-p{
+        font-size: 4vw;
+    }
+    
+    .element-a-1{
+        font-size: 4.5vw;
+        text-align:center;
+        padding-top: 2vh;
+        margin-left: 5vw;
+    }
+
+    .col-mas{
+        grid-column-start: 2;
+        position: absolute;
+        left: 15vw;
+        top: 2vh;
+    }
+
+    /*Lugares*/
+
+    .col-profile{
+        position: relative;
+        grid-template-columns: 8em 1fr 1fr 1fr;
+        height: 13vh;
+    }
+
+    .profile-img{
+        margin-right: 0em;
+        border-radius: .5em;
+        width: 28vw;
+        height: 100%;
+    }
+
+    .profile-title{
+        margin-top: 3vw;
+        font-size: 4.5vw;
+    }
+
+    .profile-p{
+        font-size: 3vw;
+    }
+    
+    .view{
+        font-size: 3.5vw;
+        text-align: right;
+        margin-top: 15vw;
+
+    }
+    
+}
+
+@media(max-width:1100px) and (min-width:700px){
+    
+    .banner{
+        width: 85%;
+        margin-top: 0em;
+    }
+
+    .col-title{
+        width: 85%;
+    }
+
+    .title{
+        border-radius: .5em;
+        font-size: 2.5vw;
+        width: 80%;
+        margin-top: 6em;
+        padding: 1.2em .9em;
+    }
+
+    .tab{
+        padding: 1em;
+        font-size: 2.5vw;
+        margin:auto;
+        margin-top: 2em;
+    }
+
+    .tab-two{
+        padding: 1em;
+        font-size: 2.5vw;
+        margin:auto;
+        margin-top: 2em;
+    }
+
+    .img-arrow {
+        margin: 0em;
+        margin: 0em 2em; 
+        width: 3em; 
+        height: 100%;
+    }
+
+    .footer-section{
+        top: 0;
+    }
+
+    /*SITE*/
+
+    .card{
+        grid-template-columns: 15em 1fr 1fr 1fr;
+        height: 10vh;
+    }
+
+    .site-img{
+        margin-right: 0em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .element-title{
+        font-size: 3vw;
+        padding: 0em;
+
+    }
+
+    .element-p{
+        font-size: 2.5vw;
+        padding: 0em;
+
+    }
+
+    .col-txt{
+        padding-left: 2vw;
+    }
+    
+    .element-a-1{
+        font-size: 3vw;
+        text-align:center;
+        padding-top: 0em;
+        margin-bottom: 2vh;
+        margin-right: 0em;
+    }
+
+    /*personas*/
+
+    .col-profile{
+        position: relative;
+        grid-template-columns: 12em 1fr 1fr 1fr;
+        height: 12vh;
+    }
+
+    .profile-img{
+        margin-right: 0em;
+        border-radius: .5em;
+        width: 19vw;
+        height: 100%;
+    }
+
+    .profile-title{
+        margin-top: 0vw;
+        font-size: 3vw;
+    }
+
+    .profile-p{
+        font-size: 2vw;
+    }
+    
+    .view{
+        font-size: 2.3vw;
+        text-align:center;
+        padding-top: 0em;
+        margin-bottom: 0vh;
+        margin-right: 1em;
+    }
+
+
 }
