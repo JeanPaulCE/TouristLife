@@ -313,7 +313,7 @@ body{/* parche pa cagada de jean */
 
     .col-profile{
         position: relative;
-        grid-template-columns: 8em 1fr 1fr 1fr;
+        grid-template-columns: 30vw 1fr 1fr;
         height: 13vh;
     }
 
@@ -336,7 +336,8 @@ body{/* parche pa cagada de jean */
     .view{
         font-size: 3.5vw;
         text-align: right;
-        margin-top: 15vw;
+        width: 100%;
+        margin-top: 13vw;
 
     }
     
