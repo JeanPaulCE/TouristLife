@@ -135,7 +135,6 @@ body{/* parche pa cagada de jean */
 
 .card{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
     grid-template-columns: 14em 1fr 1fr 1fr;
     height: 15vh;
 }
@@ -246,11 +245,6 @@ body{/* parche pa cagada de jean */
         margin-top: 2em;
     }
 
-    .card{
-        position: relative;
-        grid-template-columns: 8em 1fr 1fr 1fr;
-        height: 13vh;
-    }
 
     .inline{
         align-items: normal;
@@ -267,7 +261,7 @@ body{/* parche pa cagada de jean */
     
     .card{
         position: relative;
-        grid-template-columns: 2vw 1fr 1fr 1fr;
+        grid-template-columns: 28vw 1fr 1fr 1fr;
         height: 13vh;
     }
 
