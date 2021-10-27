@@ -246,6 +246,7 @@ body{/* parche pa cagada de jean */
     }
 
 
+
     .inline{
         align-items: normal;
     }
@@ -261,8 +262,8 @@ body{/* parche pa cagada de jean */
     
     .card{
         position: relative;
-        grid-template-columns: 28vw 1fr 1fr 1fr;
-        height: 13vh;
+        grid-template-columns: 34vw 1fr 1fr 1fr;
+        height: 12vh;
     }
 
     .col-img{
