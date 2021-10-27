@@ -39,7 +39,7 @@
 .body{
     width: 100%;
     position: relative;
-    top: -30vh;
+    
 }
 
 @media(max-width:700px){
@@ -49,8 +49,30 @@
     .ts-text{
         top: 25vh;
     }
+    .top-section{
+        background-size: 100% 100%!important;
+        height: 50vh;
+    }
 }
 @media(max-width:1100px) and (min-width:700px){
+    body{
+        position:absolute;
+        width: 100vw;
+    }
+    .top-section{
+        width: 100vw;
+        height: 50vh!important;
+        position:absolute;
+    }
+    .body{
+        width: 100%;
+        position: relative;
+        margin-top: 34vh;
+        
+    }
+    .footer-section{
+        
+    }
     .ts-text{
         top: 20vh;
     }

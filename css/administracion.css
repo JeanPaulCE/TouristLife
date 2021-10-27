@@ -34,7 +34,8 @@ body{/* parche pa cagada de jean */
     border-radius: 0em 0em 1em 1em;
     margin: auto;
     padding-top: 4em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+    margin-bottom:2em ;
 }
 
 .inner-col{
@@ -213,7 +214,9 @@ body{/* parche pa cagada de jean */
 }
 
 @media (max-width: 700px) {
-
+    .footer-section{
+        height: 8vh;
+    }
     .banner{
         width: 85%;
         margin-top: 0em;
