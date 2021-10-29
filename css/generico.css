@@ -9,6 +9,7 @@
     --backgraund-alpha: rgba(35, 34, 33, 72%);
     --text-gray:#7C7C7C;
     --black: #0F0F0F;
+    --menu2:rgba(0 , 0, 0, 0%);
 }
 
 .text-16 { font-size: 1em; }
@@ -88,6 +89,12 @@ body{
     grid-column-start: 3;
 }
 
+.menu2{
+    display: inline-flex;
+    margin: 0 .3em;
+    font-family: Montserrat-Regular;
+}
+
 .d-logo{
     width: 100%;
 }
@@ -111,7 +118,8 @@ body{
 .nav-item,.nav-item-cluster
 {
     display: inline-flex;
-    padding: 0em 0.8em;
+    padding: .2em 1em;
+    margin: 0 .3em;
     font-family: Montserrat-Regular;
 }
 
@@ -132,6 +140,7 @@ body{
 }
 .nav-item-cluster:hover>ul{
     display: block;
+    
     border-radius: 6px;
 }
 .nav-item-cluster>ul{
@@ -143,12 +152,14 @@ body{
     left: 0em;
     width: 100%;
 }
+.nav-item-cluster>p{
+    margin: 0;
+}
 .cluster>li{
     width: 100%;
     text-align: center;
     padding: 0.5em 0em;
-  
-    
+
 }
 
 
@@ -342,7 +353,7 @@ body{
     display: none;
 }
 .bars { display: none; }
-#menu { display: none; }
+#menu,#menu2 { display: none; }
 .st-1{
     margin: auto;
 }
@@ -356,13 +367,106 @@ body{
     }
 }
 
+
+
+
+
+/*cuadros genericos // Juan Luis*/
+
+
+.background{
+    width: 100%;
+    padding-bottom: 40vh;
+    height: 60vh;
+}
+
+
+
+.form-label{
+    position: relative;
+    display: block;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 25px;
+    top: 40px;
+    text-align: center;
+}
+
+.form-input{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+    color: var(--white);
+    background: var(--black);
+    width: 16em;
+    height: 3em;
+    border-radius: .5em;
+    top: 5em;
+    outline: .1px solid var(--green);
+    border: none;
+}
+
+/* botones en general*/
+.form-submit{
+    display: block;
+    position: relative;
+    border: none;
+    background:var(--green);
+    color: #fff;
+    padding: 1em;
+    border-radius: .5em;
+    width: 12em;
+    top: 5em;
+    margin: auto;
+    cursor: pointer;
+    font-family: 'Montserrat-Regular'  ;
+}
+
+.form-submit:hover{
+    background: var(--orange);
+}
+
+
+.links{
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 5em;
+    margin-bottom: 1em;
+}
+
+
+.box{
+    box-shadow: 0px 0px 60px 0px black;
+    margin: auto;
+    border-radius: 1em;
+    position: relative;
+    top: 23vh;
+    width: 25%;
+    background: var(--background);
+}
+
+/*/Juan Luis/*/
+
+
+
 @media (max-width: 700px) {
     .footer-element{
         text-align: center;
     }
+
+
+    
     .nav-bar{
         grid-template-columns: repeat(2,1fr);
         
+    }
+  
+    .nav-item-cluster{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        padding: 0;
     }
     .nav-item-cluster:hover>ul{
         display: none;
@@ -372,8 +476,8 @@ body{
         display: none;
         position: relative;
         grid-column-start:1;
-        grid-column-end: 2;
-        width: 200%;
+        grid-column-end: 3;
+        width: 100%;
         
     }
     
@@ -386,10 +490,12 @@ body{
         text-align: center;
 
     }
-    .nav-item>a,.nav-item-cluster>a{
+    .nav-item>a,.nav-item-cluster>p{
         width: 100%;
         text-align: center;
-        margin: 3vh 0;
+        padding: 3vh 0;
+        margin: 0;
+        height: auto;
     }
     .nav-item-cluster>ul{
         display: none;
@@ -403,18 +509,28 @@ body{
         position: relative;
         background: var(--rojo);
         padding: .5em .5em .25em;
-        left: 14vh;
+        left: 12vh;
         z-index: 2;
-        margin-top: .6em;
+        margin-top: .8em;
     }
     #menu:checked ~ .end  {
         display: block;
     }
+    #menu2:checked ~ .cluster   {
+        display: block;
+        position: relative;
 
+    }
+    
 
     .d-logo{
         text-align: center;
     }
+
+
+
+
+
     .element-1{
         width: 90%;
         margin: auto;
@@ -510,89 +626,21 @@ body{
 
 }
 
-
-
-/*cuadros genericos // Juan Luis*/
-
-
-.background{
-    width: 100%;
-    padding-bottom: 40vh;
-    height: 60vh;
-}
-
-
-
-.form-label{
-    position: relative;
-    display: block;
-    font-family: 'Montserrat-SemiBold';
-    font-size: 25px;
-    top: 40px;
-    text-align: center;
-}
-
-.form-input{
-    display: block;
-    position: relative;
-    text-align: center;
-    margin-bottom: 2em;
-    color: var(--white);
-    background: var(--black);
-    width: 16em;
-    height: 3em;
-    border-radius: .5em;
-    top: 5em;
-    outline: .1px solid var(--green);
-    border: none;
-}
-
-/* botones en general*/
-.form-submit{
-    display: block;
-    position: relative;
-    border: none;
-    background:var(--green);
-    color: #fff;
-    padding: 1em;
-    border-radius: .5em;
-    width: 12em;
-    top: 5em;
-    margin: auto;
-    cursor: pointer;
-    font-family: 'Montserrat-Regular'  ;
-}
-
-.form-submit:hover{
-    background: var(--orange);
-}
-
-
-.links{
-    position: relative;
-    display: block;
-    text-align: center;
-    top: 5em;
-    margin-bottom: 1em;
-}
-
-
-.box{
-    box-shadow: 0px 0px 60px 0px black;
-    margin: auto;
-    border-radius: 1em;
-    position: relative;
-    top: 23vh;
-    width: 25%;
-    background: var(--background);
-}
-
-/*/Juan Luis/*/
-
-
 /*tablet*/
 @media(max-width:1100px) and (min-width:700px){
-
+    .nav-items{
+        font-size: 2.5vw;
+    }
+    .nav-item-cluster:hover>ul{
+        display: none;
+        border-radius: 6px;
+    }
+     .nav-item-cluster{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+    }
     .footer-element{
         text-align: center;
         font-size: 2vw;
@@ -609,5 +657,18 @@ body{
         font-size: 1.2em;
         padding: 0 0.5em 0 0;
         top: 38%;
+    }
+
+    #menu2:checked ~ .cluster   {
+        display: block;
+        position: relative;
+
+    }
+    .nav-item-cluster>p{
+        width: 100%;
+        text-align: center;
+        
+        margin: 0;
+        height: auto;
     }
 }
