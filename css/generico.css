@@ -115,15 +115,18 @@ body{
     padding: 0;
     
 }
+.nav-item,.menu2{
+    margin: 0 .5em;
+}
 .nav-item,.nav-item-cluster
 {
     display: inline-flex;
     padding: .2em 1em;
-    margin: 0 .3em;
+    
     font-family: Montserrat-Regular;
 }
 
-.nav-item:hover,.nav-item-cluster:hover
+.nav-item:hover,.menu2:hover
 {
     background-color: var(--orange);
     border-radius: 6px;
@@ -138,9 +141,8 @@ body{
     position: relative;
     --display-nav:none;
 }
-.nav-item-cluster:hover>ul{
+.menu2:hover>li>ul{
     display: block;
-    
     border-radius: 6px;
 }
 .nav-item-cluster>ul{
@@ -468,7 +470,7 @@ body{
         flex-flow: column;
         padding: 0;
     }
-    .nav-item-cluster:hover>ul{
+   .menu2:hover>li>ul{
         display: none;
         border-radius: 6px;
     }
@@ -631,7 +633,7 @@ body{
     .nav-items{
         font-size: 2.5vw;
     }
-    .nav-item-cluster:hover>ul{
+    .menu2:hover>li>ul{
         display: none;
         border-radius: 6px;
     }
