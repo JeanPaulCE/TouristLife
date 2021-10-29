@@ -4,3 +4,9 @@
     background: url("../imgs/montaña.jpg") no-repeat;
 
 }
+@media (max-width: 700px) {
+    .top-section{
+        background: url("../imgs/montaña-movil.jpg") no-repeat;
+    }
+    
+}

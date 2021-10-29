@@ -7,3 +7,10 @@
     
 
 }
+
+@media (max-width: 700px) {
+    .top-section{
+        background: url("../imgs/playa-movil.jpg") no-repeat;
+    }
+    
+}
