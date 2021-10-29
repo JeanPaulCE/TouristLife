@@ -99,14 +99,16 @@ body{/* parche pa cagada de jean */
 .text-name{
     display: flex;
     font-size: 2em;
-    font-family: Montserrat-Bold;
+    font-family: "Montserrat";
+    font-weight: 700;
     margin: 0em;
 }
 
 .text-mail{
     display: flex;
     font-size: 1em;
-    font-family: Montserrat-regular;
+    font-family: "Montserrat";
+    font-weight: 400;
 }
 
 .btn{
