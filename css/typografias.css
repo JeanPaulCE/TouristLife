@@ -3,21 +3,8 @@
     src: url('../fonts/Phoresta.ttf') format('truetype');
     font-style: 400;
     font-weight: normal;
-  }
-
-@font-face {
-    font-family: 'Sary-Soft-Light';
-    src: url('../fonts/Sary-Soft-Light.otf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
 }
 
-@font-face {
-    font-family: 'Sary-Soft-SemiBlod';
-    src: url('../fonts/Sary-Soft-SemiBlod.otf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
 
 .t1{
     font-size: 2vh;
