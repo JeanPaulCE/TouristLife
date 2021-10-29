@@ -275,7 +275,9 @@ body{
 .element-a-1{
     position: relative;
     color: var(--green);
-    font-family: Montserrat-Italic;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: italic;
     font-size: 1.5em;
     padding: 1em;
     top: 35%;
@@ -342,7 +344,9 @@ body{
     position: relative;
     text-align: end;
     color: var(--orange);
-    font-family: Montserrat-Italic;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: italic;
     font-size: 1.5em;
     margin: 0em 0.8em;
     padding: 0.8em;
@@ -400,7 +404,8 @@ body{
 .form-label{
     position: relative;
     display: block;
-    font-family: 'Montserrat-SemiBold';
+    font-family: "Montserrat";
+    font-weight: 600;
     font-size: 25px;
     top: 40px;
     text-align: center;
