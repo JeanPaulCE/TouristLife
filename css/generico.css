@@ -136,6 +136,9 @@ font-weight
     background-color: var(--orange);
     border-radius: 6px;
 }
+.menu2:hover{
+    border-radius: 6px 6px 0 0;
+}
 
 .cluster>li:hover{
     background-color: var(--orange-b);
@@ -148,9 +151,8 @@ font-weight
 }
 .menu2:hover>li>ul{
     display: block;
-    border-radius: 6px;
 }
-.nav-item-cluster>ul{
+.cluster{
     display: none;
     position: absolute;
     padding-inline-start: 0px;
@@ -158,6 +160,8 @@ font-weight
     margin: 0px;
     left: 0em;
     width: 100%;
+    margin-top: 3vh;
+    border-radius:  0 0 6px 6px;
 }
 .nav-item-cluster>p{
     margin: 0;
