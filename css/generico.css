@@ -276,7 +276,8 @@ body{
     position: relative;
     color: var(--green);
     font-family: "Montserrat";
-    font-weight: 400 italic;
+    font-weight: 400;
+    font-style: italic;
     font-size: 1.5em;
     padding: 1em;
     top: 35%;
