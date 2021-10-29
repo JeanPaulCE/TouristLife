@@ -212,7 +212,8 @@ body{
 }
 
 .number{
-    font-family: 'Montserrat-Regular';
+    font-family: "Montserrat";
+    font-weight: 400;
     font-size: 1.5em;
     text-align: center;
     margin: auto;

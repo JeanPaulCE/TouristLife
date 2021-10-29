@@ -121,7 +121,8 @@ body{/* parche pa cagada de jean */
     border-radius: .5em;
     width: 10em;
     margin: auto;
-    font-family: 'Montserrat-Regular';
+    font-family:  "Montserrat";
+    font-weight: 400;
     text-align: center;
 }
 
