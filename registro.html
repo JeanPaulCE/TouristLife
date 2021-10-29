@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
-
     <link rel="stylesheet" href="./css/registro.css">
     <title>registrarse</title>
-
 </head>
 
 <body>
@@ -28,7 +32,7 @@
                         <a href="./index.html" class="logo">Tourist<span>Life</span></a>
                     </div>
                     <div>
-                        
+
                         <label for="menu" class="bars">
                             <img src="./imgs/svg/bars.svg" alt="menu bar">
                         </label>
@@ -37,15 +41,20 @@
                     <div class="end">
                         <ul class="nav-items">
                             <li class="nav-item"><a href="./index.html">inicio</a></li>
-                            <li class="nav-item-cluster">
-                               <a href="./galeria.html">categoria</a>
-                                <ul class="cluster">
-                                    <li><a href="./galeria.html">categoria</a></li>
-                                    <li><a href="./playa.html">Playa</a></li>
-                                    <li><a href="./montana.html">Montaña</a></li>
-                                    <li><a href="./ciudad.html">Ciudad</a></li>
-                                </ul>
-                            </li>
+
+                            <label for="menu2" class="menu2">
+
+                                <li class="nav-item-cluster">
+                                    <a href="./galeria.html">categoria</a>
+                                    <input id="menu2" type="checkbox">
+                                    <ul class="cluster">
+
+                                        <li><a href="./playa.html">Playa</a></li>
+                                        <li><a href="./montana.html">Montaña</a></li>
+                                        <li><a href="./ciudad.html">Ciudad</a></li>
+                                    </ul>
+                                </li>
+                            </label>
                             <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
                             <li class="nav-item"><a href="./inicioSesion.html">iniciar sesion</a></li>
                         </ul>
@@ -67,24 +76,23 @@
             </div>
         </section>
 
+        <!--     FOOTER COMPONENT -->
         <section class="footer-section">
             <footer class="footer inner-grid">
                 <ul class="footer-elements center">
-                    <div>
-                        <div class="center">
-                            <span>
-                                <li class="footer-element"><i class="fab fa-facebook"></i></li>
-                                <li class="footer-element"><i class="fab fa-instagram"></i></li>
-                                <li class="footer-element"><i class="fab fa-twitter"></i></li>
-                                <li class="footer-element"><i class="fab fa-youtube"></i></li>
-                            </span>
-                        </div>
-                        <li class="footer-element"><a href="">Read the FAQ, the Terms & Conditions and the Privacy
-                                Policy</a></li>
-                    </div>
+                    <span class="st-1">
+                        <li class="footer-element"><i class="fab fa-facebook"></i></li>
+                        <li class="footer-element"><i class="fab fa-instagram"></i></li>
+                        <li class="footer-element"><i class="fab fa-twitter"></i></li>
+                        <li class="footer-element"><i class="fab fa-youtube"></i></li>
+                    </span>
+                    <li class="footer-element"><a href="">Read the FAQ, the Terms & Conditions and the Privacy
+                            Policy</a></li>
+
                 </ul>
             </footer>
         </section>
+
     </section>
 </body>
 
