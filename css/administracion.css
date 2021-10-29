@@ -208,7 +208,8 @@ body{/* parche pa cagada de jean */
 }
 .profile-p{
     color: var(--white);
-    font-family: "Montserrat-Light";
+    font-family: "Montserrat";
+    font-weight: 300;
     font-size: 1em;
     margin: 0;
 }

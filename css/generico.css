@@ -94,7 +94,6 @@ body{
     margin: 0 .3em;
     font-family: "Montserrat";
     font-weight: 400;
-
 }
 
 .d-logo{
@@ -126,8 +125,7 @@ body{
     padding: .2em 1em;
     
     font-family: "Montserrat";
-font-weight
-: 400;
+    font-weight: 400;
 
 }
 
@@ -192,13 +190,12 @@ font-weight
     color: var(--orange);
 }
 .footer-elements{
-    
     width: 100%;
-    font-family: "Montserrat-Medium";
+    font-family: "Montserrat";
+    font-weight: 500;
     font-size: 2vh;
     padding: 0px;
     margin: 0;
-
 }
 
 
@@ -223,7 +220,8 @@ font-weight
     border-radius: 40px;
     box-shadow: -8px 8px 25px #000;
     background: var(--white);
-    font-family: "Montserrat-Medium";
+    font-family: "Montserrat";
+    font-weight: 500;
     font-size: 2vh;
     height: 36vh;
 }
@@ -250,14 +248,16 @@ font-weight
 }
 .element-title-1{
     color: var(--orange);
-    font-family: "Montserrat-Medium";
+    font-family: "Montserrat";
+    font-weight: 500;
     font-size: 2vw;
     padding: 3em 2em 0em 1vw;
     margin: 0;
 }
 .element-p-1{
     color: var(--text-gray);
-    font-family: "Montserrat-Light";
+    font-family: "Montserrat";
+    font-weight: 300;
     font-size: 1em;
     padding: 0.2em 0em 0em 1vw;
     margin: 0;
@@ -310,14 +310,16 @@ font-weight
 
 .element-title{
     color: var(--green);
-    font-family: "Montserrat-Medium";
+    font-family: "Montserrat";
+    font-weight: 500;
     font-size: 1.5vw;
     padding: 1em 0em 0em 1vw;
     margin: 0;
 }
 .element-p{
     color: var(--text-gray);
-    font-family: "Montserrat-Light";
+    font-family: "Montserrat";
+    font-weight: 300;
     font-size: 1em;
     padding: 0.2em 0em 0em 1vw;
     margin: 0;
