@@ -6,7 +6,7 @@
 .ts-text{
 
     position: relative;
-    top: 16vh;
+    top: 25vh;
 }
 .top10{
     font-family: "Montserrat-SemiBold";
@@ -24,7 +24,12 @@
     font-family: "Montserrat-SemiBold";
     font-size: 3.5vw;
 }
-
+.top-section{
+    width: 100%;
+    height: 74vh;
+    background-size: 100% 150% !important;
+    overflow: hidden;
+}
 .button-b{
     
     background: var(--green);
