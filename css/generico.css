@@ -92,7 +92,9 @@ body{
 .menu2{
     display: inline-flex;
     margin: 0 .3em;
-    font-family: Montserrat-Regular;
+    font-family: "Montserrat";
+    font-weight: 400;
+
 }
 
 .d-logo{
@@ -123,7 +125,10 @@ body{
     display: inline-flex;
     padding: .2em 1em;
     
-    font-family: Montserrat-Regular;
+    font-family: "Montserrat";
+font-weight
+: 400;
+
 }
 
 .nav-item:hover,.menu2:hover
