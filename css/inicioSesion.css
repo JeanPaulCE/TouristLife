@@ -7,7 +7,7 @@
 
 .box{
     height: 60vh;
-    max-height: 460px;
+    min-height: 500px;
 }
 
 .footer-section{
@@ -32,6 +32,7 @@
     .box{
         width: 70%;
         top: 17vh;
+        max-height: 500px; 
     }
 
 
