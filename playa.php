@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
     <link rel="stylesheet" href="./css/categorias.css">
-    <link rel="stylesheet" href="./css/ciudad.css">
+    <link rel="stylesheet" href="./css/playa.css">
     <title>TouristLife</title>
 </head>
 
@@ -50,25 +50,26 @@
                                 <p>categoria</p>
                                 <input id="menu2" type="checkbox">
                                 <ul class="cluster">
-                                    <li><a href="./galeria.html">Galeria</a></li>
-                                    <li><a href="./playa.html">Playa</a></li>
-                                    <li><a href="./montana.html">Montaña</a></li>
-                                    <li><a href="./ciudad.html">Ciudad</a></li>
+                                    <li><a href="/galeria">Galeria</a></li>
+                                    <li><a href="/playa">Playa</a></li>
+                                    <li><a href="/montana">Montaña</a></li>
+                                    <li><a href="/ciudad">Ciudad</a></li>
                                 </ul>
                             </li>
                         </label>
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
-                        <li class="nav-item"><a href="./inicioSesion.html">iniciar sesion</a></li>
+                        <li class="nav-item"><a href="/inicioSesion">iniciar sesion</a></li>
                     </ul>
                 </div>
             </nav>
         </section>
     </header>
 
+
     <section class="top-section">
         <div class="filtro"></div>
         <div class="center ts-text">
-            <h1 class="title center">Ciudad</h1>
+            <h1 class="title center">Playa</h1>
 
         </div>
 
@@ -84,7 +85,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -97,7 +98,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -110,7 +111,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -123,7 +124,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -135,7 +136,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -147,7 +148,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -159,7 +160,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -171,7 +172,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -184,7 +185,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -196,7 +197,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -208,7 +209,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -220,7 +221,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.html">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>

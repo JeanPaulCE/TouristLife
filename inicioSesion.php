@@ -16,8 +16,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
     <link rel="stylesheet" href="./css/inicioSesion.css">
@@ -47,12 +49,12 @@
                             <label for="menu2" class="menu2">
 
                                 <li class="nav-item-cluster">
-                                    <a href="./galeria.html">categoria</a>
+                                    <a href="/galeria">categoria</a>
                                     <input id="menu2" type="checkbox">
                                     <ul class="cluster">
 
-                                        <li><a href="./playa.html">Playa</a></li>
-                                        <li><a href="./montana.html">Montaña</a></li>
+                                        <li><a href="/playa">Playa</a></li>
+                                        <li><a href="/montana">Montaña</a></li>
                                         <li><a href="./ciudad.html">Ciudad</a></li>
                                     </ul>
                                 </li>
@@ -66,15 +68,15 @@
         </header>
         <section class="background background-login">
             <div class="box">
-                <form class="center" action="./administracion-lugar.html" method="get">
+                <form class="center" action="/administracion-lugar" method="get">
                     <h3 class=" form-label">Iniciar Sesión</h3>
                     <input class="form-input form-input-inicio" type="email" name="email"
                         placeholder="correo electronico">
                     <input class="form-input form-input-inicio" type="password" name="password"
                         placeholder="contraseña">
                     <input class="form-submit" type="submit" value="Iniciar sesión">
-                    <a class="links" href="./recuperar.html">¿Has olvidado tu contraseña?</a>
-                    <a class=" links" href="./registro.html">Registrarse</a>
+                    <a class="links" href="/recuperar">¿Has olvidado tu contraseña?</a>
+                    <a class=" links" href="/registro">Registrarse</a>
                 </form>
 
 

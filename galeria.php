@@ -49,15 +49,15 @@
                                 <p>categoria</p>
                                 <input id="menu2" type="checkbox">
                                 <ul class="cluster">
-                                    <li><a href="./galeria.html">Galeria</a></li>
-                                    <li><a href="./playa.html">Playa</a></li>
-                                    <li><a href="./montana.html">Montaña</a></li>
-                                    <li><a href="./ciudad.html">Ciudad</a></li>
+                                    <li><a href="/galeria">Galeria</a></li>
+                                    <li><a href="/playa">Playa</a></li>
+                                    <li><a href="/montana">Montaña</a></li>
+                                    <li><a href="/ciudad">Ciudad</a></li>
                                 </ul>
                             </li>
                         </label>
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
-                        <li class="nav-item"><a href="./inicioSesion.html">iniciar sesion</a></li>
+                        <li class="nav-item"><a href="/inicioSesion">iniciar sesion</a></li>
                     </ul>
                 </div>
             </nav>
@@ -71,18 +71,18 @@
             <div class="buttons">
                 <div>
                     <div class="center">
-                        <a class="button-b " href="./montana.html">Montaña </a>
+                        <a class="button-b " href="/montana">Montaña </a>
                     </div>
                 </div>
                 <div>
                     <div class="center">
-                        <a class="button-b" href="./ciudad.html">Ciudad</a>
+                        <a class="button-b" href="/ciudad">Ciudad</a>
                     </div>
 
                 </div>
                 <div>
                     <div class="center">
-                        <a class="button-b" href="./playa.html">Playa</a>
+                        <a class="button-b" href="/playa">Playa</a>
                     </div>
 
                 </div>

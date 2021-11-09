@@ -16,8 +16,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
     <link rel="stylesheet" href="./css/registro.css">
@@ -46,18 +48,18 @@
                             <label for="menu2" class="menu2">
 
                                 <li class="nav-item-cluster">
-                                    <a href="./galeria.html">categoria</a>
+                                    <a href="/galeria">categoria</a>
                                     <input id="menu2" type="checkbox">
                                     <ul class="cluster">
 
-                                        <li><a href="./playa.html">Playa</a></li>
-                                        <li><a href="./montana.html">Montaña</a></li>
-                                        <li><a href="./ciudad.html">Ciudad</a></li>
+                                        <li><a href="/playa">Playa</a></li>
+                                        <li><a href="/montana">Montaña</a></li>
+                                        <li><a href="/ciudad">Ciudad</a></li>
                                     </ul>
                                 </li>
                             </label>
                             <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
-                            <li class="nav-item"><a href="./inicioSesion.html">iniciar sesion</a></li>
+                            <li class="nav-item"><a href="/inicioSesion">iniciar sesion</a></li>
                         </ul>
                     </div>
                 </nav>

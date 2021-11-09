@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -21,8 +21,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
-    <link rel="stylesheet" href="./css/administracion.css">
-    <title>sistema de Administración</title>
+    <link rel="stylesheet" href="./css/usuario.css">
+    <title>usuario</title>
 </head>
 
 <body>
@@ -49,113 +49,120 @@
                                 <p>categoria</p>
                                 <input id="menu2" type="checkbox">
                                 <ul class="cluster">
-                                    <li><a href="./galeria.html">Galeria</a></li>
-                                    <li><a href="./playa.html">Playa</a></li>
-                                    <li><a href="./montana.html">Montaña</a></li>
-                                    <li><a href="./ciudad.html">Ciudad</a></li>
+                                    <li><a href="/galeria">Galeria</a></li>
+                                    <li><a href="/playa">Playa</a></li>
+                                    <li><a href="/montana">Montaña</a></li>
+                                    <li><a href="/ciudad">Ciudad</a></li>
                                 </ul>
                             </li>
                         </label>
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
-                        <li class="nav-item"><a href="./inicioSesion.html">iniciar sesion</a></li>
+                        <li class="nav-item"><a href="/inicioSesion">iniciar sesion</a></li>
                     </ul>
                 </div>
             </nav>
         </section>
     </header>
-    <section class="background background-admin">
 
-        <h2 class="title">Sistema de Administración</h2>
-
-        <section class="center">
-
-            <div class="col-title">
-                <a class="tab left" href="./administracion-personas.html">Personas Registradas</a>
-                <a class="tab-two right" href="./administracion-lugar.html">Lugares Pendientes</a>
-            </div>
-
-        </section>
+    <section class="background background-usuario">
 
         <section class="banner">
 
+            <section class="profile inner-col inner-profile">
+                <div class="inline">
+                    <img img class="img-profile" src="./imgs/profile.png" alt="profile">
+                    <div>
+                        <h4 class="text-name">Nombre Usuario</h4>
+                        <p class="text-mail">example@gmail.com</p>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn" href="./formulario-lugar.html">Nueva Publicación</a>
+                </div>
+            </section>
 
             <section>
 
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
+                <section class="site-background inner-col">
+                    <div class="inline card">
                         <div class="col-img">
-                            <img class="profile-img">
+                            <img class="site-img">
                         </div>
                         <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
+                            <h3 class="element-title">La selva de Jaco</h3>
+                            <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
                 </section>
 
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
+                <section class="site-background inner-col">
+                    <div class="inline card">
                         <div class="col-img">
-                            <img class="profile-img">
+                            <img class="site-img">
                         </div>
                         <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
+                            <h3 class="element-title">La selva de Jaco</h3>
+                            <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
                 </section>
 
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
+                <section class="site-background inner-col">
+                    <div class="inline card">
                         <div class="col-img">
-                            <img class="profile-img">
+                            <img class="site-img">
                         </div>
                         <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
+                            <h3 class="element-title">La selva de Jaco</h3>
+                            <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
                 </section>
 
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
+                <section class="site-background inner-col">
+                    <div class="inline card">
                         <div class="col-img">
-                            <img class="profile-img">
+                            <img class="site-img">
                         </div>
                         <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
+                            <h3 class="element-title">La selva de Jaco</h3>
+                            <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
                 </section>
 
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
+                <section class="site-background inner-col">
+                    <div class="inline card">
                         <div class="col-img">
-                            <img class="profile-img">
+                            <img class="site-img">
                         </div>
                         <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
+                            <h3 class="element-title">La selva de Jaco</h3>
+                            <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
