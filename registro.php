@@ -1,3 +1,30 @@
+<?php
+
+    namespace Medoo;
+    require 'Medoo.php';
+
+    $database = new Medoo([
+        // [required]
+        'type' => 'mysql',
+        'host' => 'localhost',
+        'database' => 'interactivas',
+        'username' => 'root',
+        'password' => ''
+    ]);
+
+    if($_POST){
+        print_r($_POST);
+
+        $database->insert("tb_users", [
+            "name" => $_POST["user"],
+            "lastname" => $_POST["lastname"],
+            "email" => $_POST["email"],
+            "password" => md5($_POST["password"])
+        ]);
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,12 +95,12 @@
 
         <section class="background background-register">
             <div class="box center">
-                <form class="center" action="./administracion.html" method="get">
+                <form class="center" action="registro.php" method="post">
                     <h3 class=" form-label">Crear Cuenta</h3>
                     <input class="form-input" type="text" name="user" placeholder="nombre de usuario">
                     <input class="form-input" type="email" name="email" placeholder="correo electronico">
                     <input class="form-input" type="password" name="password" placeholder="contraseña">
-                    <input class="form-input" type="password" name="password" placeholder="confirmar contraseña">
+                    <input class="form-input" type="password" name="confirm-password" placeholder="confirmar contraseña">
                     <input class="form-submit" type="submit" value="Registrar">
                 </form>
             </div>
