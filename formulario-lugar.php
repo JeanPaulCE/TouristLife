@@ -65,11 +65,11 @@
                         </div>
                         <div class="form-container-grid">
                             <label for="main-image" class="form-text text-16">Archivo</label>
-                            <input class="form-input-file" id="main-image" type="file" name="main-image" onchange="mostrarLeftImage();">
+                            <input class="form-input-file" id="main-image" type="file" name="main-image" onchange="showLeftImage();">
                         </div>
                         <div id="container-left-image" class="form-container-grid">
                             <label for="left-image" class="form-text text-16">Opcional</label>
-                            <input class="form-input-file" id="left-image" type="file" name="left-image" onchange="mostrarRightImage();">
+                            <input class="form-input-file" id="left-image" type="file" name="left-image" onchange="showRightImage();">
                         </div>
                         <div id="container-right-image" class="form-container-grid">
                             <label for="right-image" class="form-text text-16">Opcional</label>
@@ -90,11 +90,11 @@
     </section>
 
     <script>
-        function mostrarLeftImage(){
+        function showLeftImage(){
             document.getElementById('container-left-image').style.display = 'inline-flex';
         }
         
-        function mostrarRightImage(){
+        function showRightImage(){
             document.getElementById('container-right-image').style.display = 'inline-flex';
         }
     </script>
