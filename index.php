@@ -1,5 +1,22 @@
 <!DOCTYPE html>
-
+    <?php
+        include "DB.php";
+        // extraccion
+        $places = $database->select("tb_places","*",[
+            "place_status"=> "1"
+        ]);
+        $likes = $database->select("tb_places_likes","*");
+        // procesamiento
+        $top10=[];
+        $contado = 0;
+        for ($i=0; $i < count($places); $i++) { 
+            if ($contador<9) {
+                $id = $places[$i]["id_place"];
+                
+            }
+            $contador++;
+        }
+    ?>
 <html lang="es">
 
 <head>
