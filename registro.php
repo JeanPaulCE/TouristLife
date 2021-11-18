@@ -6,7 +6,7 @@
     $database = new Medoo([
         // [required]
         'type' => 'mysql',
-        'host' => 'localhost',
+        'host' => 'remotemysql.com',
         'database' => 'interactivas',
         'username' => 'root',
         'password' => ''
