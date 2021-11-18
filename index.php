@@ -32,7 +32,6 @@
 
 
     <section class="top-section">
-
         <div class="center ts-text">
             <h1 class="title">DESCUBRE LO INCREIBLE</h1>
             <div class="center">
