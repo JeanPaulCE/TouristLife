@@ -32,7 +32,6 @@
 
 
     <section class="top-section">
-
         <div class="center ts-text">
             <h1 class="title">DESCUBRE LO INCREIBLE</h1>
             <div class="center">
@@ -52,7 +51,7 @@
                         <p class="element-p-1">Puntarenas, jaco</p>
                     </div>
                     <div class="element-data-2">
-                        <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i> </a>
+                        <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i> </a>
                     </div>
                 </div>
             </div>
