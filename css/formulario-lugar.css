@@ -43,7 +43,7 @@
 
 .form-text {
   font-family: "Montserrat";
-    font-weight: 400;
+  font-weight: 400;
   width: 20%;
 }
 
@@ -69,6 +69,14 @@
   background: var(--black);
   border: 1px solid var(--green);
   border-radius: 0.5em;
+}
+
+#container-left-image {
+  display: none;
+}
+
+#container-right-image {
+  display: none;
 }
 
 .form-submit{

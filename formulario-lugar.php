@@ -1,3 +1,8 @@
+<?php
+    include "DB.php";
+
+    $categories = $database->select("tb_places_category", "*");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@
 
 <body>
 
-<?php 
+    <?php 
         include "header.php";
     ?>
 
@@ -50,22 +55,24 @@
                         <div class="form-container-grid">
                             <label class="form-text text-16" for="category">Categoría</label>
                             <select class="form-input-select" name="category" id="category">
-                                <option value="sj">Ninguno</option>
-                                <option value="pun">Playa</option>
-                                <option value="her">Montaña</option>
-                                <option value="her">Ciudad</option>
+                                <option value="0">Ninguno</option>
+                                <?php
+                                    for($i=0; $i<count($categories); $i++) {
+                                        echo "<option value='". $categories[$i]["id_place_category"] . "'>" . $categories[$i]["place_category"] . "</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                         <div class="form-container-grid">
                             <label for="main-image" class="form-text text-16">Archivo</label>
-                            <input class="form-input-file" id="main-image" type="file" name="main-image">
+                            <input class="form-input-file" id="main-image" type="file" name="main-image" onchange="mostrarLeftImage();">
                         </div>
-                        <div class="form-container-grid">
+                        <div id="container-left-image" class="form-container-grid">
                             <label for="left-image" class="form-text text-16">Opcional</label>
-                            <input class="form-input-file" id="left-image" type="file" name="left-image">
+                            <input class="form-input-file" id="left-image" type="file" name="left-image" onchange="mostrarRightImage();">
                         </div>
-                        <div class="form-container-grid">
-                            <label for="right-image" class="form-text text-16">Archivo</label>
+                        <div id="container-right-image" class="form-container-grid">
+                            <label for="right-image" class="form-text text-16">Opcional</label>
                             <input class="form-input-file" id="right-image" type="file" name="right-image">
                         </div>
                         <div class="form-container-grid center">
@@ -77,10 +84,21 @@
         </section>
 
         <?php
-        include "footer.php";
-    ?>
+            include "footer.php";
+        ?>
 
     </section>
+
+    <script>
+        function mostrarLeftImage(){
+            document.getElementById('container-left-image').style.display = 'inline-flex';
+        }
+        
+        function mostrarRightImage(){
+            document.getElementById('container-right-image').style.display = 'inline-flex';
+        }
+    </script>
+
 </body>
 
 </html>
