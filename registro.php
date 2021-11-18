@@ -1,28 +1,17 @@
 <?php
+include "DB.php";
 
-    namespace Medoo;
-    require 'Medoo.php';
+if($_POST){
+    print_r($_POST);
 
-    $database = new Medoo([
-        // [required]
-        'type' => 'mysql',
-        'host' => 'localhost',
-        'database' => 'interactivas',
-        'username' => 'root',
-        'password' => ''
+    $database->insert("tb_users", [
+        "username" => $_POST["user"],
+        "email" => $_POST["email"],
+        "password" => md5($_POST["password"])
     ]);
 
-    if($_POST){
-        print_r($_POST);
+}
 
-        $database->insert("tb_users", [
-            "name" => $_POST["user"],
-            "lastname" => $_POST["lastname"],
-            "email" => $_POST["email"],
-            "password" => md5($_POST["password"])
-        ]);
-
-    }
 ?>
 
 <!DOCTYPE html>
@@ -40,10 +29,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
