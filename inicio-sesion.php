@@ -7,16 +7,14 @@ if($_POST){
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $password_found = $database->select("tb_users","password",[
-        "password" => $password
-    ]);
+    
 
-    $email_found = $database->select("tb_users","email",[
+    $user_found = $database->select("tb_users","*",[
         "email" => $email
     ]);
 
 
-    if (count($email_found)>0 && count($password_found)>0) {
+    if (count($user_found)>0 && md5($password)==$user_found[0]["password"]) {
             echo "inicio Sesion correcto";
     }else{
         echo "fallo inicio sesion";
