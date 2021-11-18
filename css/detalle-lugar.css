@@ -13,12 +13,12 @@ body {
 }
 
 .elements-d {
-    grid-template-columns: repeat(2, 0fr);
+    grid-template-columns: 2fr 1fr;
     gap: 0.5em;
 }
 
 .inner-image {
-    width: 110vh;
+    width: 100vh;
     border-top-left-radius: 3em;
 }
 

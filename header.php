@@ -29,7 +29,7 @@
                             </li>
                         </label>
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
-                        <li class="nav-item"><a href="./inicioSesion.php">iniciar sesion</a></li>
+                        <li class="nav-item"><a href="./inicio-sesion.php">iniciar sesion</a></li>
                     </ul>
                 </div>
             </nav>

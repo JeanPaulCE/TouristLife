@@ -1,5 +1,22 @@
 <!DOCTYPE html>
-
+    <?php
+        include "DB.php";
+        // extraccion
+        $places = $database->select("tb_places","*",[
+            "place_status"=> "1"
+        ]);
+        $likes = $database->select("tb_places_likes","*");
+        // procesamiento
+        $top10=[];
+        $contado = 0;
+        for ($i=0; $i < count($places); $i++) { 
+            if ($contador<9) {
+                $id = $places[$i]["id_place"];
+                
+            }
+            $contador++;
+        }
+    ?>
 <html lang="es">
 
 <head>
@@ -49,7 +66,7 @@
                         <p class="element-p-1">Puntarenas, jaco</p>
                     </div>
                     <div class="element-data-2">
-                        <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i> </a>
+                        <a class="element-a-1" href="../detalle-lugar.php">más <i class="fas fa-arrow-right"></i> </a>
                     </div>
                 </div>
             </div>
@@ -61,7 +78,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -72,7 +89,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -83,7 +100,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -94,7 +111,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -105,7 +122,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -116,7 +133,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -127,7 +144,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -138,7 +155,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -149,7 +166,7 @@
                             <div class="element-data">
                                 <h3 class="element-title">La selva de Jaco</h3>
                                 <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>

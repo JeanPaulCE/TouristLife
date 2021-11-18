@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,17 +39,17 @@
                     </div>
                     <form action="" method="">
                         <div class="form-container-grid">
-                            <label class="form-text text-16" for="titulo">Título</label>
-                            <input id="titulo" class="form-input" type="text" name="titulo">
+                            <label class="form-text text-16" for="title">Título</label>
+                            <input id="title" class="form-input" type="text" name="title">
                         </div>
                         <div class="form-container-grid">
-                            <label for="descripcion" class="form-text text-16">Descripción</label>
-                            <textarea class="form-input-textarea h-13" name="descripcion" id="descripcion" cols="30"
+                            <label for="description" class="form-text text-16">Descripción</label>
+                            <textarea class="form-input-textarea h-13" name="description" id="description" cols="30"
                                 rows="8"></textarea>
                         </div>
                         <div class="form-container-grid">
-                            <label class="form-text text-16" for="categoria">Categoría</label>
-                            <select class="form-input-select" name="categoria" id="categoria">
+                            <label class="form-text text-16" for="category">Categoría</label>
+                            <select class="form-input-select" name="category" id="category">
                                 <option value="sj">Ninguno</option>
                                 <option value="pun">Playa</option>
                                 <option value="her">Montaña</option>
@@ -56,8 +57,16 @@
                             </select>
                         </div>
                         <div class="form-container-grid">
-                            <label for="archivo" class="form-text text-16">Archivo</label>
-                            <input class="form-input-file" id="archivo" type="file" name="archivo">
+                            <label for="main-image" class="form-text text-16">Archivo</label>
+                            <input class="form-input-file" id="main-image" type="file" name="main-image">
+                        </div>
+                        <div class="form-container-grid">
+                            <label for="left-image" class="form-text text-16">Opcional</label>
+                            <input class="form-input-file" id="left-image" type="file" name="left-image">
+                        </div>
+                        <div class="form-container-grid">
+                            <label for="right-image" class="form-text text-16">Archivo</label>
+                            <input class="form-input-file" id="right-image" type="file" name="right-image">
                         </div>
                         <div class="form-container-grid center">
                             <input class="form-submit" type="submit" value="Enviar">
