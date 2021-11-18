@@ -1,3 +1,31 @@
+<?php
+include "DB.php";
+
+if($_POST){
+    print_r($_POST);
+
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    $password_found = $database->select("tb_users","password",[
+        "password" => $password
+    ]);
+
+    $email_found = $database->select("tb_users","email",[
+        "email" => $email
+    ]);
+
+
+    if (count($email_found)>0 && count($password_found)>0) {
+            echo "inicio Sesion correcto";
+    }else{
+        echo "fallo inicio sesion";
+    } 
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,15 +59,15 @@
     ?>
         <section class="background background-login">
             <div class="box">
-                <form class="center" action="/administracion-lugar" method="get">
+                <form class="center" action="inicio-sesion.php" method="post">
                     <h3 class=" form-label">Iniciar Sesión</h3>
                     <input class="form-input form-input-inicio" type="email" name="email"
                         placeholder="correo electronico">
                     <input class="form-input form-input-inicio" type="password" name="password"
                         placeholder="contraseña">
                     <input class="form-submit" type="submit" value="Iniciar sesión">
-                    <a class="links" href="/recuperar">¿Has olvidado tu contraseña?</a>
-                    <a class=" links" href="/registro">Registrarse</a>
+                    <a class="links" href="./recuperar.php">¿Has olvidado tu contraseña?</a>
+                    <a class=" links" href="./registro.php">Registrarse</a>
                 </form>
 
 

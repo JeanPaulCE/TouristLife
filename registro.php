@@ -4,11 +4,32 @@ include "DB.php";
 if($_POST){
     print_r($_POST);
 
-    $database->insert("tb_users", [
-        "username" => $_POST["user"],
-        "email" => $_POST["email"],
-        "password" => md5($_POST["password"])
+    $user = $_POST["user"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    $user_found = $database->select("tb_users","username",[
+        "username" => $user
     ]);
+
+    $email_found = $database->select("tb_users","email",[
+        "email" => $email
+    ]);
+
+
+    if (count($user_found)>0 || count($email_found)>0) {
+            echo "El USUARIO YA EXISTE";
+    }else{
+        $database->insert("tb_users", [
+            "username" => $user,
+            "email" => $email,
+            "password" => md5($password)
+        ]);
+    }
+
+
+    
+    
 
 }
 
