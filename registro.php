@@ -1,5 +1,17 @@
 <?php
 include "DB.php";
+
+if($_POST){
+    print_r($_POST);
+
+    $database->insert("tb_users", [
+        "username" => $_POST["user"],
+        "email" => $_POST["email"],
+        "password" => md5($_POST["password"])
+    ]);
+
+}
+
 ?>
 
 <!DOCTYPE html>
