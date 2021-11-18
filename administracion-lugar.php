@@ -59,7 +59,7 @@
                             <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="element-a-1 " href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            <a class="element-a-1 " href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                             <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                             <p class="element-p">categoria</p>
                         </div>
                         <div class="col-mas">
-                            <a class="element-a-1" href="/detalle-lugar">más <i class="fas fa-arrow-right"></i>
+                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
