@@ -1,28 +1,7 @@
 <?php
+include "DB.php";
 
-    namespace Medoo;
-    require 'Medoo.php';
 
-    $database = new Medoo([
-        // [required]
-        'type' => 'mysql',
-        'host' => 'remotemysql.com',
-        'database' => 'interactivas',
-        'username' => 'root',
-        'password' => ''
-    ]);
-
-    if($_POST){
-        print_r($_POST);
-
-        $database->insert("tb_users", [
-            "name" => $_POST["user"],
-            "lastname" => $_POST["lastname"],
-            "email" => $_POST["email"],
-            "password" => md5($_POST["password"])
-        ]);
-
-    }
 ?>
 
 <!DOCTYPE html>
