@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,10 +21,10 @@
 </head>
 
 <body>
-<?php 
-        include "header.php";
-    ?>
     <section class="main">
+        <?php 
+            include "header.php";
+        ?>
 
         <section class="inner-grid">
             <div class="detail-container">
@@ -55,7 +54,6 @@
                             </label>
                         </div>
                     </div>
-
                 </div>
             </div>
             <p class="center"><a class="links text-20" href="#">Seguir viendo</a></p>
@@ -63,9 +61,7 @@
 
         <?php
         include "footer.php";
-    ?>
-
+        ?>
     </section>
 </body>
-
 </html>
