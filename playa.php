@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<?php
+        include "DB.php";
+        $publicaciones = $database->select("tb_places", "*", [
+            "place_status" => "1",
+            "id_place_caregory"=>1
+            
+        ]);
+    
+    ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,159 +50,21 @@
         <div class="elements">
             <div class="center">
                 <div class="elements-d">
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
+                    <?php for ($i=0; $i < count($publicaciones); $i++) { 
+                        echo '<div class="element">
+                            <div>
+                                <div class="element-img"><img class="element-item-img" src="'. $publicaciones[$i]["place_main_image"].'" alt=""></div>
+                                <div class="element-data">
+                                    <h3 class="element-title">'.$publicaciones[$i]["place_title"].'</h3>
+                                    <p class="element-p">'. $publicaciones[$i]["place_location"].'</p>
+                                    <a class="element-a" href="./detalle-lugar.php?pg='. $publicaciones[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <div>
-                            <div class="element-img"></div>
-                            <div class="element-data">
-                                <h3 class="element-title">La selva de Jaco</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        </div>';
+                    }?>
                 </div>
             </div>
-
-
-
-
         </div>
     </section>
 

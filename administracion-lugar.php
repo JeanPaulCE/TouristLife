@@ -34,8 +34,8 @@
         <section class="center">
 
             <div class="col-title">
-                <a class="tab-two left" href="/administracion-personas">Personas Registradas</a>
-                <a class="tab right" href="/administracion-lugar">Lugares Pendientes</a>
+                <a class="tab-two left" href="./administracion-personas.php">Personas Registradas</a>
+                <a class="tab right" href="./administracion-lugar.php">Lugares Pendientes</a>
             </div>
 
         </section>

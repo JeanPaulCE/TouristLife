@@ -47,10 +47,10 @@
         
             <div class="element-1 inner-grid">
                 <div class="container">
-                    <div class="element-img-1"></div>
+                    <div class="element-img-1" > <img class="element-item-img-1" src="<?php echo  $top10[0]["place_main_image"];?>" alt=""> </div>
                     <div class="element-data-1">
                         <h3 class="element-title-1"><?php echo $top10[0]["place_title"];?></h3>
-                        <p class="element-p-1">Puntarenas, jaco</p>
+                        <p class="element-p-1"><?php echo $top10[0]["place_location"];?></p>
                     </div>
                     <div class="element-data-2">
                         <a class="element-a-1" href="../detalle-lugar.php">más <i class="fas fa-arrow-right"></i> </a>
@@ -63,11 +63,11 @@
                 <?php for ($i=1; $i < count($top10); $i++) { 
                     echo '<div class="element">
                         <div>
-                            <div class="element-img"></div>
+                            <div class="element-img"><img class="element-item-img" src="'. $top10[$i]["place_main_image"].'" alt=""></div>
                             <div class="element-data">
                                 <h3 class="element-title">'.$top10[$i]["place_title"].'</h3>
-                                <p class="element-p">Puntarenas, jaco</p>
-                                <a class="element-a" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
+                                <p class="element-p">'. $top10[$i]["place_location"].'</p>
+                                <a class="element-a" href="./detalle-lugar.php?pg='. $top10[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>

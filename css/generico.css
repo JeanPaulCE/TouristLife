@@ -80,6 +80,13 @@ body{
     grid-template-columns: repeat(2,1fr);
     
 }
+
+.nav-profile{
+    max-width: 40px;
+    min-width: 30px;
+    width: 4vw;
+}
+
 .end{
     width: 100%;
     display: flex;
@@ -245,11 +252,20 @@ body{
     flex-direction: column;
     width: 200%;
 }
+.element-item-img-1{
+    display: block;
+    position: relative;
+    width: 100%;
+    
+    border-radius: 40px 0px 0px 40px;
+}
+
+
+
 .element-img-1{
     display: flex;
-    background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
-    background-size: 100% 100%;
-    
+    overflow: hidden;
+    height: 100%;
     border-radius: 40px 0px 0px 40px;
 }
 .element-title-1{
@@ -305,14 +321,18 @@ body{
     border-radius: 20px;
 }
 
-
+.element-item-img{
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
 .element-img{
     display: flex;
-    background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
-    background-size: 100% 100%;
+    
     width: 24vw;
     height: 28vh;
-    border-radius: 20px 20px 0px 0px;
+    
 }
 
 
@@ -336,8 +356,6 @@ body{
     color: var(--orange);
    font-size: 0.7em;
 }
-
-
 
 .element-a{
     display: block;
@@ -472,6 +490,8 @@ body{
 
 
 @media (max-width: 700px) {
+   
+
     .footer-element{
         text-align: center;
     }

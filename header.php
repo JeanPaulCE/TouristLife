@@ -1,3 +1,5 @@
+
+
 <header>
         <section class="nav-sec ">
             <nav class="nav-bar inner-grid">
@@ -29,7 +31,14 @@
                             </li>
                         </label>
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
-                        <li class="nav-item"><a href="./inicio-sesion.php">iniciar sesion</a></li>
+                        <?php
+                            if(isset($_SESSION)){
+                                echo '<li class="nav-item"><a href="./usuario.php"> <img class="nav-profile" src="./imgs/profile.png" alt="profile"> </a></li>';
+                            }else{
+                                echo '<li class="nav-item"><a href="./inicio-sesion.php">iniciar sesion</a></li>';
+                            }
+                        ?> 
+                        <!-- <li class="nav-item"><a href="./inicio-sesion.php">iniciar sesion</a></li> -->
                     </ul>
                 </div>
             </nav>
