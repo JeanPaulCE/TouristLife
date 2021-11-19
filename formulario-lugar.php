@@ -1,12 +1,10 @@
 <?php
-    include "DB.php";
+include "DB.php";
 
-    $categories = $database->select("tb_places_category", "*");
+$categories = $database->select("tb_places_category", "*");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,23 +16,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
     <link rel="stylesheet" href="./css/formulario-lugar.css">
     <title>TouristLife</title>
 </head>
-
 <body>
-
-    <?php 
-        include "header.php";
-    ?>
-
-
     <section class="main">
+        <?php
+            include "header.php";
+        ?>
 
         <section class="background">
             <div class="box">
@@ -49,17 +41,16 @@
                         </div>
                         <div class="form-container-grid">
                             <label for="description" class="form-text text-16">Descripción</label>
-                            <textarea class="form-input-textarea h-13" name="description" id="description" cols="30"
-                                rows="8"></textarea>
+                            <textarea class="form-input-textarea h-13" name="description" id="description" cols="30" rows="8"></textarea>
                         </div>
                         <div class="form-container-grid">
                             <label class="form-text text-16" for="category">Categoría</label>
                             <select class="form-input-select" name="category" id="category">
                                 <option value="0">Ninguno</option>
                                 <?php
-                                    for($i=0; $i<count($categories); $i++) {
-                                        echo "<option value='". $categories[$i]["id_place_category"] . "'>" . $categories[$i]["place_category"] . "</option>";
-                                    }
+                                for ($i = 0; $i < count($categories); $i++) {
+                                    echo "<option value='" . $categories[$i]["id_place_category"] . "'>" . $categories[$i]["place_category"] . "</option>";
+                                }
                                 ?>
                             </select>
                         </div>
@@ -86,19 +77,23 @@
         <?php
             include "footer.php";
         ?>
-
     </section>
-
     <script>
-        function showLeftImage(){
-            document.getElementById('container-left-image').style.display = 'inline-flex';
+        function showLeftImage() {
+            if (document.documentElement.clientWidth >= 1100) {
+                document.getElementById('container-left-image').style.display = 'inline-flex';
+            } else {
+                document.getElementById('container-left-image').style.display = 'grid';
+            }
         }
-        
-        function showRightImage(){
-            document.getElementById('container-right-image').style.display = 'inline-flex';
+
+        function showRightImage() {
+            if (document.documentElement.clientWidth >= 1100) {
+                document.getElementById('container-right-image').style.display = 'inline-flex';
+            } else {
+                document.getElementById('container-right-image').style.display = 'grid';
+            }
         }
     </script>
-
 </body>
-
 </html>
