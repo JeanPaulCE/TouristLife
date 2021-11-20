@@ -17,10 +17,9 @@
                     <ul class="nav-items">
                         <li class="nav-item"><a href="./index.php">inicio</a></li>
 
-                        <label for="menu2" class="menu2">
-
-                            <li class="nav-item-cluster">
-                                <p>categoria</p>
+                        
+                            <li class="nav-item-cluster menu2">
+                                <label for="menu2" class="label-cl">categoria</label>
                                 <input id="menu2" type="checkbox">
                                 <ul class="cluster">
                                     <li><a href="./galeria.php">Galeria</a></li>
@@ -29,7 +28,8 @@
                                     <li><a href="./ciudad.php">Ciudad</a></li>
                                 </ul>
                             </li>
-                        </label>
+                        
+                        
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
                         <?php
                             if(isset($_SESSION)){
