@@ -32,7 +32,7 @@
                         
                         <!-- <li class="nav-item"><a href="">acerca de</a></li> -->
                         <?php
-                            if(isset($_SESSION)){
+                            if(isset($_SESSION["id"])){
                                 echo '<li class="nav-item"><a href="./usuario.php"> <img class="nav-profile" src="./imgs/profile.png" alt="profile"> </a></li>';
                             }else{
                                 echo '<li class="nav-item"><a href="./inicio-sesion.php">iniciar sesion</a></li>';

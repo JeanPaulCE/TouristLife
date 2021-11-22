@@ -1,4 +1,5 @@
-<?php
+<?php session_start();
+
 include "DB.php";
 
 if($_POST){
@@ -15,9 +16,15 @@ if($_POST){
 
 
     if (count($user_found)>0 && md5($password)==$user_found[0]["password"]) {
-            echo "inicio Sesion correcto";
+            
+            $_SESSION['id'] = $user_found['id_user'];
+            header('Location:./usuario.php');
+            session_write_close();
+            session_regenerate_id(true);
+            exit();
     }else{
-        echo "fallo inicio sesion";
+        session_destroy();
+        $valida =false;
     } 
 }
 ?>
@@ -59,11 +66,18 @@ if($_POST){
             <div class="box">
                 <form class="center" action="inicio-sesion.php" method="post">
                     <h3 class=" form-label">Iniciar Sesión</h3>
-                    <input class="form-input form-input-inicio" type="email" name="email"
+                    <input class="form-input form-input-inicio email" type="email" name="email"
                         placeholder="correo electronico">
-                    <input class="form-input form-input-inicio" type="password" name="password"
+                    <input class="form-input form-input-inicio pss" type="password" name="password"
                         placeholder="contraseña">
-                    <input class="form-submit" type="submit" value="Iniciar sesión">
+                     <?php
+                            if(isset($valida)){
+                                echo '<p class="form-submit error">Contraseña incorrecta</p>';
+                            }else{
+                                echo '<input class="form-submit" type="submit" value="Iniciar sesión">';
+                            }
+                    ?> 
+                   
                     <a class="links" href="./recuperar.php">¿Has olvidado tu contraseña?</a>
                     <a class=" links" href="./registro.php">Registrarse</a>
                 </form>
@@ -77,6 +91,13 @@ if($_POST){
     ?>
 
     </section>
+
+    <script>
+        var nombre =  document.getElementsByClassName("email");
+        nombre.addEventListener("keypress", function(){
+            nombre.get
+        });
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    if (!isset($_SESSION["id"])) {
+        echo "<h1>ERROR2</h1>";
+        session_destroy();
+    }else{
+        echo "<h1>ERROR</h1>";
+    }
+
+?>
+
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,7 +41,7 @@
     <section class="background background-usuario">
 
         <section class="banner">
-
+            
             <section class="profile inner-col inner-profile">
                 <div class="inline">
                     <img img class="img-profile" src="./imgs/profile.png" alt="profile">
