@@ -1,5 +1,6 @@
 <?php
     namespace Medoo;
+    session_start();
     require 'Medoo.php';
 
     $database = new Medoo([
