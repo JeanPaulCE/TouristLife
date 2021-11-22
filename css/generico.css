@@ -16,8 +16,9 @@
     display: block;
     position: relative;
     top: 4.5em;
-    font-size: 1em;
+    font-size: 1.3em;
     color: red !important;
+    margin: 1em auto;
 }
 
 .text-16 { font-size: 1em; }
@@ -449,6 +450,7 @@ body{
     top: 5em;
     outline: .1px solid var(--green);
     border: none;
+    margin: 1em auto;
 }
 
 /* botones en general*/
