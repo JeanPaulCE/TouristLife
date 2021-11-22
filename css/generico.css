@@ -13,10 +13,12 @@
 }
 .hov{
     color: #fff;
+    font-size: 1.6em;
 }
-.hov:hover{
-    color: var(--orange);
+.a-link{
+    margin-top: .3em;
 }
+
 .error{
     display: block;
     position: relative;
