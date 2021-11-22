@@ -11,9 +11,14 @@
     --black: #0F0F0F;
     --menu2:rgba(0 , 0, 0, 0%);
 }
+
 .error{
-    background: red !important;
+    position: relative;
+    top: 4.5em;
+;
+    color: red !important;
 }
+
 .text-16 { font-size: 1em; }
 .text-20 { font-size: 1.25em; }
 .text-24 { font-size: 1.5em; }
