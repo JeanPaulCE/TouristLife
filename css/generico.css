@@ -17,7 +17,8 @@
     position: relative;
     top: 4.5em;
     color: red !important;
-    margin: 1em auto;
+    margin: .7em auto;
+    
 }
 
 .text-16 { font-size: 1em; }
