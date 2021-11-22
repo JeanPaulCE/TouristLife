@@ -1,6 +1,8 @@
 <?php
 include "DB.php";
 
+$valida=2;
+
 if($_POST){
     print_r($_POST);
 
@@ -16,6 +18,7 @@ if($_POST){
         "email" => $email
     ]);
 
+    
 
     if (count($user_found)>0) {
         session_destroy();
@@ -84,8 +87,8 @@ if($_POST){
                     <h3 class=" form-label">Crear Cuenta</h3>
                     <input class="form-input" type="text" name="user" placeholder="nombre de usuario">
                     <input class="form-input" type="email" name="email" placeholder="correo electronico">
-                    <input class="form-input" type="password" name="password" placeholder="contraseña">
-                    <input class="form-input" type="password" name="confirm-password" placeholder="confirmar contraseña">
+                    <input class="form-input password" type="password" name="password" placeholder="contraseña">
+                    <input class="form-input confirm-password" type="password" name="confirm-password" placeholder="confirmar contraseña">
                     <input class="form-submit" type="submit" value="Registrar">
 
                     <?php
@@ -104,6 +107,14 @@ if($_POST){
     ?>
 
     </section>
+
+    <script>
+        var nombre =  document.getElementsByClassName("password");
+        nombre.addEventListener("keypress", function(){
+            nombre.get
+        });
+    </script>
+
 </body>
 
 </html>
