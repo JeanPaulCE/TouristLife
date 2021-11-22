@@ -1,6 +1,8 @@
 <?php
 include "DB.php";
 
+$valida=2;
+
 if($_POST){
     print_r($_POST);
 
@@ -16,15 +18,26 @@ if($_POST){
         "email" => $email
     ]);
 
+    
 
-    if (count($user_found)>0 || count($email_found)>0) {
-            echo "El USUARIO YA EXISTE";
+    if (count($user_found)>0) {
+        $valida =0;
+
+    }else if(count($email_found)>0){
+        $valida =1;
     }else{
         $database->insert("tb_users", [
             "username" => $user,
             "email" => $email,
             "password" => md5($password)
         ]);
+
+        $user_found = $database->select("tb_users","*",[
+            "email" => $email
+        ]);
+
+        $_SESSION['id'] = $user_found[0]['id_user'];
+            header('Location:./usuario.php');
     }
 
 
@@ -72,9 +85,17 @@ if($_POST){
                     <h3 class=" form-label">Crear Cuenta</h3>
                     <input class="form-input" type="text" name="user" placeholder="nombre de usuario">
                     <input class="form-input" type="email" name="email" placeholder="correo electronico">
-                    <input class="form-input" type="password" name="password" placeholder="contraseña">
-                    <input class="form-input" type="password" name="confirm-password" placeholder="confirmar contraseña">
+                    <input class="form-input password" type="password" name="password" placeholder="contraseña">
+                    <input class="form-input confirm-password" type="password" name="confirm-password" placeholder="confirmar contraseña">
                     <input class="form-submit" type="submit" value="Registrar">
+
+                    <?php
+                            if($valida==0){
+                                echo '<p class="error">Usuario ya registrado</p>';
+                            }else if($valida==1){
+                                echo '<p class="error">Correo ya registrado</p>';
+                            }
+                    ?>
                 </form>
             </div>
         </section>
@@ -84,6 +105,14 @@ if($_POST){
     ?>
 
     </section>
+
+    <script>
+        var nombre =  document.getElementsByClassName("password");
+        nombre.addEventListener("keypress", function(){
+            nombre.get
+        });
+    </script>
+
 </body>
 
 </html>

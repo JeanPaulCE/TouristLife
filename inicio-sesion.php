@@ -57,9 +57,9 @@ if($_POST){
             <div class="box">
                 <form class="center" action="inicio-sesion.php" method="post">
                     <h3 class=" form-label">Iniciar Sesión</h3>
-                    <input class="form-input form-input-inicio email" type="email" name="email"
+                    <input class="form-input form-input-inicio" type="email" name="email"
                         placeholder="correo electronico">
-                    <input class="form-input form-input-inicio pss" type="password" name="password"
+                    <input class="form-input form-input-inicio" type="password" name="password"
                         placeholder="contraseña">
                     <input class="form-submit" type="submit" value="Iniciar sesión">
 
@@ -83,12 +83,7 @@ if($_POST){
 
     </section>
 
-    <script>
-        var nombre =  document.getElementsByClassName("email");
-        nombre.addEventListener("keypress", function(){
-            nombre.get
-        });
-    </script>
+    
 </body>
 
 </html>

@@ -34,7 +34,7 @@ $categories = $database->select("tb_places_category", "*");
                     <div class="title-box">
                         <h3 class="form-title text-20">Registrar lugar</h3>
                     </div>
-                    <form action="" method="">
+                    <form action="add_lugar.php" method="post" enctype="multipart/form-data">
                         <div class="form-container-grid">
                             <label class="form-text text-16" for="title">Título</label>
                             <input id="title" class="form-input" type="text" name="title">
