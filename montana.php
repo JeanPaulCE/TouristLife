@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
 <?php
         include "DB.php";
         $publicaciones = $database->select("tb_places", "*", [
@@ -9,6 +7,8 @@
         ]);
     
     ?>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

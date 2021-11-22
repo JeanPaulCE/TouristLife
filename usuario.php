@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include "DB.php";
     if (!isset($_SESSION["id"])) {
         
         session_destroy();
