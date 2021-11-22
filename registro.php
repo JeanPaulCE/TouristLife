@@ -17,8 +17,13 @@ if($_POST){
     ]);
 
 
-    if (count($user_found)>0 || count($email_found)>0) {
-            echo "El USUARIO YA EXISTE";
+    if (count($user_found)>0) {
+        session_destroy();
+        $valida =0;
+
+    }else if(count($email_found)>0){
+        session_destroy();
+        $valida =1;
     }else{
         $database->insert("tb_users", [
             "username" => $user,
@@ -82,6 +87,14 @@ if($_POST){
                     <input class="form-input" type="password" name="password" placeholder="contraseña">
                     <input class="form-input" type="password" name="confirm-password" placeholder="confirmar contraseña">
                     <input class="form-submit" type="submit" value="Registrar">
+
+                    <?php
+                            if($valida==0){
+                                echo '<p class="error">Usuario ya registrado</p>';
+                            }else if($valida==1){
+                                echo '<p class="error">Correo ya registrado</p>';
+                            }
+                    ?>
                 </form>
             </div>
         </section>
