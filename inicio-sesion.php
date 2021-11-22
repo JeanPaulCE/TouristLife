@@ -71,7 +71,7 @@ if($_POST){
                      <?php
                             if(isset($valida)){
                                 echo '<input class="form-submit" type="submit" value="Iniciar sesión">';
-                                echo '<p class="form-submit error">Contraseña incorrecta</p>';
+                                echo '<p class="error">Correo o contraseña incorrectos</p>';
                             }else{
                                 echo '<input class="form-submit" type="submit" value="Iniciar sesión">';
                             }
