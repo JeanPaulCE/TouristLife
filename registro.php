@@ -21,11 +21,9 @@ if($_POST){
     
 
     if (count($user_found)>0) {
-        session_destroy();
         $valida =0;
 
     }else if(count($email_found)>0){
-        session_destroy();
         $valida =1;
     }else{
         $database->insert("tb_users", [
