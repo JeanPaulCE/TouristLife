@@ -1,10 +1,10 @@
 <?php
     session_start();
     if (!isset($_SESSION["id"])) {
-        echo "<h1>ERROR2</h1>";
+        
         session_destroy();
     }else{
-        echo "<h1>ERROR</h1>";
+        
     }
 
 ?>
