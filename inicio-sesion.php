@@ -2,12 +2,8 @@
 include "DB.php";
 
 if($_POST){
-    print_r($_POST);
-
     $email = $_POST["email"];
     $password = $_POST["password"];
-
-    
 
     $user_found = $database->select("tb_users","*",[
         "email" => $email
