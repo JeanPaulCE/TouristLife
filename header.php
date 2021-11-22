@@ -36,7 +36,7 @@
                                 echo '<li class="nav-item"><a href="./usuario.php"> <img class="nav-profile" src="./imgs/profile.png" alt="profile"> </a></li>';
                                 echo '<li class="nav-item"><a class="a-link" href="./out.php"> <i class="fas fa-sign-in-alt hov"></i> </a></li>';
                             }else{
-                                echo '<li class="nav-item"><a class="a-link" href="./inicio-sesion.php">iniciar sesion</a></li>';
+                                echo '<li class="nav-item"><a href="./inicio-sesion.php">Ingresar/Registrarse</a></li>';
                             }
                         ?> 
                         <!-- <li class="nav-item"><a href="./inicio-sesion.php">iniciar sesion</a></li> -->

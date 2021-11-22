@@ -2,12 +2,8 @@
 include "DB.php";
 
 if($_POST){
-    print_r($_POST);
-
     $email = $_POST["email"];
     $password = $_POST["password"];
-
-    
 
     $user_found = $database->select("tb_users","*",[
         "email" => $email
@@ -68,12 +64,11 @@ if($_POST){
                         placeholder="correo electronico">
                     <input class="form-input form-input-inicio pss" type="password" name="password"
                         placeholder="contraseña">
+                    <input class="form-submit" type="submit" value="Iniciar sesión">
+
                      <?php
                             if(isset($valida)){
-                                echo '<input class="form-submit" type="submit" value="Iniciar sesión">';
                                 echo '<p class="error">Correo o contraseña incorrectos</p>';
-                            }else{
-                                echo '<input class="form-submit" type="submit" value="Iniciar sesión">';
                             }
                     ?> 
                    
