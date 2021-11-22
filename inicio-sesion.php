@@ -13,7 +13,6 @@ if($_POST){
     if (count($user_found)>0 && md5($password)==$user_found[0]["password"]) {
            
             $_SESSION['id'] = $user_found[0]['id_user'];
-            echo session_status();
             header('Location:./usuario.php');
             
     }else{

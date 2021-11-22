@@ -25,6 +25,13 @@ if($_POST){
             "email" => $email,
             "password" => md5($password)
         ]);
+
+        $user_found = $database->select("tb_users","*",[
+            "email" => $email
+        ]);
+
+        $_SESSION['id'] = $user_found[0]['id_user'];
+            header('Location:./usuario.php');
     }
 
 
