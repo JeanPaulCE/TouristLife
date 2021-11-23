@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div>
-                    <a class="btn" href="./formulario-lugar.html">Nueva Publicación</a>
+                    <a class="btn" href="./formulario-lugar.php">Nueva Publicación</a>
                 </div>
             </section>
 
