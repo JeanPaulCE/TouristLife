@@ -3,8 +3,9 @@ include "DB.php";
 
 date_default_timezone_set("America/Costa_Rica");
 $date = date('Y-m-d H:i:s');
-
-
+$error_1 = false;
+$error_2 = false;
+$error_3 = false;
 
 function imgs_id($int,$imgs_temp){
     if (isset($imgs_temp[$int])) {
@@ -29,12 +30,24 @@ if($_POST){
                 $images[0] = $_FILES["main-image"];
                 $ready = true;
             }
+            else {
+                $error_1 = true;
+            }
+
             if(in_array(end($left_img), $valid_ext) === true){
                 $images[1] = $_FILES["left-image"];
             }
+            else {
+                $error_2 = true;
+            }
+
             if(in_array(end($right_img), $valid_ext) === true){
                 $images[2] = $_FILES["right-image"];
             }
+            else {
+                $error_3 = true;
+            }
+
             if($ready){
                 
                 for ($i = 0; $i < count($images); $i++){
@@ -62,9 +75,10 @@ if($_POST){
                      "id_user" => $_SESSION["id"],
                      "place_location" => $_POST["location"]
                  ]);
+                 /*
                 if(!($status->rowCount()>=0)){//error al insertar en la bace de datos
                     echo "MAMAMOS";
-                }
+                }*/
             }else{
                 echo "ready false";
             }

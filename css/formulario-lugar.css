@@ -47,6 +47,12 @@
   width: 20%;
 }
 
+.form-error {
+  position: absolute;
+  padding-top: .5em;
+  color: red;
+}
+
 .form-input {
   width: 80%;
   margin: 0;
@@ -126,6 +132,12 @@
     margin-bottom: 1em;
   }
 
+  .form-error {
+    padding-top: 0;
+    margin-top: .2em;
+    margin-left: 7em;
+  }
+
   .footer-section {
     height: 11vh;
   }
@@ -167,6 +179,12 @@
 
   .form-submit {
     margin-bottom: 2em;
+  }
+
+  .form-error {
+    padding-top: 0;
+    margin-top: .2em;
+    margin-left: 7em;
   }
 
   .footer-section {
