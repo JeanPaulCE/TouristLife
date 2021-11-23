@@ -61,9 +61,12 @@
 
                 <div class="elements-d">
                 <?php for ($i=1; $i < count($top10); $i++) { 
+                    $img = $database->select("tb_imgs", "*", [
+                        "id_imgs" => $top10[$i]["place_title"],
+                    ]);
                     echo '<div class="element">
                         <div>
-                            <div class="element-img"><img class="element-item-img" src="'. $top10[$i]["place_main_image"].'" alt=""></div>
+                            <div class="element-img"><img class="element-item-img" src="'.$img[0]["url"].'" alt=""></div>
                             <div class="element-data">
                                 <h3 class="element-title">'.$top10[$i]["place_title"].'</h3>
                                 <p class="element-p">'. $top10[$i]["place_location"].'</p>

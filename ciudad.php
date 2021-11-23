@@ -50,9 +50,13 @@
             <div class="center">
                 <div class="elements-d">
                     <?php for ($i=0; $i < count($publicaciones); $i++) { 
+                        $img = $database->select("tb_imgs", "*", [
+                        "id_imgs" => $publicaciones[$i]["place_title"],
+                        ]);
+                        
                         echo '<div class="element">
                             <div>
-                                <div class="element-img"><img class="element-item-img" src="'. $publicaciones[$i]["place_main_image"].'" alt=""></div>
+                                <div class="element-img"><img class="element-item-img" src="'.  $img[0]["url"].'" alt=""></div>
                                 <div class="element-data">
                                     <h3 class="element-title">'.$publicaciones[$i]["place_title"].'</h3>
                                     <p class="element-p">'. $publicaciones[$i]["place_location"].'</p>
