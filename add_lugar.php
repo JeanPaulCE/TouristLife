@@ -4,8 +4,12 @@ include "DB.php";
 date_default_timezone_set("America/Costa_Rica");
 $date = date('Y-m-d H:i:s');
 
-function generateRandomString($len=15){
-    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($len/strlen($x)))),1,$len);
+function imgs_id($int){
+    if (isset($imgs_temp[$int])) {
+       return $imgs_temp[$int];
+    }else{
+        return null;
+    }
 }
 
 if($_POST){
@@ -45,9 +49,9 @@ if($_POST){
                 $database->insert("tb_places", [
                     "place_title" => $_POST["title"],
                     "place_description" => $_POST["description"],
-                    "place_main_image" => $imgs_temp[0],
-                    "place_right_image" => $imgs_temp[1],
-                    "place_left_image" => $imgs_temp[2],
+                    "place_main_image" => imgs_id(0),
+                    "place_right_image" => imgs_id(1),
+                    "place_left_image" => imgs_id(2),
                     "place_pub_date" => $date,
                     "place_status" => "1",
                     "id_place_caregory" => $_POST["category"],
