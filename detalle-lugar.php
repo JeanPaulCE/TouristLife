@@ -1,3 +1,10 @@
+<?php
+    include "DB.php";
+    if($_GET) {
+        $place = $database->select("tb_places", "*");
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,20 +38,30 @@
                 <div class="elements-d">
                     <img class="inner-image" src="./imgs/prueba-detalle.jpg" alt="imagen">
                     <div class="inner-text">
-                        <h3 class="detail-title text-16">Título</h3>
-                        <p class="detail-description text-16">Descripción. Lorem ipsum dolor sit amet, consectetuer
-                            adipiscing elit, sed diam nonummy nibh
-                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                            veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                            commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-                            molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-                            iusto odio dignissim qui blandit praesent luptatum zzril delenit augue.</p>
+                        <?php
+                            echo "<h3 class='detail-title text-16'>" . $place[0]["place_title"] . "</h3>";
+                            echo "<p class='detail-description text-16'>" . $place[0]["place_location"] . "</p>";
+                            echo "<p class='detail-description text-16'>" . $place[0]["place_description"] . "</p>";
+                        ?>
                     </div>
                 </div>
                 <div class="inner-row">
+                    <?php
+                        $name_user = $database->select("tb_users", "username",[
+                            "id_user" => $place[0]["id_user"]
+                        ]);
+                        $name_category = $database->select("tb_places_category", "place_category",[
+                            "id_place_category" => $place[0]["id_place_caregory"]
+                        ]);
+                        echo "<p class='detail-bottom text-16'>" . $name_user[0] . "</p>";
+                        echo "<p class='detail-bottom text-16'>" . $name_category[0] . "</p>";
+                        echo "<p class='detail-bottom text-16'>" . $place[0]["place_pub_date"] . "</p>";
+                    ?>
+                    <!--
                     <p class="detail-bottom text-16">usuario</p>
                     <p class="detail-bottom text-16">categoria</p>
                     <p class="detail-bottom text-16">dd/mm/aaaa</p>
+                    -->
                     <div class="detail-bottom text-16">
                         <div class="inner-like">
                             <p class="center-vertical mr-02">1</p>
