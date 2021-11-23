@@ -40,6 +40,10 @@ $categories = $database->select("tb_places_category", "*");
                             <input id="title" class="form-input" type="text" name="title">
                         </div>
                         <div class="form-container-grid">
+                            <label class="form-text text-16" for="location">Localización</label>
+                            <input id="location" class="form-input" type="text" name="location">
+                        </div>
+                        <div class="form-container-grid">
                             <label for="description" class="form-text text-16">Descripción</label>
                             <textarea class="form-input-textarea h-13" name="description" id="description" cols="30" rows="8"></textarea>
                         </div>

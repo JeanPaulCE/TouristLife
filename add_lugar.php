@@ -4,45 +4,58 @@ include "DB.php";
 date_default_timezone_set("America/Costa_Rica");
 $date = date('Y-m-d H:i:s');
 
+function generateRandomString($len=15){
+    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($len/strlen($x)))),1,$len);
+}
+
 if($_POST){
     if(isset($_SESSION["id"])){
         if(isset($_FILES["main-image"])){
             $valid_ext = array("jpeg", "jpg", "png");
+            $images = array();
             $main_img = explode(".", $_FILES["main-image"]["name"]);
             $left_img = explode(".", $_FILES["left-image"]["name"]);
             $right_img = explode(".", $_FILES["right-image"]["name"]);
             
-
-            if(in_array(end($main_img), $valid_ext) === false){
-                echo "Main";
+            $ready = false;
+            if(in_array(end($main_img), $valid_ext) === true){
+                $images[0] = $_FILES["main-image"];
+                $ready = true;
             }
-            else if(in_array(end($left_img), $valid_ext) === false){
-                echo "Left";
+            if(in_array(end($left_img), $valid_ext) === true){
+                $images[1] = $_FILES["left-image"];
             }
-            else if(in_array(end($right_img), $valid_ext) === false){
-                echo "Right";
+            if(in_array(end($right_img), $valid_ext) === true){
+                $images[2] = $_FILES["right-image"];
             }
-            else {
-                move_uploaded_file($file_tmp, "uploads/".$img);
-            }
-            /*
-            if(empty($errors)){
-                $img = "places-img-".generateRandomString().".".$file_ext;
-                move_uploaded_file($file_tmp, "uploads/".$img);
+            if($ready){
+                $imgs_temp = array();
+                for ($i = 0; $i < count($images); $i++){
+                    $consulta = $database->query("SELECT tb_imgs.id_imgs, url from BIYx7soDWk.tb_imgs group by tb_imgs.id_imgs order by 1 desc")->fetchAll();
+                    $id = $consulta[0]["id_imgs"] + 1;
+                    $imgs_temp[$i] = $id;
+                    $img = "img-" . $id . $images[$i]["name"];
+                    move_uploaded_file($images[$i]["tmp_name"], "imgs/places/" . $img);
+                    
+                    $database->insert("tb_imgs", [
+                        "url" => "./imgs/places/" . $img
+                    ]);
+                }
 
                 $database->insert("tb_places", [
-                    "id_place_category" => $_POST["pcategory"],
-                    "place_title" => $_POST["ptitle"],
-                    "place_description" => $_POST["pdescription"],
-                    "place_main_image" => $img,
-                    "place_right_image" => $img,
-                    "place_left_image" => $img,
+                    "place_title" => $_POST["title"],
+                    "place_description" => $_POST["description"],
+                    "place_main_image" => $imgs_temp[0],
+                    "place_right_image" => $imgs_temp[1],
+                    "place_left_image" => $imgs_temp[2],
                     "place_pub_date" => $date,
-                    "place_status" => 0
+                    "place_status" => "1",
+                    "id_place_caregory" => $_POST["category"],
+                    "id_user" => $_SESSION["id"],
+                    "place_location" => $_POST["location"]
                 ]);
-
             }
-            */
+            
         }
     }
 }
