@@ -1,6 +1,13 @@
 <?php
     include "DB.php";
-   
+
+    $user_found = $database->select("tb_users","*",[
+        "id_user" => $_SESSION["id"]
+    ]);
+
+    $publicaciones = $database->select("tb_places","*",[
+        "id_user" => $_SESSION["id"]
+    ]);
 
 ?>
 
@@ -41,8 +48,8 @@
                 <div class="inline">
                     <img img class="img-profile" src="./imgs/profile.png" alt="profile">
                     <div>
-                        <h4 class="text-name">Nombre Usuario</h4>
-                        <p class="text-mail">example@gmail.com</p>
+                        <h4 class="text-name"><?php echo $user_found[0]["username"];?></h4>
+                        <p class="text-mail"><?php echo $user_found[0]["email"];?></p>
                     </div>
                 </div>
                 <div>
@@ -51,91 +58,30 @@
             </section>
 
             <section>
+                
+                <?php 
+                for ($i=0; $i < count($publicaciones); $i++) {
 
-                <section class="site-background inner-col">
-                    <div class="inline card">
-                        <div class="col-img">
-                            <img class="site-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="element-title">La selva de Jaco</h3>
-                            <p class="element-p">categoria</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
+                            echo '
+                            <section class="site-background inner-col">
+                                <div class="inline card">
+                                 <div class="col-img">
+                                    <img class="site-img">
+                                 </div>
+                                 <div class="col-txt">
+                                    <h3 class="element-title">'.$publicaciones[$i]["place_title"].'</h3>
+                                    <p class="element-p">'. $publicaciones[$i]["place_location"].'</p>
+                                 </div>
+                                 <div class="col-mas">
+                                    <p class="element-p">no verificado</p>
+                                    <a class="element-a" href="./detalle-lugar.php?pg='. $publicaciones[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+        
+                        </section>';
+                    }?>
 
-                </section>
-
-                <section class="site-background inner-col">
-                    <div class="inline card">
-                        <div class="col-img">
-                            <img class="site-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="element-title">La selva de Jaco</h3>
-                            <p class="element-p">categoria</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="site-background inner-col">
-                    <div class="inline card">
-                        <div class="col-img">
-                            <img class="site-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="element-title">La selva de Jaco</h3>
-                            <p class="element-p">categoria</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="site-background inner-col">
-                    <div class="inline card">
-                        <div class="col-img">
-                            <img class="site-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="element-title">La selva de Jaco</h3>
-                            <p class="element-p">categoria</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="site-background inner-col">
-                    <div class="inline card">
-                        <div class="col-img">
-                            <img class="site-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="element-title">La selva de Jaco</h3>
-                            <p class="element-p">categoria</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="element-a-1" href="./detalle-lugar.php">más <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </section>
 
             </section>
 
