@@ -4,11 +4,14 @@ include "DB.php";
 date_default_timezone_set("America/Costa_Rica");
 $date = date('Y-m-d H:i:s');
 
+$imgs_temp = array();
+
 function imgs_id($int){
+    echo isset($imgs_temp[$int]);
     if (isset($imgs_temp[$int])) {
        return $imgs_temp[$int];
     }else{
-        return null;
+        return "aaa";
     }
 }
 
@@ -33,7 +36,7 @@ if($_POST){
                 $images[2] = $_FILES["right-image"];
             }
             if($ready){
-                $imgs_temp = array();
+                
                 for ($i = 0; $i < count($images); $i++){
                     $consulta = $database->query("SELECT tb_imgs.id_imgs, url from BIYx7soDWk.tb_imgs group by tb_imgs.id_imgs order by 1 desc")->fetchAll();
                     $id = $consulta[0]["id_imgs"] + 1;
@@ -45,6 +48,9 @@ if($_POST){
                         "url" => "./imgs/places/" . $img
                     ]);
                 }
+                echo imgs_id(0);
+                echo imgs_id(1);
+                echo imgs_id(2);
 
                 $database->insert("tb_places", [
                     "place_title" => $_POST["title"],
@@ -58,6 +64,7 @@ if($_POST){
                     "id_user" => $_SESSION["id"],
                     "place_location" => $_POST["location"]
                 ]);
+                
             }
             
         }
