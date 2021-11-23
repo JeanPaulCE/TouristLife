@@ -52,7 +52,7 @@
                 <div class="elements-d">
                     <?php for ($i=0; $i < count($publicaciones); $i++) { 
                         $img = $database->select("tb_imgs", "*", [
-                        "id_imgs" => $publicaciones[$i]["place_title"],
+                        "id_imgs" => $publicaciones[$i]["place_main_image"],
                         ]);
                         
                         echo '<div class="element">
