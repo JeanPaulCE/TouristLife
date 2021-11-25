@@ -37,13 +37,7 @@ if($_POST){
         $_SESSION['id'] = $user_found[0]['id_user'];
             header('Location:./usuario.php');
     }
-
-
-    
-    
-
 }
-
 ?>
 
 <!DOCTYPE html>
