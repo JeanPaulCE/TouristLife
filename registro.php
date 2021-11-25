@@ -4,8 +4,6 @@ include "DB.php";
 $valida=2;
 
 if($_POST){
-    print_r($_POST);
-
     $user = $_POST["user"];
     $email = $_POST["email"];
     $password = $_POST["password"];
