@@ -4,39 +4,26 @@ include "DB.php";
 $valida=2;
 
 if($_POST){
-    $user = $_POST["user"];
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $user_found = $database->select("tb_users","username",[
-        "username" => $user
-    ]);
 
     $email_found = $database->select("tb_users","email",[
         "email" => $email
     ]);
 
+
+    if (count($user_found)>0 && md5($password)==$user_found[0]["password"]) {
+        $_SESSION['id'] = $user_found[0]['id_user'];
+        header('Location:./usuario.php');
+    }else{
+        session_destroy();
+        $valida =false;
+    } 
+
     
 
-    if (count($user_found)>0) {
-        $valida =0;
-
-    }else if(count($email_found)>0){
-        $valida =1;
-    }else{
-        $database->insert("tb_users", [
-            "username" => $user,
-            "email" => $email,
-            "password" => md5($password)
-        ]);
-
-        $user_found = $database->select("tb_users","*",[
-            "email" => $email
-        ]);
-
-        $_SESSION['id'] = $user_found[0]['id_user'];
-            header('Location:./usuario.php');
-    }
+    
 }
 ?>
 
@@ -73,7 +60,7 @@ if($_POST){
 
         <section class="background background-recover">
             <div class="box center">
-                <form class="center" action="registro.php" method="post">
+                <form class="center" action="recuperar.php" method="post">
                     <h3 class=" form-label">Cambiar contraseña</h3>
                     <input class="form-input" type="email" name="email" placeholder="correo electronico">
                     <input class="form-input password" type="password" name="password" placeholder="contraseña actual">
