@@ -28,6 +28,14 @@
     
 }
 
+#message{
+    display: block;
+    position: relative;
+    top: 5em;
+    margin-left: 5em;
+    color: rgb(0, 214, 96) !important;
+}
+
 .text-16 { font-size: 1em; }
 .text-20 { font-size: 1.25em; }
 .text-24 { font-size: 1.5em; }

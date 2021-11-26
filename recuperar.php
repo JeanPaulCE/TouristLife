@@ -64,11 +64,12 @@ if($_POST){
             <div class="box center">
                 <form class="center" action="recuperar.php" method="post">
                     <h3 class=" form-label">Cambiar contraseña</h3>
-                    <input class="form-input" type="email" name="email" placeholder="correo electronico">
-                    <input class="form-input password" type="password" name="password" placeholder="contraseña actual">
-                    <input class="form-input new_password" type="password" name="new_password" placeholder="nueva contraseña">
-                    <input class="form-input confirm-password" type="password" name="confirm_password" placeholder="confirmar nueva contraseña">
-                    <input class="form-submit" type="submit" value="Actualizar">
+                    <input class="form-input" id="i" type="email" name="email" placeholder="correo electronico" required>
+                    <input class="form-input password" type="password" name="password" placeholder="contraseña actual" required>
+                    <input class="form-input new_password" id="new_password" type="password" name="new_password" placeholder="nueva contraseña" onkeyup="check();" required>
+                    <input class="form-input confirm_password" id="confirm_password" type="password" name="confirm_password" placeholder="confirmar nueva contraseña" onkeyup="check();" required>
+                    <input class="form-submit" id="a" type="submit" value="Actualizar">
+                    <p class="message" id="message"></p>
 
                     <?php
                             if(isset($valida)){
@@ -86,10 +87,18 @@ if($_POST){
     </section>
 
     <script>
-        var nombre =  document.getElementsByClassName("password");
-        nombre.addEventListener("keypress", function(){
-            nombre.get
-        });
+        var check = function() {
+            document.getElementById('a').disabled=true;
+        
+         if (document.getElementById('new_password').value == document.getElementById('confirm_password').value) {
+                
+                document.getElementById('message').innerHTML= 'Coinciden';
+                document.getElementById('a').disabled=false;
+            } else {
+                    document.getElementById('message').innerHTML = 'contrasenas no coinciden';
+                }
+        }
+
     </script>
 
 </body>
