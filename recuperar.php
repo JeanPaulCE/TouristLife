@@ -1,3 +1,45 @@
+<?php
+include "DB.php";
+
+$valida=2;
+
+if($_POST){
+    $user = $_POST["user"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    $user_found = $database->select("tb_users","username",[
+        "username" => $user
+    ]);
+
+    $email_found = $database->select("tb_users","email",[
+        "email" => $email
+    ]);
+
+    
+
+    if (count($user_found)>0) {
+        $valida =0;
+
+    }else if(count($email_found)>0){
+        $valida =1;
+    }else{
+        $database->insert("tb_users", [
+            "username" => $user,
+            "email" => $email,
+            "password" => md5($password)
+        ]);
+
+        $user_found = $database->select("tb_users","*",[
+            "email" => $email
+        ]);
+
+        $_SESSION['id'] = $user_found[0]['id_user'];
+            header('Location:./usuario.php');
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,31 +62,48 @@
     <link rel="stylesheet" href="./css/typografias.css">
     <link rel="stylesheet" href="./css/generico.css">
     <link rel="stylesheet" href="./css/recuperar.css">
-    <title>recuperar</title>
-
+    <title>registrarse</title>
 </head>
 
 <body>
-<?php 
+    <section>
+    <?php 
         include "header.php";
     ?>
 
-    <section class="background background-recover">l
-        <div class="box">
-            <form class="center" action="./administracion.html" method="get">
-                <h3 class=" form-label">Recuperar Cuenta</h3>
-                <label for="Ingresa-correo" class="links text-recover">Ingresa tu correo electronico <br> de
-                    recuperación</label>
-                <input class="form-input" type="email" name="email" placeholder="correo electronico">
-                <input class="form-submit" type="submit" value="Enviar">
-            </form>
-        </div>
-    </section>
-    
-    <?php
+        <section class="background background-recover">
+            <div class="box center">
+                <form class="center" action="registro.php" method="post">
+                    <h3 class=" form-label">Cambiar contraseña</h3>
+                    <input class="form-input" type="email" name="email" placeholder="correo electronico">
+                    <input class="form-input password" type="password" name="password" placeholder="contraseña actual">
+                    <input class="form-input new-password" type="password" name="new-password" placeholder="nueva contraseña">
+                    <input class="form-input confirm-password" type="password" name="confirm-password" placeholder="confirmar nueva contraseña">
+                    <input class="form-submit" type="submit" value="Actualizar">
+
+                    <?php
+                            if($valida==0){
+                                echo '<p class="error">Usuario ya registrado</p>';
+                            }else if($valida==1){
+                                echo '<p class="error">Correo ya registrado</p>';
+                            }
+                    ?>
+                </form>
+            </div>
+        </section>
+
+        <?php
         include "footer.php";
     ?>
 
+    </section>
+
+    <script>
+        var nombre =  document.getElementsByClassName("password");
+        nombre.addEventListener("keypress", function(){
+            nombre.get
+        });
+    </script>
 
 </body>
 
