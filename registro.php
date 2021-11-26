@@ -78,7 +78,7 @@ if($_POST){
                     <input class="form-input" type="text" name="user" placeholder="nombre de usuario">
                     <input class="form-input" type="email" name="email" placeholder="correo electronico">
                     <input class="form-input password" type="password" name="password" placeholder="contraseña">
-                    <input class="form-input confirm-password" type="password" name="confirm-password" placeholder="confirmar contraseña">
+                    <input class="form-input confirm_password" type="password" name="confirm_password" placeholder="confirmar contraseña">
                     <input class="form-submit" type="submit" value="Registrar">
 
                     <?php
