@@ -1,12 +1,10 @@
 <?php
 include "DB.php";
 
-$valida=2;
-
 if($_POST){
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $new-password = $_POST["new-password"];
+    $new_password = $_POST["new-password"];
 
 
     $email_found = $database->select("tb_users","email",[
@@ -15,16 +13,19 @@ if($_POST){
 
 
     if (count($email_found)>0 && md5($password)==$user_found[0]["password"]) {
-        
+        $database->update("tb_users",[
+            "password" => md5($new_password)
+        ],[
+
+            "email"=> $_POST["email"]
+        ]);
         session_destroy();
         header('Location:./inicio-sesion.php');
     }else{
         $valida =false;
     } 
 
-    
-
-    
+      
 }
 ?>
 
@@ -65,8 +66,8 @@ if($_POST){
                     <h3 class=" form-label">Cambiar contraseña</h3>
                     <input class="form-input" type="email" name="email" placeholder="correo electronico">
                     <input class="form-input password" type="password" name="password" placeholder="contraseña actual">
-                    <input class="form-input new-password" type="password" name="new-password" placeholder="nueva contraseña">
-                    <input class="form-input confirm-password" type="password" name="confirm-password" placeholder="confirmar nueva contraseña">
+                    <input class="form-input new_password" type="password" name="new_password" placeholder="nueva contraseña">
+                    <input class="form-input confirm-password" type="password" name="confirm_password" placeholder="confirmar nueva contraseña">
                     <input class="form-submit" type="submit" value="Actualizar">
 
                     <?php
