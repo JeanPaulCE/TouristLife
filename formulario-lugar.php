@@ -5,7 +5,7 @@ $categories = $database->select("tb_places_category", "*");
 date_default_timezone_set("America/Costa_Rica");
 $date = date('Y-m-d H:i:s');
 
-function imgs_id($int,$imgs_temp){
+function imgs_id($int, $imgs_temp){
     if (isset($imgs_temp[$int])) {
        return $imgs_temp[$int];
     }else{
@@ -13,16 +13,48 @@ function imgs_id($int,$imgs_temp){
     }
 }
 
+/*
+function add_images($element){
+    if($element) {
+        array_push($images, $element);
+        return "añadido";
+    }
+}*/
+
 if($_POST){
     if(isset($_SESSION["id"])){
         if(isset($_FILES["main-image"])){
-            $valid_ext = array("jpeg", "jpg", "png");
-            $images = array();
+            //$valid_ext = array("jpeg", "jpg", "png");
             $imgs_temp = array();
-            $main_img = explode(".", $_FILES["main-image"]["name"]);
-            $left_img = explode(".", $_FILES["left-image"]["name"]);
-            $right_img = explode(".", $_FILES["right-image"]["name"]);
+            //$main_img = explode(".", $_FILES["main-image"]["name"]);
+            //$left_img = explode(".", $_FILES["left-image"]["name"]);
+            //$right_img = explode(".", $_FILES["right-image"]["name"]);
+
+            //var_dump($_FILES["main-image"]["name"]);
+            //var_dump(add_images($_FILES["main-image"]["name"]));
+            //add_images($_FILES["left-image"]["name"]);
+            //add_images($_FILES["right-image"]["name"]);
+            $images = array();
+            $main_img = $_FILES["main-image"];
+            $left_img = $_FILES["left-image"];
+            $right_img = $_FILES["right-image"];
+
+            if($main_img['name']) {
+                array_push($images, $main_img);
+            }
+            if($left_img['name']) {
+                array_push($images, $left_img);
+            }
+            if($right_img['name']) {
+                array_push($images, $right_img);
+            }
+            
+            //$images[0] = $_FILES["main-image"];
+            //var_dump($images[0]["tmp_name"]);
             /*
+            
+
+
             $ready = false;
             if(in_array(end($main_img), $valid_ext) === true){
                 $images[0] = $_FILES["main-image"];
@@ -39,10 +71,16 @@ if($_POST){
 
             if($ready){
                 */
+
+                
                 for ($i = 0; $i < count($images); $i++){
-                    $consulta = $database->query("SELECT tb_imgs.id_imgs, url from BIYx7soDWk.tb_imgs group by tb_imgs.id_imgs order by 1 desc")->fetchAll();
-                    $id = $consulta[0]["id_imgs"] + 1;
+                    $query = $database->query("SELECT tb_imgs.id_imgs, url from BIYx7soDWk.tb_imgs group by tb_imgs.id_imgs order by 1 desc")->fetchAll();
+                    $id = $query[0]["id_imgs"] + 1;
                     $imgs_temp[$i] = $id;
+
+                    //var_dump($id);
+                    //var_dump($images[$i]["name"]);
+                    //var_dump($images[$i]["tmp_name"]);
                     
                     $img = "img-" . $id . $images[$i]["name"];
                     move_uploaded_file($images[$i]["tmp_name"], "imgs/places/" . $img);
@@ -56,14 +94,14 @@ if($_POST){
                      "place_title" => $_POST["title"],
                      "place_description" => $_POST["description"],
                      "place_main_image" => imgs_id(0,$imgs_temp),
-                     "place_right_image" =>imgs_id(1,$imgs_temp),
+                     "place_right_image" => imgs_id(1,$imgs_temp),
                      "place_left_image" => imgs_id(2,$imgs_temp),
                      "place_pub_date" => $date,
                      "place_status" => "1",
                      "id_place_caregory" => $_POST["category"],
                      "id_user" => $_SESSION["id"],
                      "place_location" => $_POST["location"]
-                 ]);
+                ]);
                  
                  /*
                 if(!($status->rowCount()>=0)){//error al insertar en la bace de datos
@@ -147,7 +185,7 @@ if($_POST){
                             <input class="form-input-file" id="right-image" type="file" name="right-image">
                         </div>
                         <div class="form-container-grid center">
-                            <input class="form-submit" type="submit" value="Enviar">
+                            <input id="form-submit" class="form-submit" type="submit" value="Enviar">
                         </div>
                     </form>
                 </div>
