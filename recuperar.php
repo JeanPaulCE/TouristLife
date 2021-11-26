@@ -6,6 +6,7 @@ $valida=2;
 if($_POST){
     $email = $_POST["email"];
     $password = $_POST["password"];
+    $new-password = $_POST["new-password"];
 
 
     $email_found = $database->select("tb_users","email",[
@@ -13,11 +14,11 @@ if($_POST){
     ]);
 
 
-    if (count($user_found)>0 && md5($password)==$user_found[0]["password"]) {
-        $_SESSION['id'] = $user_found[0]['id_user'];
-        header('Location:./usuario.php');
-    }else{
+    if (count($email_found)>0 && md5($password)==$user_found[0]["password"]) {
+        
         session_destroy();
+        header('Location:./inicio-sesion.php');
+    }else{
         $valida =false;
     } 
 
@@ -69,12 +70,10 @@ if($_POST){
                     <input class="form-submit" type="submit" value="Actualizar">
 
                     <?php
-                            if($valida==0){
-                                echo '<p class="error">Usuario ya registrado</p>';
-                            }else if($valida==1){
-                                echo '<p class="error">Correo ya registrado</p>';
+                            if(isset($valida)){
+                                echo '<p class="error">Correo o contraseña incorrectos</p>';
                             }
-                    ?>
+                    ?> 
                 </form>
             </div>
         </section>
