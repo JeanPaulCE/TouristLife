@@ -69,7 +69,7 @@ if($_POST){
                             }
                     ?> 
                    
-                    <a class="links" href="./recuperar.php">¿Has olvidado tu contraseña?</a>
+                    <a class="links" href="./recuperar.php">¿Quieres cambiar tu contraseña?</a>
                     <a class=" links" href="./registro.php">Registrarse</a>
                 </form>
 

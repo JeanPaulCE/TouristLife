@@ -4,15 +4,15 @@ include "DB.php";
 if($_POST){
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $new_password = $_POST["new-password"];
+    $new_password = $_POST["new_password"];
 
 
-    $email_found = $database->select("tb_users","email",[
+    $email_found = $database->select("tb_users","*",[
         "email" => $email
     ]);
 
 
-    if (count($email_found)>0 && md5($password)==$user_found[0]["password"]) {
+    if (count($email_found)>0 && md5($password)==$email_found[0]["password"]) {
         $database->update("tb_users",[
             "password" => md5($new_password)
         ],[
