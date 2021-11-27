@@ -9,10 +9,12 @@ if($_POST){
     $password = $_POST["password"];
 
     $user_found = $database->select("tb_users","username",[
-        "username" => $user
+        "username" => $user //=naomy//
     ]);
 
-    $email_found = $database->select("tb_users","email",[
+    $arreglo=[1,2,3];
+
+    $user_found = $database->select("tb_users","*",[
         "email" => $email
     ]);
 
@@ -30,9 +32,7 @@ if($_POST){
             "password" => md5($password)
         ]);
 
-        $user_found = $database->select("tb_users","*",[
-            "email" => $email
-        ]);
+        
 
         $_SESSION['id'] = $user_found[0]['id_user'];
             header('Location:./usuario.php');
