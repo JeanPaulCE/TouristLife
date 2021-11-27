@@ -151,19 +151,19 @@ if($_POST){
                     <form action="formulario-lugar.php" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this);">
                         <div class="form-container-grid">
                             <label class="form-text text-16" for="title">Título</label>
-                            <input id="title" class="form-input" type="text" name="title">
+                            <input id="title" class="form-input" type="text" name="title" required>
                         </div>
                         <div class="form-container-grid">
                             <label class="form-text text-16" for="location">Localización</label>
-                            <input id="location" class="form-input" type="text" name="location">
+                            <input id="location" class="form-input" type="text" name="location" required>
                         </div>
                         <div class="form-container-grid">
                             <label for="description" class="form-text text-16">Descripción</label>
-                            <textarea class="form-input-textarea h-13" name="description" id="description" cols="30" rows="8"></textarea>
+                            <textarea class="form-input-textarea h-13" name="description" id="description" cols="30" rows="8"></textarea required>
                         </div>
                         <div class="form-container-grid">
                             <label class="form-text text-16" for="category">Categoría</label>
-                            <select class="form-input-select" name="category" id="category">
+                            <select class="form-input-select" name="category" id="category" required>
                                 <option value="0">Ninguno</option>
                                 <?php
                                 for ($i = 0; $i < count($categories); $i++) {
