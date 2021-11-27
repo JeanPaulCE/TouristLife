@@ -41,6 +41,7 @@
 .text-24 { font-size: 1.5em; }
 .h-13 { height: 13vh; }
 .mr-02 { margin-right: .2em; }
+.w-100 { width: 100%; }
 
 *{
     list-style: none;

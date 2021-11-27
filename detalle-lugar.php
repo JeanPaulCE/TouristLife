@@ -38,14 +38,41 @@ if ($_GET) {
             <div class="detail-container">
                 <div class="elements-d">
                     <div class="inner-image">
+                        <div id="slider" class="slider">
+                            <?php
+                            $url_main = $database->select("tb_imgs", "url", [
+                                "id_imgs" => $place[0]["place_main_image"]
+                            ]);
+                            $url_right = $database->select("tb_imgs", "url", [
+                                "id_imgs" => $place[0]["place_right_image"]
+                            ]);
+                            $url_left = $database->select("tb_imgs", "url", [
+                                "id_imgs" => $place[0]["place_left_image"]
+                            ]);
+                            
+                            echo "<div class='w-100'>";
+                            echo "<img id='main-image' class='slider-image' src='" . $url_main[0] . "' alt='main-image'>";
+                            echo "</div>";
+                            
+                            if(count($url_right) > 0){
+                                echo "<div class='w-100'>";
+                                echo "<img class='slider-image' src='" . $url_right[0] . "' alt='right-image'>";
+                                echo "</div>";
+                            }
+                            if(count($url_left) > 0){
+                                echo "<div class='w-100'>";
+                                echo "<img class='slider-image' src='" . $url_left[0] . "' alt='left-image'>";
+                                echo "</div>";
+                            }
+                            ?>
+                            <!--<img class="inner-image" src="./imgs/prueba-detalle.jpg" alt="imagen">-->
+                        </div>
+                        <i id="button-left" class="fas fa-angle-left slider-button-left"></i>
                         <?php
-                        $url_main = $database->select("tb_imgs", "url", [
-                            "id_imgs" => $place[0]["place_main_image"]
-                        ]);
-
-                        echo "<img class='inner-image' src='" . $url_main[0] . "' alt='imagen'>";
+                        if(count($url_right) > 0){
+                            echo "<i id='button-right' class='fas fa-angle-right slider-button-right'></i>";
+                        }
                         ?>
-                        <!--<img class="inner-image" src="./imgs/prueba-detalle.jpg" alt="imagen">-->
                     </div>
                     <div class="inner-text">
                         <?php
@@ -91,6 +118,7 @@ if ($_GET) {
         include "footer.php";
         ?>
     </section>
+    <script src="./js/slider.js"></script>
 </body>
 
 </html>
