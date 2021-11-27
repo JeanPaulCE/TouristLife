@@ -14,7 +14,7 @@
 
 
 .footer-section{
-    top: 92vh;
+    top: 90vh;
     height: 8vh;
 }
 
@@ -26,6 +26,16 @@
 
 
 @media (max-width: 700px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header header"
+        "main main . sidebar"
+        "footer footer footer footer";
+
+    }   
     .footer-section{
         top: 89vh;
         height: 11vh;
@@ -41,8 +51,18 @@
         top: 17vh;
         max-height: 500px; 
     }
+    .background{
+        height: 40vh;
+        min-height: 400px;
+        
 
-    
+    }
+    .footer-section{
+        top: 2vh;
+        height: 11vh;
+        position: relative;
+
+    }
 
 
 }

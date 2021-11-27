@@ -55,7 +55,7 @@ if($_POST){
 </head>
 
 <body>
-    <section>
+    <section class="mai-grid">
     <?php 
         include "header.php";
     ?>
