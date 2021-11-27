@@ -26,16 +26,7 @@
 
 
 @media (max-width: 700px) {
-    .main-grid{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "header header header header"
-        "main main . sidebar"
-        "footer footer footer footer";
-
-    }   
+      
     .footer-section{
         top: 89vh;
         height: 11vh;
