@@ -10,7 +10,7 @@ body {
     display: grid;    
     background: var(--background);
     border-radius: 3em;
-    margin-top: 16vh;
+    margin-top: 18vh;
 }
 
 .elements-d {
