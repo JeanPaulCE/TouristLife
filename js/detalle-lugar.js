@@ -3,8 +3,7 @@ function voting(id){
         place_id: id
     }
     
-
-    fetch("http://explorecr.test/votes.php/", {
+    fetch("http://touristlife.test/votes.php", {
         method: "POST",
         mode: "same-origin",
         credentials: "same-origin",
@@ -12,20 +11,20 @@ function voting(id){
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(info)
+        body: JSON.stringify(places)
     })
     .then(response => response.json())
     .then(data => {
         if (data === 401) {
-            alert("Login to vote");
+            alert("Inicia sesión para votar");
         }
         if (data === 200) {
-            alert("Login");
-            let btn = document.getElementById(id);
-            btn.classList.remove("far");
-            btn.removeAttribute("onclick");
-            btn.classList.add("fas");
-            let votes = document.getElementById("v" + id);
+            let like = document.getElementById(id);
+            like.classList.remove("like");
+            like.removeAttribute("onclick");
+            like.classList.add("like-click");
+            
+            let votes = document.getElementById("votes" + id);
             let updateVotes = Number(votes.innerText);
             updateVotes += 1;
             votes.innerText = updateVotes;

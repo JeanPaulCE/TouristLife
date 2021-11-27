@@ -1,5 +1,6 @@
 <?php
 include "DB.php";
+
 if ($_GET) {
     $place = $database->select("tb_places", "*", [
         "id_place" => $_GET
@@ -49,27 +50,26 @@ if ($_GET) {
                             $url_left = $database->select("tb_imgs", "url", [
                                 "id_imgs" => $place[0]["place_left_image"]
                             ]);
-                            
+
                             echo "<div class='w-100'>";
                             echo "<img id='main-image' class='slider-image' src='" . $url_main[0] . "' alt='main-image'>";
                             echo "</div>";
-                            
-                            if(count($url_right) > 0){
+
+                            if (count($url_right) > 0) {
                                 echo "<div class='w-100'>";
                                 echo "<img class='slider-image' src='" . $url_right[0] . "' alt='right-image'>";
                                 echo "</div>";
                             }
-                            if(count($url_left) > 0){
+                            if (count($url_left) > 0) {
                                 echo "<div class='w-100'>";
                                 echo "<img class='slider-image' src='" . $url_left[0] . "' alt='left-image'>";
                                 echo "</div>";
                             }
                             ?>
-                            <!--<img class="inner-image" src="./imgs/prueba-detalle.jpg" alt="imagen">-->
                         </div>
                         <i id="button-left" class="fas fa-angle-left slider-button-left"></i>
                         <?php
-                        if(count($url_right) > 0){
+                        if (count($url_right) > 0) {
                             echo "<i id='button-right' class='fas fa-angle-right slider-button-right'></i>";
                         }
                         ?>
@@ -94,45 +94,34 @@ if ($_GET) {
                     echo "<p class='detail-bottom text-16'>" . $name_category[0] . "</p>";
                     echo "<p class='detail-bottom text-16'>" . $place[0]["place_pub_date"] . "</p>";
                     ?>
-                    <!--
-                        <p class="detail-bottom text-16">usuario</p>
-                        <p class="detail-bottom text-16">categoria</p>
-                        <p class="detail-bottom text-16">dd/mm/aaaa</p>
-                        -->
+
                     <div class="detail-bottom text-16">
                         <div class="inner-like">
                             <?php
-                                $votes = $database->count("tb_places_likes", [
-                                    "id_place" => $place[0]["id_place"]
-                                ]);
+                            $votes = $database->count("tb_places_likes", [
+                                "id_place" => $place[0]["id_place"]
+                            ]);
 
-                                $hasVoted = [];
-                                if(isset($_SESSION["id"])) {
-                                    $hasVoted = $database->select("tb_places_likes", "*", [
-                                        "id_place" => $place[0]["id_place"],
-                                        "id_user" => $_SESSION["id"]
-                                    ]);
-                                }
-                                if (count($hasVoted) > 0) {
-                                    $class = "fas fa-heart like-click";
-                                    $click = "";
-                                }
-                                else {
-                                    $class = "fas fa-heart like";
-                                    $click = "onclick='voting(this.id);'";
-                                }
-                                echo "<p id='votes " . $place[0]["id_place"] . "' class='center-vertical mr-02'>" . $votes . "</p>";
-                                echo "<i id='" . $place[0]["id_place"] . "' class='" . $class . "'" . $click . "></i>";
+                            $hasVoted = [];
+                            if (isset($_SESSION["id"])) {
+                                $hasVoted = $database->select("tb_places_likes", "*", [
+                                    "id_place" => $place[0]["id_place"],
+                                    "id_user" => $_SESSION["id"]
+                                ]);
+                            }
+                            if (count($hasVoted) > 0) {
+                                $class = "fas fa-heart like-click";
+                                $click = "";
+                            } else {
+                                $class = "fas fa-heart like";
+                                $click = "onclick='voting(this.id);'";
+                            }
+                            echo "<p id='votes" . $place[0]["id_place"] . "' class='center-vertical mr-02'>" . $votes . "</p>";
+                            echo "<i id='" . $place[0]["id_place"] . "' class='" . $class . "'" . $click . "></i>";
                             ?>
-                            <!--<p class="center-vertical mr-02">1</p>
-                            <input id="like" type="checkbox">
-                            <label for="like" class="center-vertical">
-                                <i id="like" class="fas fa-heart like"></i>
-                            </label>-->
                         </div>
                     </div>
                 </div>
-
             </div>
             <p class="center"><a class="links text-20" href="#">Seguir viendo</a></p>
         </section>
