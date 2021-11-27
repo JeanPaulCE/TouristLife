@@ -92,13 +92,16 @@ body {
     display: inline-flex;
 }
 
-#like { display: none; }
+/*#like { display: none; }*/
+.like {
+    color: var(--white);
+}
 
-#like:hover ~ label i {
+.like:hover {
     color: var(--green);
 }
 
-#like:checked ~ label i {
+.like-click {
     color: var(--green);
 }
 

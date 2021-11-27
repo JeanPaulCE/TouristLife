@@ -101,11 +101,34 @@ if ($_GET) {
                         -->
                     <div class="detail-bottom text-16">
                         <div class="inner-like">
-                            <p class="center-vertical mr-02">1</p>
+                            <?php
+                                $votes = $database->count("tb_places_likes", [
+                                    "id_place" => $place[0]["id_place"]
+                                ]);
+
+                                $hasVoted = [];
+                                if(isset($_SESSION["id"])) {
+                                    $hasVoted = $database->select("tb_places_likes", "*", [
+                                        "id_place" => $place[0]["id_place"],
+                                        "id_user" => $_SESSION["id"]
+                                    ]);
+                                }
+                                if (count($hasVoted) > 0) {
+                                    $class = "fas fa-heart like-click";
+                                    $click = "";
+                                }
+                                else {
+                                    $class = "fas fa-heart like";
+                                    $click = "onclick='voting(this.id);'";
+                                }
+                                echo "<p id='votes " . $place[0]["id_place"] . "' class='center-vertical mr-02'>" . $votes . "</p>";
+                                echo "<i id='" . $place[0]["id_place"] . "' class='" . $class . "'" . $click . "></i>";
+                            ?>
+                            <!--<p class="center-vertical mr-02">1</p>
                             <input id="like" type="checkbox">
                             <label for="like" class="center-vertical">
-                                <i class="fas fa-heart"></i>
-                            </label>
+                                <i id="like" class="fas fa-heart like"></i>
+                            </label>-->
                         </div>
                     </div>
                 </div>
@@ -119,6 +142,7 @@ if ($_GET) {
         ?>
     </section>
     <script src="./js/slider.js"></script>
+    <script src="./js/detalle-lugar.js"></script>
 </body>
 
 </html>
