@@ -3,6 +3,7 @@
     --orange: #F3881F;
     --orange-b:#d4781c;
     --green: #006600;
+    --red: rgb(255, 0, 0);
     --white:#F2F2F2;
     --gray: #2D2C2B;
     --display-nav:none;
@@ -33,7 +34,6 @@
     position: relative;
     top: 5em;
     margin-left: 5em;
-    color: rgb(0, 214, 96) !important;
 }
 
 .text-16 { font-size: 1em; }
@@ -467,6 +467,10 @@ body{
     outline: .1px solid var(--green);
     border: none;
     margin: 1em auto;
+}
+
+.outline-red{
+    outline: .1px solid var(--red)!important;
 }
 
 /* botones en general*/

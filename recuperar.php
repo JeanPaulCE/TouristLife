@@ -68,7 +68,7 @@ if($_POST){
                     <input class="form-input password" type="password" name="password" placeholder="contraseña actual" required>
                     <input class="form-input new_password" id="new_password" type="password" name="new_password" placeholder="nueva contraseña" onkeyup="check();" required>
                     <input class="form-input confirm_password" id="confirm_password" type="password" name="confirm_password" placeholder="confirmar nueva contraseña" onkeyup="check();" required>
-                    <input class="form-submit" id="a" type="submit" value="Actualizar">
+                    <input class="form-submit" id="buttom" type="submit" value="Actualizar">
                     <p class="message" id="message"></p>
 
                     <?php
@@ -87,15 +87,21 @@ if($_POST){
     </section>
 
     <script>
+        var red=false;
         var check = function() {
-            document.getElementById('a').disabled=true;
+            document.getElementById('buttom').disabled=true;
         
          if (document.getElementById('new_password').value == document.getElementById('confirm_password').value) {
-                
-                document.getElementById('message').innerHTML= 'Coinciden';
-                document.getElementById('a').disabled=false;
+                document.getElementById('buttom').disabled=false;
+                if(red){
+                    document.getElementById('confirm_password').className = " form-input confirm_password ";
+                    red=false;
+                }
             } else {
-                    document.getElementById('message').innerHTML = 'contrasenas no coinciden';
+                    if(!red){
+                        document.getElementById('confirm_password').className += " outline-red ";
+                        red=true;
+                    }
                 }
         }
 
