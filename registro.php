@@ -75,11 +75,11 @@ if($_POST){
             <div class="box center">
                 <form class="center" action="registro.php" method="post">
                     <h3 class=" form-label">Crear Cuenta</h3>
-                    <input class="form-input" type="text" name="user" placeholder="nombre de usuario">
-                    <input class="form-input" type="email" name="email" placeholder="correo electronico">
-                    <input class="form-input password" type="password" name="password" placeholder="contraseña">
-                    <input class="form-input confirm_password" type="password" name="confirm_password" placeholder="confirmar contraseña">
-                    <input class="form-submit" type="submit" value="Registrar">
+                    <input class="form-input" type="text" name="user" placeholder="nombre de usuario" required>
+                    <input class="form-input" type="email" name="email" placeholder="correo electronico" required>
+                    <input class="form-input password" id="password2" type="password" name="password" placeholder="contraseña" onkeyup="check();" required>
+                    <input class="form-input confirm_password" id="confirm_password2" type="password" name="confirm_password" placeholder="confirmar contraseña" onkeyup="check();" required>
+                    <input class="form-submit" id="buttom" type="submit" value="Registrar">
 
                     <?php
                             if($valida==0){
@@ -99,10 +99,24 @@ if($_POST){
     </section>
 
     <script>
-        var nombre =  document.getElementsByClassName("password");
-        nombre.addEventListener("keypress", function(){
-            nombre.get
-        });
+        var red=false;
+        var check = function() {
+            document.getElementById('buttom').disabled=true;
+        
+         if (document.getElementById('confirm_password2').value == document.getElementById('password2').value) {
+                document.getElementById('buttom').disabled=false;
+                if(red){
+                    document.getElementById('confirm_password2').className = " form-input confirm_password ";
+                    red=false;
+                }
+            } else {
+                    if(!red){
+                        document.getElementById('confirm_password2').className += " outline-red ";
+                        red=true;
+                    }
+                }
+        }
+
     </script>
 
 </body>
