@@ -5,33 +5,19 @@ let buttonRight = document.getElementById("button-right");
 let count = 0;
 
 function nextRight() {
-    if(count == 0 && images.length == 2){
-        slider.style.transition = "all 0.5s";
-        setTimeout(function(){
-            slider.style.transition = "none";
-            slider.style.marginLeft = "-150%";
-            buttonLeft.style.display = "block";
-            buttonRight.style.display = "none";
-        }, 500);
-    }
-    if(count == 0 && images.length == 3){
+    if(count == 0){
         slider.style.transition = "all 0.5s";
         setTimeout(function(){
             slider.style.transition = "none";
             slider.style.marginLeft = "-100%";
+            if (images.length == 2) {
+                buttonRight.style.display = "none";
+            }
             buttonLeft.style.display = "block";
         }, 500);
     }
 
-    if(count == 1 && images.length == 2){
-        slider.style.transition = "all 0.5s";
-        setTimeout(function(){
-            slider.style.transition = "none";
-            slider.style.marginLeft = "-300%";
-            buttonRight.style.display = "none";
-        }, 500);
-    }
-    if(count == 1 && images.length == 3){
+    if(count == 1){
         slider.style.transition = "all 0.5s";
         setTimeout(function(){
             slider.style.transition = "none";
@@ -43,7 +29,7 @@ function nextRight() {
 }
 
 function nextLeft() {
-    if(count == 1 && images.length > 1){
+    if(count == 1){
         slider.style.transition = "all 0.5s";
         setTimeout(function(){
             slider.style.transition = "none";
@@ -53,15 +39,7 @@ function nextLeft() {
         }, 500);
     }
 
-    if(count == 2 && images.length == 2){
-        slider.style.transition = "all 0.5s";
-        setTimeout(function(){
-            slider.style.transition = "none";
-            slider.style.marginLeft = "-150%";
-            buttonRight.style.display = "block";
-        }, 500);
-    }
-    if(count == 2 && images.length == 3){
+    if(count == 2){
         slider.style.transition = "all 0.5s";
         setTimeout(function(){
             slider.style.transition = "none";

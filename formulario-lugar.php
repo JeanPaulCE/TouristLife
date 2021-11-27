@@ -6,6 +6,7 @@ $categories = $database->select("tb_places_category", "*");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +24,11 @@ $categories = $database->select("tb_places_category", "*");
     <link rel="stylesheet" href="./css/formulario-lugar.css">
     <title>TouristLife</title>
 </head>
+
 <body>
     <section class="main">
         <?php
-            include "header.php";
+        include "header.php";
         ?>
 
         <section class="background">
@@ -80,7 +82,7 @@ $categories = $database->select("tb_places_category", "*");
         </section>
 
         <?php
-            include "footer.php";
+        include "footer.php";
         ?>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>

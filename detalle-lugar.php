@@ -39,35 +39,45 @@ if ($_GET) {
             <div class="detail-container">
                 <div class="elements-d">
                     <div class="inner-image">
-                        <div id="slider" class="slider">
-                            <?php
-                            $url_main = $database->select("tb_imgs", "url", [
-                                "id_imgs" => $place[0]["place_main_image"]
-                            ]);
-                            $url_right = $database->select("tb_imgs", "url", [
-                                "id_imgs" => $place[0]["place_right_image"]
-                            ]);
-                            $url_left = $database->select("tb_imgs", "url", [
-                                "id_imgs" => $place[0]["place_left_image"]
-                            ]);
+                        <?php
+                        $url_main = $database->select("tb_imgs", "url", [
+                            "id_imgs" => $place[0]["place_main_image"]
+                        ]);
+                        $url_right = $database->select("tb_imgs", "url", [
+                            "id_imgs" => $place[0]["place_right_image"]
+                        ]);
+                        $url_left = $database->select("tb_imgs", "url", [
+                            "id_imgs" => $place[0]["place_left_image"]
+                        ]);
 
+                        $class_width = "w-100";
+                        if (count($url_right) > 0) {
+                            $class_width = "w-200";
+                        }
+                        if (count($url_left) > 0) {
+                            $class_width = "w-300";
+                        }
+                        echo "<div id='slider' class='slider " . $class_width . "'>";
+
+                        echo "<div class='w-100'>";
+                        echo "<img id='main-image' class='slider-image' src='" . $url_main[0] . "' alt='main-image'>";
+                        echo "</div>";
+                        if (count($url_right) > 0) {
                             echo "<div class='w-100'>";
-                            echo "<img id='main-image' class='slider-image' src='" . $url_main[0] . "' alt='main-image'>";
+                            echo "<img class='slider-image' src='" . $url_right[0] . "' alt='right-image'>";
                             echo "</div>";
+                        }
+                        if (count($url_left) > 0) {
+                            echo "<div class='w-100'>";
+                            echo "<img class='slider-image' src='" . $url_left[0] . "' alt='left-image'>";
+                            echo "</div>";
+                        }
 
-                            if (count($url_right) > 0) {
-                                echo "<div class='w-100'>";
-                                echo "<img class='slider-image' src='" . $url_right[0] . "' alt='right-image'>";
-                                echo "</div>";
-                            }
-                            if (count($url_left) > 0) {
-                                echo "<div class='w-100'>";
-                                echo "<img class='slider-image' src='" . $url_left[0] . "' alt='left-image'>";
-                                echo "</div>";
-                            }
-                            ?>
-                        </div>
+                        echo "</div>";
+                        ?>
+                        
                         <i id="button-left" class="fas fa-angle-left slider-button-left"></i>
+
                         <?php
                         if (count($url_right) > 0) {
                             echo "<i id='button-right' class='fas fa-angle-right slider-button-right'></i>";

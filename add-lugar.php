@@ -31,33 +31,33 @@ if($_POST){
                 array_push($images, $right_img);
             }
             
-                for ($i = 0; $i < count($images); $i++){
-                    $query = $database->query("SELECT tb_imgs.id_imgs, url from BIYx7soDWk.tb_imgs group by tb_imgs.id_imgs order by 1 desc")->fetchAll();
-                    $id = $query[0]["id_imgs"] + 1;
-                    $imgs_temp[$i] = $id;
+            for ($i = 0; $i < count($images); $i++){
+                $query = $database->query("SELECT tb_imgs.id_imgs, url from BIYx7soDWk.tb_imgs group by tb_imgs.id_imgs order by 1 desc")->fetchAll();
+                $id = $query[0]["id_imgs"] + 1;
+                $imgs_temp[$i] = $id;
 
-                    $img = "img-" . $id . $images[$i]["name"];
-                    move_uploaded_file($images[$i]["tmp_name"], "imgs/places/" . $img);
+                $img = "img-" . $id . $images[$i]["name"];
+                move_uploaded_file($images[$i]["tmp_name"], "imgs/places/" . $img);
                     
-                    $database->insert("tb_imgs", [
-                         "url" => "./imgs/places/" . $img
-                    ]);
-                }
-
-                $status = $database->insert("tb_places", [
-                     "place_title" => $_POST["title"],
-                     "place_description" => $_POST["description"],
-                     "place_main_image" => imgs_id(0,$imgs_temp),
-                     "place_right_image" => imgs_id(1,$imgs_temp),
-                     "place_left_image" => imgs_id(2,$imgs_temp),
-                     "place_pub_date" => $date,
-                     "place_status" => "1",
-                     "id_place_caregory" => $_POST["category"],
-                     "id_user" => $_SESSION["id"],
-                     "place_location" => $_POST["location"]
+                $database->insert("tb_imgs", [
+                    "url" => "./imgs/places/" . $img
                 ]);
+            }
+
+            $status = $database->insert("tb_places", [
+                "place_title" => $_POST["title"],
+                "place_description" => $_POST["description"],
+                "place_main_image" => imgs_id(0,$imgs_temp),
+                "place_right_image" => imgs_id(1,$imgs_temp),
+                "place_left_image" => imgs_id(2,$imgs_temp),
+                "place_pub_date" => $date,
+                "place_status" => "1",
+                "id_place_caregory" => $_POST["category"],
+                "id_user" => $_SESSION["id"],
+                "place_location" => $_POST["location"]
+            ]);
                 
-                header('Location:./usuario.php');       
+            header('Location:./usuario.php');
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
     include "DB.php";
 
-    if(isset($_SESSION['id'])){
-        if(isset($_SERVER["CONTENT_TYPE"])){
+    if(isset($_SESSION['id'])) {
+        if(isset($_SERVER["CONTENT_TYPE"])) {
             $contentType = $_SERVER["CONTENT_TYPE"];
 
             if($contentType === "application/json"){

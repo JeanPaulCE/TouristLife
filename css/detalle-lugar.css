@@ -29,7 +29,6 @@ body {
 
 .slider {
     display: flex;
-    width: 300%;
     height: 60vh;
 }
 
@@ -92,7 +91,6 @@ body {
     display: inline-flex;
 }
 
-/*#like { display: none; }*/
 .like {
     color: var(--white);
 }
