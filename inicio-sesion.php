@@ -58,9 +58,9 @@ if($_POST){
                 <form class="center" action="inicio-sesion.php" method="post">
                     <h3 class=" form-label">Iniciar Sesión</h3>
                     <input class="form-input form-input-inicio" type="email" name="email"
-                        placeholder="correo electronico">
+                        placeholder="correo electronico" required>
                     <input class="form-input form-input-inicio" type="password" name="password"
-                        placeholder="contraseña">
+                        placeholder="contraseña" required>
                     <input class="form-submit" type="submit" value="Iniciar sesión">
 
                      <?php
