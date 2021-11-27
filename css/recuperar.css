@@ -14,7 +14,6 @@
 
 
 .footer-section{
-    position: absolute;
     top: 92vh;
     height: 8vh;
 }
@@ -37,7 +36,8 @@
     }
 
     .box{
-        width: 70%;
+        
+        width: 80%;
         top: 17vh;
         max-height: 500px; 
     }
