@@ -121,10 +121,11 @@ if ($_GET) {
                             }
                             if (count($hasVoted) > 0) {
                                 $class = "fas fa-heart like-click";
-                                $click = "";
-                            } else {
+                                $click = "onclick='dislike(this.id);'";
+                            } 
+                            else {
                                 $class = "fas fa-heart like";
-                                $click = "onclick='voting(this.id);'";
+                                $click = "onclick='like(this.id);'";
                             }
                             echo "<p id='votes" . $place[0]["id_place"] . "' class='center-vertical mr-02'>" . $votes . "</p>";
                             echo "<i id='" . $place[0]["id_place"] . "' class='" . $class . "'" . $click . "></i>";
