@@ -1,3 +1,6 @@
+ /* top: 91vh; AÑADIR EN PAGINAS QUE SE JODIO EL FOOTER REF: NOTA1 */
+
+
 :root{
     --background: #232221;
     --orange: #F3881F;
@@ -518,8 +521,83 @@ body{
 }
 
 /*/Juan Luis/*/
+/*/movil de lado/*/
+@media(max-height:950px) and (max-width:1015px){
+.menu2:hover>ul{
+        display: none;
+        border-radius: 6px;
+    }
+        .nav-bar{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .label-cl{
+        padding: 3vh 0vh;
 
+    }
+    .nav-item-cluster{
+        /* width: 100%; */
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+    }
+   .menu2:hover>ul{
+        display: none;
+        border-radius: 6px;
+    }
+    .end{
+        display: none;
+        position: relative;
+        grid-column-start:1;
+        grid-column-end: 3;
+        width: 100%;
+        
+    }
+    
+    .nav-items{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: relative;
+        right: 0;
+        width: 100%;
+        text-align: center;
 
+    }
+    .nav-item>a,.nav-item-cluster>p{
+        width: 100%;
+        text-align: center;
+        padding: 3vh 0;
+        margin: 0;
+        height: auto;
+    }
+    .nav-item-cluster>ul{
+        display: none;
+    }
+    .nav-item{
+        position: relative;
+    }
+    .bars {
+        display: block;
+        width: 4vw;
+        position: relative;
+        background: var(--rojo);
+        padding: .5em .5em .25em;
+        left: 12vh;
+        z-index: 2;
+        margin-top: .8em;
+    }
+    #menu:checked ~ .end  {
+        display: block;
+    }
+    #menu2:checked ~ .cluster   {
+        display: block;
+        position: relative;
+
+    }
+    
+
+    
+}
 
 @media (max-width: 700px) {
    
@@ -528,7 +606,7 @@ body{
     position: relative;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
-}
+    }
 
     .footer-element{
         text-align: center;
@@ -703,7 +781,7 @@ body{
     }
     .footer-section{
         height: 6vh;
-        top: 91vh;
+       /* top: 91vh; AÑADIR EN PAGINAS QUE SE JODIO EL FOOTER NOTA1 */
     }
     .container{
         height: 15vh;

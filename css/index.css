@@ -63,7 +63,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) and (max-height:870px) {
     .top-section{
         height: 85vh;
         background: url("../imgs/main-back-movil.jpg") no-repeat;
@@ -83,7 +83,8 @@
         width: 25vw;
     }
 }
-@media(max-width:1100px) and (min-width:700px){
+
+@media (min-height:870px){
     .ts-text{
         top: 14vH;
     }
@@ -100,5 +101,20 @@
     }
     .footer-section{
         top: 0;
+    }
+}
+
+@media(max-height:870px) and (min-width:1000px){
+    .top-section {
+        height: 100vh;
+        background: url(../imgs/main-back.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .container {
+     height: 35vh;
+    }
+    .element {
+        width: 24vw;
+        margin: 1em 1em;
     }
 }
