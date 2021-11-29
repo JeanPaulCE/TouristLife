@@ -134,7 +134,7 @@ if ($_GET) {
                     </div>
                 </div>
             </div>
-            <p class="center"><a class="links text-20" href="#">Seguir viendo</a></p>
+            <p class="center"><a class="links text-20" href="./galeria.php">Seguir viendo</a></p>
         </section>
 
         <?php

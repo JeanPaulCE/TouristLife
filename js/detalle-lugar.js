@@ -3,7 +3,7 @@ function like(id){
         place_id: id
     }
     
-    fetch("http://touristlife.test/like.php", {
+    fetch("like.php", {
         method: "POST",
         mode: "same-origin",
         credentials: "same-origin",
@@ -37,7 +37,7 @@ function dislike(id){
         place_id: id
     }
     
-    fetch("http://touristlife.test/dislike.php", {
+    fetch("dislike.php", {
         method: "POST",
         mode: "same-origin",
         credentials: "same-origin",
