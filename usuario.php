@@ -1,6 +1,8 @@
 <?php
     include "DB.php";
 
+    $MOSTRAR = array();
+
     $user_found = $database->select("tb_users","*",[
         "id_user" => $_SESSION["id"]
     ]);
@@ -9,6 +11,18 @@
         "id_user" => $_SESSION["id"]
     ]);
 
+    if ($_GET) {
+
+        $INICIO = (intval($_GET["pag"])-1)*5;
+
+    } else {
+        $INICIO = 1;
+    }
+    for ($i=0; $i < 5; $i++) { 
+        $MOSTRAR[$i] = $publicaciones[$INICIO+$i];
+    }
+
+    $MAX = count($publicaciones)/5;
 ?>
 
  <!DOCTYPE html>
@@ -53,43 +67,58 @@
                     </div>
                 </div>
                 <div>
-                    <a class="btn" href="./formulario-lugar.php">Nueva Publicación</a>
+                    <a class="btn" href="./formulario-lugar.html">Nueva Publicación</a>
                 </div>
             </section>
 
             <section>
                 
                 <?php 
-                for ($i=0; $i < count($publicaciones); $i++) {
+                for ($i=0; $i < count($MOSTRAR); $i++) {
 
-                            echo '
+                    echo '
                             <section class="site-background inner-col">
                                 <div class="inline card">
                                  <div class="col-img">
                                     <img class="site-img">
                                  </div>
                                  <div class="col-txt">
-                                    <h3 class="element-title">'.$publicaciones[$i]["place_title"].'</h3>
-                                    <p class="element-p">'. $publicaciones[$i]["place_location"].'</p>
+                                    <h3 class="element-title">'.$MOSTRAR[$i]["place_title"].'</h3>
+                                    <p class="element-p">'. $MOSTRAR[$i]["place_location"].'</p>
                                  </div>
-                                 <div class="col-mas">
-                                    <p class="element-p">no verificado</p>
-                                    <a class="element-a" href="./detalle-lugar.php?pg='. $publicaciones[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-        
-                        </section>';
-                    }?>
+                                 <div class="col-mas">';
 
+                    if ($MOSTRAR[$i]["place_status"] == "0"){
+                        echo '
+                                    <p class="element-p">no verificado</p>';
+                        
+
+                    }else if (!($MOSTRAR[$i]["place_status"] == "1")){
+                        echo '
+                                    <p class="element-p">no aprovado</p>';
+
+                            }
+
+                        echo ' 
+                        <a class="element-a" href="./detalle-lugar.php?pg='. $MOSTRAR[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </section>';
+
+                    }?>
+                
 
             </section>
 
             <section class="center">
                 <div class="inline">
-                    <img img class="img-arrow" src="./imgs/left.png" alt="left">
-                    <p class="number">5</p>
-                    <img img class="img-arrow" src="./imgs/right.png" alt="right">
+
+                    <img class="img-arrow cursor" src="./imgs/left.png" alt="left" onclick="back();">
+                    <p class="number" id="pagina">1</p>
+                    <img class="img-arrow cursor" src="./imgs/right.png" alt="right" onclick="next();">
+
                 </div>
             </section>
 
@@ -100,6 +129,44 @@
     ?>
 
     </section>
+
+    <script>
+
+        let max_actual = <?php echo intval($MAX)  ?>;
+        let pag_actual = <?php 
+            
+            if ($_GET){
+                echo intval($_GET["pag"]);
+
+            }else{
+
+                echo intval(1);
+
+            } ?>;
+
+                document.getElementById("pagina").innerHTML=pag_actual;
+
+            let next = function() {
+                    
+                if(pag_actual < max_actual)
+                {
+                    window.location.href = "usuario.php?pag="+(pag_actual+1);
+                }
+
+            }
+
+            let back = function() {
+
+                if(pag_actual > 1)
+                {
+                    window.location.href = "usuario.php?pag="+(pag_actual-1);
+
+            }
+            }
+            
+
+
+    </script>
 
 </body>
 
