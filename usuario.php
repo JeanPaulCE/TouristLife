@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div>
-                    <a class="btn" href="./formulario-lugar.php">Nueva Publicación</a>
+                    <a class="btn" href="./formulario-lugar.html">Nueva Publicación</a>
                 </div>
             </section>
 
@@ -61,8 +61,7 @@
                 
                 <?php 
                 for ($i=0; $i < count($publicaciones); $i++) {
-
-                            echo '
+                        echo '
                             <section class="site-background inner-col">
                                 <div class="inline card">
                                  <div class="col-img">
@@ -72,16 +71,28 @@
                                     <h3 class="element-title">'.$publicaciones[$i]["place_title"].'</h3>
                                     <p class="element-p">'. $publicaciones[$i]["place_location"].'</p>
                                  </div>
-                                 <div class="col-mas">
-                                    <p class="element-p">no verificado</p>
-                                    <a class="element-a" href="./detalle-lugar.php?pg='. $publicaciones[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-        
-                        </section>';
-                    }?>
+                                 <div class="col-mas">';
 
+                    if ($publicaciones[$i]["place_status"] == "0"){
+                        echo '
+                                    <p class="element-p">no verificado</p>';
+                        
+
+                    }else if (!($publicaciones[$i]["place_status"] == "1")){
+                        echo '
+                                    <p class="element-p">no aprovado</p>';
+
+                            }
+
+                        echo ' 
+                        <a class="element-a" href="./detalle-lugar.php?pg='. $publicaciones[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </section>';   
+    
+                    }?>
 
             </section>
 
