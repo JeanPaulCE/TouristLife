@@ -284,6 +284,10 @@ body{/* parche pa cagada de jean */
         padding-bottom: 0em;
     }
 
+    .cursor{
+        cursor: pointer;
+    }
+
     .img-arrow {
         margin: 0em;
         margin: 0em 2em; 
