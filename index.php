@@ -2,6 +2,10 @@
     <?php
         include "DB.php";
         $top10 = $database->query("SELECT *, (SELECT count(tb_places_likes.id_place)  as total from BIYx7soDWk.tb_places_likes where tb_places.id_place = tb_places_likes.id_place) as 'Likes'  from BIYx7soDWk.tb_places where tb_places.id_place in (Select id_place From (SELECT tb_places_likes.id_place, count(tb_places_likes.id_place)  as total from BIYx7soDWk.tb_places_likes group by tb_places_likes.id_place order by 2 desc limit 10) as t)group by tb_places.id_place order by 11 desc;")->fetchAll();
+        if (count($top10)<1) {
+            $top10 = $database->query("SELECT * FROM BIYx7soDWk.tb_places order by id_place asc limit 1;")->fetchAll();
+            $novotos = true;
+        }
     ?>
 <html lang="es">
 
@@ -36,24 +40,29 @@
         <div class="center ts-text">
             <h1 class="title">DESCUBRE LO INCREIBLE</h1>
             <div class="center">
-                <a class="form-submit" href="/galeria">Galeria</a>
+                <a class="form-submit" href="/galeria.php">Galeria</a>
             </div>
         </div>
     </section>
 
     <section class="body">
         <h2 class="top10 center">Los 10 mas votados</h2>
+        <?php if(isset($novotos)){echo '<h2>NO hay votos aun</h2>;';} ?>
         <div class="elements">
         
             <div class="element-1 inner-grid">
                 <div class="container">
-                    <div class="element-img-1" > <img class="element-item-img-1" src="<?php echo  $top10[0]["place_main_image"];?>" alt=""> </div>
+                    <div class="element-img-1" > <img class="element-item-img-1" src="<?php 
+                    $img = $database->select("tb_imgs", "*", [
+                        "id_imgs" => $top10[0]["place_main_image"],
+                    ]);
+                    echo  $img[0]["url"];?>" alt=""> </div>
                     <div class="element-data-1">
                         <h3 class="element-title-1"><?php echo $top10[0]["place_title"];?></h3>
                         <p class="element-p-1"><?php echo $top10[0]["place_location"];?></p>
                     </div>
                     <div class="element-data-2">
-                        <a class="element-a-1" href="../detalle-lugar.php">más <i class="fas fa-arrow-right"></i> </a>
+                        <a class="element-a-1" href=<?php echo './detalle-lugar.php?pg='.$top10[0]["id_place"] ?>>más <i class="fas fa-arrow-right"></i> </a>
                     </div>
                 </div>
             </div>
@@ -61,9 +70,12 @@
 
                 <div class="elements-d">
                 <?php for ($i=1; $i < count($top10); $i++) { 
+                    $img = $database->select("tb_imgs", "*", [
+                        "id_imgs" => $top10[$i]["place_main_image"],
+                    ]);
                     echo '<div class="element">
                         <div>
-                            <div class="element-img"><img class="element-item-img" src="'. $top10[$i]["place_main_image"].'" alt=""></div>
+                            <div class="element-img"><img class="element-item-img" src="'. $img[0]["url"].'" alt=""></div>
                             <div class="element-data">
                                 <h3 class="element-title">'.$top10[$i]["place_title"].'</h3>
                                 <p class="element-p">'. $top10[$i]["place_location"].'</p>

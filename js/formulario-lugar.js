@@ -17,7 +17,6 @@ function showRightImage() {
 let errors = false;
 
 function showError(element) {
-    
     if(element.getAttribute('valid') == null){
         let message = document.createElement("p");
         message.classList.add("form-error")

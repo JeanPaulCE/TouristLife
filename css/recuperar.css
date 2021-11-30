@@ -3,23 +3,19 @@
     background-size: cover;
 }
 
-.text-recover{
-    top: 4em;
-}
-
-
-.form-input{
-    left: 1.3vh;
-}
 
 .box{
-    height: 55vh;
+    position: relative;
+    height: 70vh;
     max-height: 400px;
+    top: 16vh;
+    min-height: 500px;
 }
 
+
 .footer-section{
-    top: 93vh;
-    height: 7vh;
+    top: 90vh;
+    height: 8vh;
 }
 
 .footer-elements{
@@ -30,6 +26,7 @@
 
 
 @media (max-width: 700px) {
+      
     .footer-section{
         top: 89vh;
         height: 11vh;
@@ -40,16 +37,33 @@
     }
 
     .box{
-        width: 70%;
-        top: 22vh;
+        
+        width: 80%;
+        top: 17vh;
+        max-height: 500px; 
+    }
+    .background{
+        height: 40vh;
+        min-height: 400px;
+        
+
+    }
+    .footer-section{
+        top: 2vh;
+        height: 11vh;
+        position: relative;
+
     }
 
 
 }
 
 @media(max-width:1100px) and (min-width:700px){
+
     .box{
         width: 40%;
+        
+        
     }
 
 }

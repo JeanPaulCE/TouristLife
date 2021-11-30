@@ -25,21 +25,31 @@
     margin-bottom: 0;
 }
 
+.error{
+    top: 4.7em;
+}
+
 
 @media (max-width: 700px) {
     .footer-section{
-        top: 89vh;
+        top: 2vh;
         height: 11vh;
-    }
+        position: relative;
 
+    }
     .footer-elements{
         margin-bottom: 0;
     }
 
     .box{
-        width: 70%;
+        width: 80%;
         top: 17vh;
         max-height: 500px; 
+    }
+
+    .background{
+        height: 40vh;
+        min-height: 400px;
     }
 
     
