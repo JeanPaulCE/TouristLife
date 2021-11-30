@@ -12,7 +12,7 @@ if($_POST){
         "username" => $user 
     ]);
 
-    $user_found = $database->select("tb_users","*",[
+    $email_found = $database->select("tb_users","*",[
         "email" => $email
     ]);
 
