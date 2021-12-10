@@ -1,3 +1,43 @@
+<?php
+    include "DB.php";
+
+    $MOSTRAR = array();
+
+    $user_found = $database->select("tb_users", "*", );
+
+    if(count($user_found)>0){
+
+        if ($_GET) {
+
+            $INICIO = (intval($_GET["pag"])-1)*5;
+    
+        } else {
+            $INICIO = 0;
+        }
+
+        if(count($user_found)-$INICIO<5){
+
+            $aux=count($user_found)-$INICIO;
+
+        }else{
+
+            $aux = 5;
+
+        }
+
+        for ($i=0; $i < $aux; $i++) { 
+            
+
+                $MOSTRAR[$i] = $user_found[$INICIO+$i];
+
+        }
+
+    }
+
+    $MAX = round(count($user_found)/5, 0, PHP_ROUND_HALF_UP);
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -45,21 +85,10 @@
 
             <section>
 
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
-                        <div class="col-img">
-                            <img class="profile-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
+            <?php 
+                for ($i=0; $i < count($MOSTRAR); $i++) {
 
-                </section>
+                    echo '
 
                 <section class="profile-background inner-col">
                     <div class="inline col-profile">
@@ -67,71 +96,24 @@
                             <img class="profile-img">
                         </div>
                         <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
+                            <h3 class="profile-title">'.$MOSTRAR[$i]["username"].'</h3>
+                            <p class="profile-p">'. $MOSTRAR[$i]["email"].'</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="view" href="/usuario.php">ver Perfil <i class="fas fa-arrow-right"></i> </a>
                         </div>
                     </div>
 
-                </section>
-
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
-                        <div class="col-img">
-                            <img class="profile-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
-                        <div class="col-img">
-                            <img class="profile-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="profile-background inner-col">
-                    <div class="inline col-profile">
-                        <div class="col-img">
-                            <img class="profile-img">
-                        </div>
-                        <div class="col-txt">
-                            <h3 class="profile-title">Nombre Usuario</h3>
-                            <p class="profile-p">example@gmail.com</p>
-                        </div>
-                        <div class="col-mas">
-                            <a class="view" href="/usuario.html">ver Perfil <i class="fas fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-
-                </section>
+                </section>';
+            }?>
 
             </section>
 
             <section class="center">
                 <div class="inline">
-                    <img img class="img-arrow" src="./imgs/left.png" alt="left">
-                    <p class="number">5</p>
-                    <img img class="img-arrow" src="./imgs/right.png" alt="right">
+                    <img class="img-arrow" src="./imgs/left.png" alt="left" onclick="back();">
+                    <p class="number" id="pagina">1</p>
+                    <img class="img-arrow" src="./imgs/right.png" alt="right" onclick="next();">
                 </div>
             </section>
 
@@ -142,6 +124,44 @@
     ?>
 
     </section>
+
+    <script>
+
+        let max_actual = <?php echo intval($MAX)  ?>;
+        let pag_actual = <?php 
+            
+            if ($_GET){
+                echo intval($_GET["pag"]);
+
+            }else{
+
+                echo intval(1);
+
+            } ?>;
+
+                document.getElementById("pagina").innerHTML=pag_actual;
+
+            let next = function() {
+                    
+                if(pag_actual < max_actual)
+                {
+                    window.location.href = "administracion-personas.php?pag="+(pag_actual+1);
+                }
+
+            }
+
+            let back = function() {
+
+                if(pag_actual > 1)
+                {
+                    window.location.href = "administracion-personas.php?pag="+(pag_actual-1);
+
+            }
+            }
+            
+
+
+    </script>
 
 </body>
 

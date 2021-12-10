@@ -11,18 +11,36 @@
         "id_user" => $_SESSION["id"]
     ]);
 
-    if ($_GET) {
+    if(count($publicaciones)>0){
 
-        $INICIO = (intval($_GET["pag"])-1)*5;
+        if ($_GET) {
 
-    } else {
-        $INICIO = 1;
+            $INICIO = (intval($_GET["pag"])-1)*5;
+    
+        } else {
+            $INICIO = 0;
+        }
+        
+        if(count($publicaciones)-$INICIO<5){
+
+            $aux=count($publicaciones)-$INICIO;
+
+        }else{
+
+            $aux = 5;
+
+        }
+
+        for ($i=0; $i < $aux; $i++) { 
+            
+
+                $MOSTRAR[$i] = $publicaciones[$INICIO+$i];
+
+        }
+
     }
-    for ($i=0; $i < 5; $i++) { 
-        $MOSTRAR[$i] = $publicaciones[$INICIO+$i];
-    }
 
-    $MAX = count($publicaciones)/5;
+    $MAX = round(count($publicaciones)/5, 0, PHP_ROUND_HALF_UP);
 ?>
 
  <!DOCTYPE html>
@@ -67,7 +85,7 @@
                     </div>
                 </div>
                 <div>
-                    <a class="btn" href="./formulario-lugar.html">Nueva Publicación</a>
+                    <a class="btn" href="./formulario-lugar.php">Nueva Publicación</a>
                 </div>
             </section>
 
@@ -76,11 +94,16 @@
                 <?php 
                 for ($i=0; $i < count($MOSTRAR); $i++) {
 
+                    $img = $database->select("tb_imgs", "*", [
+                        "id_imgs" => $publicaciones[$i]["place_main_image"],
+                        ]);
+
+
                     echo '
                             <section class="site-background inner-col">
                                 <div class="inline card">
                                  <div class="col-img">
-                                    <img class="site-img">
+                                    <img class="site-img" src="'.$img[0]["url"].'">
                                  </div>
                                  <div class="col-txt">
                                     <h3 class="element-title">'.$MOSTRAR[$i]["place_title"].'</h3>
