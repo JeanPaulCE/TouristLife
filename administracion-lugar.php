@@ -106,7 +106,7 @@
                             <p class="element-p">'. $MOSTRAR[$i]["place_location"].'</p>
                         </div>
                         <div class="col-mas">
-                            <a class="element-a-1 " href="./detalle-lugar.php?pg='. $publicaciones[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
+                            <a class="element-a-1 " href="./detalle-lugar.php?pg='. $MOSTRAR[$i]["id_place"].'">más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>

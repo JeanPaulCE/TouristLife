@@ -121,10 +121,8 @@ body{/* parche pa cagada de jean */
 }
 
 .site-img{
-    background: url(../imgs/trees-landscape-colorful-mountains-sunset-Italy-69255-wallhere.com\ \(1\).jpg) no-repeat;
-    background-size: 100% 100%;
     width: 100%;
-    height: 100%;
+    height: 15vh;
     margin-right: 1em;
     border-radius: .5em 0em 0em .5em;
 }
@@ -162,6 +160,20 @@ body{/* parche pa cagada de jean */
 }
 
 /*PROFILE*/
+.btn{
+    display:block;
+    position:relative;
+    border: none;
+    background: var(--orange);
+    color: #fff;
+    padding: 1.5em;
+    border-radius: .5em;
+    width: 10em;
+    margin: auto;
+    font-family:  "Montserrat";
+    font-weight: 400;
+    text-align: center;
+}
 
 .profile-background{
     border-radius: .5em;

@@ -100,7 +100,7 @@
                             <p class="profile-p">'. $MOSTRAR[$i]["email"].'</p>
                         </div>
                         <div class="col-mas">
-                            <a class="view" href="/usuario.php">ver Perfil <i class="fas fa-arrow-right"></i> </a>
+                            <a class="btn" >Eliminar</a>
                         </div>
                     </div>
 
