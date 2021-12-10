@@ -2,7 +2,7 @@
 <?php
         include "DB.php";
         $publicaciones = $database->select("tb_places", "*", [
-            "place_status" => "1"
+            "place_status" => "2"
         ]);
     
     ?>
