@@ -51,7 +51,7 @@ if($_POST){
                 "place_right_image" => imgs_id(1,$imgs_temp),
                 "place_left_image" => imgs_id(2,$imgs_temp),
                 "place_pub_date" => $date,
-                "place_status" => "1",
+                "place_status" => "0",
                 "id_place_caregory" => $_POST["category"],
                 "id_user" => $_SESSION["id"],
                 "place_location" => $_POST["location"]
