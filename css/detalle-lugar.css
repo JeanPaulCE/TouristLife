@@ -123,6 +123,51 @@ body {
     height: 6.5vh;
 }
 
+/*BTN DETALLES*/
+
+.inner-btn{
+    display: grid;
+    grid-template-columns: 50vw 1fr 1fr;
+    height: 15vh;
+    gap: 3em;
+
+}
+
+.btn-aceptar{
+    display:block;
+    position:relative;
+    border: none;
+    background: var(--green);
+    color: #fff;
+    padding: 2vh;
+    border-radius: .5em;
+    width: 6vw;
+    margin: auto;
+    grid-column-start: 2;
+    font-family:  "Montserrat";
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.btn-rechazar{
+    display:block;
+    position:relative;
+    border: none;
+    background: var(--red);
+    color: #fff;
+    padding: 2vh;
+    border-radius: .5em;
+    width: 6vw;
+    margin: auto;
+    grid-column-start: 3;
+    font-family:  "Montserrat";
+    font-weight: 400;
+    text-align: center;
+
+}
+
+
 @media (max-width: 700px) {
     .detail-container {
         margin-top: 18vh;
@@ -169,6 +214,27 @@ body {
         height: 13vh;
         top: 8vh;
     }
+
+    /*BTN DETALLES*/
+
+    .inner-btn{
+        display: inline-flex;
+        grid-template-columns: 1fr 1fr;
+        height: 12vh;
+        gap: 1em;
+    }
+
+    .btn-aceptar{
+        width: auto;
+        grid-column-start: 1;
+    }
+
+    .btn-rechazar{
+        width: auto;
+        grid-column-start: 2;
+
+    }
+
 }
 
 @media(max-width:1100px) and (min-width:700px){
@@ -226,4 +292,8 @@ body {
     .footer-section {
         height: 8.5vh;
     }
+
+    
+
+
 }
