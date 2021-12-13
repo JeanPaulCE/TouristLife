@@ -111,23 +111,8 @@ if ($_GET) {
                                 "id_place" => $place[0]["id_place"]
                             ]);
 
-                            $hasVoted = [];
-                            if (isset($_SESSION["id"])) {
-                                $hasVoted = $database->select("tb_places_likes", "*", [
-                                    "id_place" => $place[0]["id_place"],
-                                    "id_user" => $_SESSION["id"]
-                                ]);
-                            }
-                            if (count($hasVoted) > 0) {
-                                $class = "fas fa-heart like-click";
-                                $click = "onclick='dislike(this.id);'";
-                            } 
-                            else {
-                                $class = "fas fa-heart like";
-                                $click = "onclick='like(this.id);'";
-                            }
                             echo "<p id='votes" . $place[0]["id_place"] . "' class='center-vertical mr-02'>" . $votes . "</p>";
-                            echo "<i id='" . $place[0]["id_place"] . "' class='" . $class . "'" . $click . "></i>";
+                            echo "<i id='" . $place[0]["id_place"] . "' class='fas fa-heart like'></i>";
                             ?>
                         </div>
                     </div>
@@ -144,7 +129,6 @@ if ($_GET) {
         ?>
     </section>
     <script src="./js/slider.js"></script>
-    <script src="./js/detalle-lugar.js"></script>
 </body>
 
 </html>
