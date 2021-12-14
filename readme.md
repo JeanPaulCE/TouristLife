@@ -1,2 +1,2 @@
-USER        admin
+USER        admin    admin@mail.com
 PASSWORD    admin
