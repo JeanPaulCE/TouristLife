@@ -7,6 +7,15 @@
         "place_status" => "0",
     ]);
 
+    $admin = $database->select("tb_users","*",[
+        "id_user" => $_SESSION["id"],
+    ]);
+
+    if(!($admin[0]["admin"]=='1')){
+
+        header('Location:./index.php');
+    }
+
     if(count($publicaciones)>0){
 
         if ($_GET) {

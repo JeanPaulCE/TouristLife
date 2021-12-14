@@ -85,6 +85,18 @@
                     </div>
                 </div>
                 <div>
+                <?php
+                
+                $admin = $database->select("tb_users","*",[
+                    "id_user" => $_SESSION["id"],
+                ]);
+            
+                if(($admin[0]["admin"]=='1')){
+            
+                    echo'<a class="btn" href="./administracion-personas.php">Administración</a>';
+                }
+                
+                ?> 
                     <a class="btn" href="./formulario-lugar.php">Nueva Publicación</a>
                 </div>
             </section>

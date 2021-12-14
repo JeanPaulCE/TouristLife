@@ -5,9 +5,32 @@
 
     $user_found = $database->select("tb_users", "*", );
 
+    $admin = $database->select("tb_users","*",[
+        "id_user" => $_SESSION["id"],
+    ]);
+
+    if(!($admin[0]["admin"]=='1')){
+
+        header('Location:./index.php');
+    }
+
+    if(isset($_GET["btn"])){
+        if($_GET["btn"]=="eliminar"){
+
+                var_dump($_GET["id"]);
+            
+                $data = $database->delete("tb_users",[
+                     "id_user" => $_GET["id"]
+                ]);
+
+                header('Location:./administracion-personas.php');
+
+        }
+    }
+
     if(count($user_found)>0){
 
-        if ($_GET) {
+        if (isset($_GET["pag"])) {
 
             $INICIO = (intval($_GET["pag"])-1)*5;
     
@@ -27,7 +50,6 @@
 
         for ($i=0; $i < $aux; $i++) { 
             
-
                 $MOSTRAR[$i] = $user_found[$INICIO+$i];
 
         }
@@ -100,7 +122,7 @@
                             <p class="profile-p">'. $MOSTRAR[$i]["email"].'</p>
                         </div>
                         <div class="col-mas">
-                            <a class="btn" >Eliminar</a>
+                            <a class="btn" href="administracion-personas.php?id='. $MOSTRAR[$i]["id_user"] .'&btn=eliminar" >Eliminar</a>
                         </div>
                     </div>
 

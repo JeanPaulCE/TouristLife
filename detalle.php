@@ -6,6 +6,16 @@ if ($_GET) {
         "id_place" => $_GET["pg"]
     ]);
 
+    $admin = $database->select("tb_users","*",[
+        "id_user" => $_SESSION["id"],
+    ]);
+
+    if(!($admin[0]["admin"]=='1')){
+
+        header('Location:./index.php');
+    }
+
+
     if(isset($_GET["btn"])){
         if($_GET["btn"]=="1"){
             $aceptar = $database->update("tb_places", [
