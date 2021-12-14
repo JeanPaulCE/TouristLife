@@ -20,7 +20,7 @@ body{/* parche pa cagada de jean */
     margin: 0;
     padding: 0;
     height: 76vh;
-    background: url(/imgs/admin.jpg)no-repeat;
+    background: url(../imgs/admin.jpg)no-repeat;
     background-size: cover;
     height:auto;
 }

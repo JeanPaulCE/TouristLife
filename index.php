@@ -47,10 +47,18 @@
 
     <section class="body">
         <h2 class="top10 center">Los 10 mas votados</h2>
-        <?php if(isset($novotos)){echo '<h2>NO hay votos aun</h2>;';} ?>
-        <div class="elements">
+        <?php 
+            if(isset($novotos)){
+                echo '<h class="top10 center">NO hay votos aun</h2>
+                    <div class="elements none">
+                ';}else{
+                echo'<div class="elements">';
+            }
+
+        ?>
         
-            <div class="element-1 inner-grid">
+        
+            <div class="element-1 inner-grid" >
                 <div class="container">
                     <div class="element-img-1" > <img class="element-item-img-1" src="<?php 
                     $img = $database->select("tb_imgs", "*", [
@@ -69,7 +77,9 @@
             <div class="center">
 
                 <div class="elements-d">
-                <?php for ($i=1; $i < count($top10); $i++) { 
+                <?php
+                
+                    for ($i=1; $i < count($top10); $i++) { 
                     $img = $database->select("tb_imgs", "*", [
                         "id_imgs" => $top10[$i]["place_main_image"],
                     ]);
