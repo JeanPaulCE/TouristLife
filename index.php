@@ -40,7 +40,7 @@
         <div class="center ts-text">
             <h1 class="title">DESCUBRE LO INCREIBLE</h1>
             <div class="center">
-                <a class="form-submit" href="/galeria.php">Galeria</a>
+                <a class="form-submit" href="./galeria.php">Galeria</a>
             </div>
         </div>
     </section>
