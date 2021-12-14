@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <?php
         include "DB.php";
-        $top10 = $database->query("SELECT *, (SELECT count(tb_places_likes.id_place)  as total from BIYx7soDWk.tb_places_likes where tb_places.id_place = tb_places_likes.id_place) as 'Likes'  from BIYx7soDWk.tb_places where tb_places.id_place in (Select id_place From (SELECT tb_places_likes.id_place, count(tb_places_likes.id_place)  as total from BIYx7soDWk.tb_places_likes group by tb_places_likes.id_place order by 2 desc limit 10) as t)group by tb_places.id_place order by 11 desc;")->fetchAll();
+        $top10 = $database->query("SELECT *, (SELECT count(tb_places_likes.id_place)  as total from BIYx7soDWk.tb_places_likes where tb_places.id_place = tb_places_likes.id_place) as 'Likes'  from BIYx7soDWk.tb_places where tb_places.id_place in (Select id_place From (SELECT tb_places_likes.id_place, count(tb_places_likes.id_place)  as total from BIYx7soDWk.tb_places_likes group by tb_places_likes.id_place order by 2 desc limit 10) as t)group by tb_places.id_place order by 11 asc;")->fetchAll();
         if (count($top10)<1) {
             $top10 = $database->query("SELECT * FROM BIYx7soDWk.tb_places order by id_place asc limit 1;")->fetchAll();
             $novotos = true;
