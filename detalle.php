@@ -3,8 +3,27 @@ include "DB.php";
 
 if ($_GET) {
     $place = $database->select("tb_places", "*", [
-        "id_place" => $_GET
+        "id_place" => $_GET["pg"]
     ]);
+
+    if(isset($_GET["btn"])){
+        if($_GET["btn"]=="1"){
+            $aceptar = $database->update("tb_places", [
+                "place_status" => "1",
+            ],["id_place" => $_GET["pg"] ]);
+
+            header('Location:./administracion-lugar.php');
+
+        }else if($_GET["btn"]=="2"){
+            $aceptar = $database->update("tb_places", [
+                "place_status" => "2",
+            ],["id_place" => $_GET["pg"]  ]);
+
+            header('Location:./administracion-lugar.php');
+        }
+    }
+    
+
 }
 
 ?>
@@ -119,8 +138,12 @@ if ($_GET) {
                 </div>
             </div>
             <div class="inner-btn">
-                    <p class='btn-aceptar'>ACEPTAR</p>
-                    <p class='btn-rechazar'>RECHAZAR</p>
+            <?php
+                    echo '<a class="btn-aceptar" href="detalle.php?pg='. $place[0]["id_place"] .'&btn=1">ACEPTAR</a>';
+                    echo '<a class="btn-rechazar" href="detalle.php?pg='. $place[0]["id_place"] .'&btn=2">RECHAZAR</a>';
+
+
+                    ?>
                     </div>
         </section>
 
